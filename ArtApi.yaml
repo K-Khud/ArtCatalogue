@@ -1,0 +1,488 @@
+openapi: 3.0.3
+info:
+  title: ArtApi
+  version: '1.0'
+  description: ''
+servers:
+  - url: 'https://api.artic.edu/api/v1/'
+paths:
+  /artists:
+    get:
+      summary: Artists Endpoint
+      tags:
+        - Artists Endpoints
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponseModel'
+      operationId: get-artists
+      description: A list of all artists.
+  /artworks:
+    get:
+      summary: Artworks Endpoint
+      tags:
+        - Artworks Endpoints
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponseModel'
+              examples: {}
+      operationId: get-artworks
+      description: A list of all artworks sorted by last updated date in descending order.
+components:
+  schemas:
+    ResponseModel:
+      title: ResponseModel
+      type: object
+      properties:
+        pagination:
+          $ref: '#/components/schemas/Pagination'
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/Data'
+        info:
+          $ref: '#/components/schemas/Info'
+        config:
+          $ref: '#/components/schemas/Config'
+    Pagination:
+      description: ''
+      type: object
+      properties:
+        total:
+          type: number
+        limit:
+          type: number
+        offset:
+          type: number
+        total_pages:
+          type: number
+        current_page:
+          type: number
+        next_url:
+          type: string
+          minLength: 1
+      required:
+        - total
+        - limit
+        - offset
+        - total_pages
+        - current_page
+        - next_url
+    Data:
+      description: ''
+      type: object
+      title: Data
+      properties:
+        id:
+          type: number
+        api_model:
+          type: string
+          minLength: 1
+        api_link:
+          type: string
+          minLength: 1
+        is_boosted:
+          type: boolean
+        title:
+          type: string
+          minLength: 1
+        alt_titles: {}
+        thumbnail:
+          $ref: '#/components/schemas/Thumbnail'
+        main_reference_number:
+          type: string
+          minLength: 1
+        has_not_been_viewed_much:
+          type: boolean
+        boost_rank: {}
+        date_start:
+          type: number
+        date_end:
+          type: number
+        date_display:
+          type: string
+          minLength: 1
+        date_qualifier_title:
+          type: string
+          minLength: 1
+        date_qualifier_id:
+          type: number
+        artist_display:
+          type: string
+          minLength: 1
+        place_of_origin:
+          type: string
+          minLength: 1
+        dimensions:
+          type: string
+          minLength: 1
+        medium_display:
+          type: string
+          minLength: 1
+        inscriptions: {}
+        credit_line:
+          type: string
+          minLength: 1
+        publication_history: {}
+        exhibition_history: {}
+        provenance_text: {}
+        publishing_verification_level:
+          type: string
+          minLength: 1
+        internal_department_id:
+          type: number
+        fiscal_year: {}
+        fiscal_year_deaccession: {}
+        is_public_domain:
+          type: boolean
+        is_zoomable:
+          type: boolean
+        max_zoom_window_size:
+          type: number
+        copyright_notice: {}
+        has_multimedia_resources:
+          type: boolean
+        has_educational_resources:
+          type: boolean
+        colorfulness:
+          type: number
+        color: {}
+        latitude: {}
+        longitude: {}
+        latlon: {}
+        is_on_view:
+          type: boolean
+        on_loan_display: {}
+        gallery_title:
+          type: string
+          minLength: 1
+        gallery_id:
+          type: number
+        artwork_type_title:
+          type: string
+          minLength: 1
+        artwork_type_id:
+          type: number
+        department_title:
+          type: string
+          minLength: 1
+        department_id:
+          type: string
+          minLength: 1
+        artist_id:
+          type: number
+        artist_title:
+          type: string
+          minLength: 1
+        alt_artist_ids:
+          type: array
+          items:
+            type: object
+        artist_ids:
+          type: array
+          items:
+            type: object
+        artist_titles:
+          type: array
+          items:
+            type: object
+        category_ids:
+          type: array
+          items:
+            type: object
+        category_titles:
+          type: array
+          items:
+            type: object
+        artwork_catalogue_ids:
+          type: array
+          items:
+            type: object
+        term_titles:
+          type: array
+          items:
+            type: object
+        style_id: {}
+        style_title: {}
+        alt_style_ids:
+          type: array
+          items:
+            type: object
+        style_ids:
+          type: array
+          items:
+            type: object
+        style_titles:
+          type: array
+          items:
+            type: object
+        classification_id:
+          type: string
+          minLength: 1
+        classification_title:
+          type: string
+          minLength: 1
+        alt_classification_ids:
+          type: array
+          items:
+            type: object
+        classification_ids:
+          type: array
+          items:
+            type: object
+        classification_titles:
+          type: array
+          items:
+            type: object
+        subject_id:
+          type: string
+          minLength: 1
+        alt_subject_ids:
+          type: array
+          items:
+            type: object
+        subject_ids:
+          type: array
+          items:
+            type: object
+        subject_titles:
+          type: array
+          items:
+            type: object
+        material_id:
+          type: string
+          minLength: 1
+        alt_material_ids:
+          type: array
+          items:
+            type: object
+        material_ids:
+          type: array
+          items:
+            type: object
+        material_titles:
+          type: array
+          items:
+            type: object
+        technique_id:
+          type: string
+          minLength: 1
+        alt_technique_ids:
+          type: array
+          items:
+            type: object
+        technique_ids:
+          type: array
+          items:
+            type: object
+        technique_titles:
+          type: array
+          items:
+            type: object
+        theme_titles:
+          type: array
+          items:
+            type: object
+        image_id:
+          type: string
+          minLength: 1
+        alt_image_ids:
+          type: array
+          items:
+            type: object
+        document_ids:
+          type: array
+          items:
+            type: object
+        sound_ids:
+          type: array
+          items:
+            type: object
+        video_ids:
+          type: array
+          items:
+            type: object
+        text_ids:
+          type: array
+          items:
+            type: object
+        section_ids:
+          type: array
+          items:
+            type: object
+        section_titles:
+          type: array
+          items:
+            type: object
+        site_ids:
+          type: array
+          items:
+            type: object
+        suggest_autocomplete_all:
+          type: array
+          uniqueItems: true
+          minItems: 1
+          items:
+            type: object
+            properties:
+              input:
+                type: array
+                items:
+                  type: object
+              weight:
+                type: number
+              contexts:
+                type: object
+                properties:
+                  groupings:
+                    type: array
+                    items:
+                      type: object
+                required:
+                  - groupings
+            required:
+              - weight
+        last_updated_source:
+          type: string
+          minLength: 1
+        last_updated:
+          type: string
+          minLength: 1
+        timestamp:
+          type: string
+          minLength: 1
+      required:
+        - id
+        - api_model
+        - api_link
+        - is_boosted
+        - title
+        - thumbnail
+        - main_reference_number
+        - has_not_been_viewed_much
+        - date_start
+        - date_end
+        - date_display
+        - date_qualifier_title
+        - date_qualifier_id
+        - artist_display
+        - place_of_origin
+        - dimensions
+        - medium_display
+        - credit_line
+        - publishing_verification_level
+        - internal_department_id
+        - is_public_domain
+        - is_zoomable
+        - max_zoom_window_size
+        - has_multimedia_resources
+        - has_educational_resources
+        - colorfulness
+        - is_on_view
+        - gallery_title
+        - gallery_id
+        - artwork_type_title
+        - artwork_type_id
+        - department_title
+        - department_id
+        - artist_id
+        - artist_title
+        - alt_artist_ids
+        - artist_ids
+        - artist_titles
+        - category_ids
+        - category_titles
+        - artwork_catalogue_ids
+        - term_titles
+        - alt_style_ids
+        - style_ids
+        - style_titles
+        - classification_id
+        - classification_title
+        - alt_classification_ids
+        - classification_ids
+        - classification_titles
+        - subject_id
+        - alt_subject_ids
+        - subject_ids
+        - subject_titles
+        - material_id
+        - alt_material_ids
+        - material_ids
+        - material_titles
+        - technique_id
+        - alt_technique_ids
+        - technique_ids
+        - technique_titles
+        - theme_titles
+        - image_id
+        - alt_image_ids
+        - document_ids
+        - sound_ids
+        - video_ids
+        - text_ids
+        - section_ids
+        - section_titles
+        - site_ids
+        - suggest_autocomplete_all
+        - last_updated_source
+        - last_updated
+        - timestamp
+    Info:
+      description: ''
+      type: object
+      properties:
+        license_text:
+          type: string
+          minLength: 1
+        license_links:
+          type: array
+          items:
+            properties: {}
+        version:
+          type: string
+          minLength: 1
+      required:
+        - license_text
+        - license_links
+        - version
+    Config:
+      description: ''
+      type: object
+      properties:
+        iiif_url:
+          type: string
+          minLength: 1
+        website_url:
+          type: string
+          minLength: 1
+      required:
+        - iiif_url
+        - website_url
+    Thumbnail:
+      description: ''
+      type: object
+      properties:
+        lqip:
+          type: string
+          minLength: 1
+        width:
+          type: number
+        height:
+          type: number
+        alt_text:
+          type: string
+          minLength: 1
+      required:
+        - lqip
+        - width
+        - height
+        - alt_text
+
