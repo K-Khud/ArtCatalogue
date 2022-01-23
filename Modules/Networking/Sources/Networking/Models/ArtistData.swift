@@ -13,74 +13,28 @@ import AnyCodable
 public struct ArtistData: Codable, Hashable, Identifiable {
 
     public var id: Double
-//    public var apiModel: String
-//    public var apiLink: String
     public var title: String
-//    public var sortTitle: String
-//    public var altTitles: [AnyCodable]
     public var birthDate: Double?
     public var birthPlace: AnyCodable?
     public var deathDate: AnyCodable?
-//    public var deathPlace: AnyCodable?
-//    public var description: AnyCodable?
-//    public var isLicensingRestricted: AnyCodable?
-//    public var isArtist: Bool
-//    public var agentTypeTitle: String
-//    public var agentTypeId: Double
     public var artworkIds: [Int]
-//    public var siteIds: [AnyCodable]
-//    public var suggestAutocompleteAll: ArtistDataSuggestAutocompleteAll
-//    public var lastUpdatedSource: String
-//    public var lastUpdated: String
-//    public var timestamp: String
 
     public init(id: Double, title: String, birthDate: Double? = nil, birthPlace: AnyCodable? = nil, deathDate: AnyCodable? = nil, artworkIds: [Int]) {
-//    public init(id: Double, apiModel: String, apiLink: String, title: String, sortTitle: String, altTitles: [AnyCodable], birthDate: Double, birthPlace: AnyCodable? = nil, deathDate: AnyCodable? = nil, deathPlace: AnyCodable? = nil, description: AnyCodable? = nil, isLicensingRestricted: AnyCodable? = nil, isArtist: Bool, agentTypeTitle: String, agentTypeId: Double, artworkIds: [AnyCodable], siteIds: [AnyCodable], suggestAutocompleteAll: ArtistDataSuggestAutocompleteAll, lastUpdatedSource: String, lastUpdated: String, timestamp: String) {
         self.id = id
-//        self.apiModel = apiModel
-//        self.apiLink = apiLink
         self.title = title
-//        self.sortTitle = sortTitle
-//        self.altTitles = altTitles
         self.birthDate = birthDate
         self.birthPlace = birthPlace
         self.deathDate = deathDate
-//        self.deathPlace = deathPlace
-//        self.description = description
-//        self.isLicensingRestricted = isLicensingRestricted
-//        self.isArtist = isArtist
-//        self.agentTypeTitle = agentTypeTitle
-//        self.agentTypeId = agentTypeId
         self.artworkIds = artworkIds
-//        self.siteIds = siteIds
-//        self.suggestAutocompleteAll = suggestAutocompleteAll
-//        self.lastUpdatedSource = lastUpdatedSource
-//        self.lastUpdated = lastUpdated
-//        self.timestamp = timestamp
     }
 
     public enum CodingKeys: String, CodingKey, CaseIterable {
         case id
-//        case apiModel = "api_model"
-//        case apiLink = "api_link"
         case title
-//        case sortTitle = "sort_title"
-//        case altTitles = "alt_titles"
         case birthDate = "birth_date"
         case birthPlace = "birth_place"
         case deathDate = "death_date"
-//        case deathPlace = "death_place"
-//        case description
-//        case isLicensingRestricted = "is_licensing_restricted"
-//        case isArtist = "is_artist"
-//        case agentTypeTitle = "agent_type_title"
-//        case agentTypeId = "agent_type_id"
         case artworkIds = "artwork_ids"
-//        case siteIds = "site_ids"
-//        case suggestAutocompleteAll = "suggest_autocomplete_all"
-//        case lastUpdatedSource = "last_updated_source"
-//        case lastUpdated = "last_updated"
-//        case timestamp
     }
 
     // Encodable protocol methods
@@ -88,26 +42,11 @@ public struct ArtistData: Codable, Hashable, Identifiable {
     public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(id, forKey: .id)
-//        try container.encode(apiModel, forKey: .apiModel)
-//        try container.encode(apiLink, forKey: .apiLink)
         try container.encode(title, forKey: .title)
-//        try container.encode(sortTitle, forKey: .sortTitle)
-//        try container.encode(altTitles, forKey: .altTitles)
         try container.encode(birthDate, forKey: .birthDate)
         try container.encodeIfPresent(birthPlace, forKey: .birthPlace)
         try container.encodeIfPresent(deathDate, forKey: .deathDate)
-//        try container.encodeIfPresent(deathPlace, forKey: .deathPlace)
-//        try container.encodeIfPresent(description, forKey: .description)
-//        try container.encodeIfPresent(isLicensingRestricted, forKey: .isLicensingRestricted)
-//        try container.encode(isArtist, forKey: .isArtist)
-//        try container.encode(agentTypeTitle, forKey: .agentTypeTitle)
-//        try container.encode(agentTypeId, forKey: .agentTypeId)
         try container.encode(artworkIds, forKey: .artworkIds)
-//        try container.encode(siteIds, forKey: .siteIds)
-//        try container.encode(suggestAutocompleteAll, forKey: .suggestAutocompleteAll)
-//        try container.encode(lastUpdatedSource, forKey: .lastUpdatedSource)
-//        try container.encode(lastUpdated, forKey: .lastUpdated)
-//        try container.encode(timestamp, forKey: .timestamp)
     }
 }
 
