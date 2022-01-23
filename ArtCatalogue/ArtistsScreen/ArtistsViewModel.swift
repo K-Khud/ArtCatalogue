@@ -1,17 +1,17 @@
 //
-//  ArtworksViewModel.swift
+//  ArtistsViewModel.swift
 //  ArtCatalogue
 //
-//  Created by Ekaterina Khudzhamkulova on 15.1.2022.
+//  Created by Ekaterina Khudzhamkulova on 23.1.2022.
 //
 
 import Foundation
 import Networking
 import SwiftUI
 
-final class ArtworksViewModel: ObservableObject, Loader {
+final class ArtistsViewModel: ObservableObject {
 
-    @Published var artworks: [ArtworkData] = []
+    @Published var artists: [ArtistData] = []
     @Published var isPageLoading: Bool = false
 
     var page: Int = 0
@@ -22,7 +22,7 @@ final class ArtworksViewModel: ObservableObject, Loader {
             Text("")
     }
 
-    func load(_ data: ArtworkData? = nil) {
+    func load() {
         guard isPageLoading == false else {
             return
         }
@@ -31,9 +31,9 @@ final class ArtworksViewModel: ObservableObject, Loader {
         page += 1
 
         DispatchQueue.global(qos: .background).async {
-            ArtEndpointsAPI.getArtworks(page: self.page, completion: { data, error in
+            ArtEndpointsAPI.getArtists(page: self.page, completion: { data, error in
 
-                self.artworks.append(contentsOf: data?.data ?? [])
+                self.artists.append(contentsOf: data?.data ?? [])
                 self.isPageLoading = false
 
             })

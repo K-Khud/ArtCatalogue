@@ -10,56 +10,38 @@ paths:
     get:
       summary: Artists Endpoint
       tags:
-        - Artists Endpoints
+        - Art Endpoints
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ResponseModel'
+                $ref: '#/components/schemas/ResponseArtists'
       operationId: get-artists
       description: A list of all artists.
   /artworks:
     get:
       summary: Artworks Endpoint
       tags:
-        - Artworks Endpoints
+        - Art Endpoints
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ResponseModel'
+                $ref: '#/components/schemas/ResponseArtworks'
               examples: {}
       operationId: get-artworks
       description: A list of all artworks sorted by last updated date in descending order.
 components:
   schemas:
-    ResponseModel:
-      title: ResponseModel
-      type: object
-      properties:
-        pagination:
-          $ref: '#/components/schemas/Pagination'
-        data:
-          type: array
-          items:
-            $ref: '#/components/schemas/Data'
-        info:
-          $ref: '#/components/schemas/Info'
-        config:
-          $ref: '#/components/schemas/Config'
     Pagination:
       description: ''
       type: object
       properties:
-        total:
-          type: number
-        limit:
-          type: number
-        offset:
+        '':
           type: number
         total_pages:
           type: number
@@ -68,17 +50,9 @@ components:
         next_url:
           type: string
           minLength: 1
-      required:
-        - total
-        - limit
-        - offset
-        - total_pages
-        - current_page
-        - next_url
-    Data:
+    ArtworkData:
       description: ''
       type: object
-      title: Data
       properties:
         id:
           type: number
@@ -435,6 +409,7 @@ components:
         - last_updated_source
         - last_updated
         - timestamp
+      title: ArtworkData
     Info:
       description: ''
       type: object
@@ -485,4 +460,129 @@ components:
         - width
         - height
         - alt_text
+    ResponseArtworks:
+      title: ResponseArtworks
+      type: object
+      properties:
+        pagination:
+          $ref: '#/components/schemas/Pagination'
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/ArtworkData'
+        info:
+          $ref: '#/components/schemas/Info'
+        config:
+          $ref: '#/components/schemas/Config'
+    ResponseArtists:
+      title: ResponseArtists
+      type: object
+      properties:
+        pagination:
+          $ref: '#/components/schemas/Pagination'
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/ArtistData'
+        info:
+          $ref: '#/components/schemas/Info'
+        config:
+          $ref: '#/components/schemas/Config'
+      required:
+        - pagination
+        - data
+        - info
+        - config
+    ArtistData:
+      description: ''
+      type: object
+      properties:
+        id:
+          type: number
+        api_model:
+          type: string
+          minLength: 1
+        api_link:
+          type: string
+          minLength: 1
+        title:
+          type: string
+          minLength: 1
+        sort_title:
+          type: string
+          minLength: 1
+        alt_titles:
+          type: array
+          items:
+            properties: {}
+        birth_date:
+          type: number
+        birth_place: {}
+        death_date: {}
+        death_place: {}
+        description: {}
+        is_licensing_restricted: {}
+        is_artist:
+          type: boolean
+        agent_type_title:
+          type: string
+          minLength: 1
+        agent_type_id:
+          type: number
+        artwork_ids:
+          type: array
+          items:
+            properties: {}
+        site_ids:
+          type: array
+          items:
+            properties: {}
+        suggest_autocomplete_all:
+          type: object
+          properties:
+            input:
+              type: array
+              items:
+                properties: {}
+            weight:
+              type: number
+            contexts:
+              type: object
+              properties:
+                groupings:
+                  type: array
+                  items:
+                    properties: {}
+              required:
+                - groupings
+          required:
+            - input
+            - weight
+            - contexts
+        last_updated_source:
+          type: string
+          minLength: 1
+        last_updated:
+          type: string
+          minLength: 1
+        timestamp:
+          type: string
+          minLength: 1
+      required:
+        - id
+        - api_model
+        - api_link
+        - title
+        - sort_title
+        - alt_titles
+        - birth_date
+        - is_artist
+        - agent_type_title
+        - agent_type_id
+        - artwork_ids
+        - site_ids
+        - suggest_autocomplete_all
+        - last_updated_source
+        - last_updated
+        - timestamp
 

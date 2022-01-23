@@ -20,15 +20,10 @@ struct MainTabView: View {
                     Label("Artworks", systemImage: "photo.artframe")
             }.tag(0)
 
-            VStack {
-            Text("Artists")
-                Button {
-                    self.router.tabSelection = 0
-                } label: {
-                    Text("Go first")
-                        .frame(height: 50)
-                }
-            }.background(Color.yellow).tabItem {
+            NavigationContainerView(transition: Transition.custom(.opacity), content: {
+                ArtistsScreenView()
+            })
+                .tabItem {
                 Label("Artists", systemImage: "person")
             }.tag(1)
         })

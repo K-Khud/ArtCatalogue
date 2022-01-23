@@ -44,7 +44,7 @@ struct ArtworkView: View {
     @State var saved: Bool = false
     @StateObject var worksViewModel: ArtworksViewModel
     
-    var artwork: ModelData
+    var artwork: ArtworkData
     
     var body: some View {
         Text(artwork.title)

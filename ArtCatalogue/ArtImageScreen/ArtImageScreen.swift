@@ -10,7 +10,7 @@ import SwiftUI
 import Networking
 
 struct ArtImageScreen: View {
-    @State var artwork: ModelData
+    @State var artwork: ArtworkData
 
     @EnvironmentObject var routeModel: NavigationContainerViewModel
     @StateObject var itemViewModel: ArtImageViewModel = .init()

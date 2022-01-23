@@ -1,23 +1,23 @@
 //
-//  LoadButton.swift
+//  LoadArtistsButton.swift
 //  ArtCatalogue
 //
-//  Created by Ekaterina Khudzhamkulova on 22.1.2022.
+//  Created by Ekaterina Khudzhamkulova on 23.1.2022.
 //
 
 import SwiftUI
 import Networking
 
-struct LoadButton<T: Loader>: View {
-    @ObservedObject var viewModel: T
-    var artwork: ArtworkData?
-    var buttonTitle: String
+struct LoadArtistsButton: View {
+    @ObservedObject var viewModel: ArtistsViewModel
     @State var buttonTapped = false
+
+    var buttonTitle: String
 
     var body: some View {
         HStack {
             Button {
-                viewModel.load(artwork)
+                viewModel.load()
                 buttonTapped.toggle()
 
             } label: {
@@ -33,8 +33,8 @@ struct LoadButton<T: Loader>: View {
     }
 }
 
-struct LoadButton_Previews: PreviewProvider {
+struct LoadArtistsButton_Previews: PreviewProvider {
     static var previews: some View {
-        LoadButton(viewModel: ArtworksViewModel(), buttonTitle: "Title")
+        LoadArtistsButton(viewModel: ArtistsViewModel(), buttonTitle: "Load")
     }
 }

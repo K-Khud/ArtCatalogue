@@ -12,14 +12,14 @@ import AnyCodable
 
 public struct Pagination: Codable, Hashable {
 
-    public var total: Double
-    public var limit: Double
-    public var offset: Double
+    public var total: Double?
+    public var limit: Double?
+    public var offset: Double?
     public var totalPages: Double
     public var currentPage: Double
     public var nextUrl: String
 
-    public init(total: Double, limit: Double, offset: Double, totalPages: Double, currentPage: Double, nextUrl: String) {
+    public init(total: Double?, limit: Double?, offset: Double?, totalPages: Double, currentPage: Double, nextUrl: String) {
         self.total = total
         self.limit = limit
         self.offset = offset

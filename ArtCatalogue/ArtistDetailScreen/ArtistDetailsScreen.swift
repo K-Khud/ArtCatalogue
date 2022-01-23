@@ -1,42 +1,36 @@
 //
-//  ArtworkItemView.swift
+//  ArtistDetailsScreen.swift
 //  ArtCatalogue
 //
-//  Created by Ekaterina Khudzhamkulova on 16.1.2022.
+//  Created by Ekaterina Khudzhamkulova on 23.1.2022.
 //
-
 
 import SwiftUI
 import Networking
 
-struct ArtworkItemView: View {
-    @State var item: ArtworkData
+struct ArtistDetailsScreen: View {
+    @State var item: ArtistData
     @EnvironmentObject var routeModel: NavigationContainerViewModel
 
     var body: some View {
         VStack {
-            Text("Artwork title:")
+            Text("Name:")
                 .fontWeight(.light)
             Text(item.title)
                 .bold()
                 .padding()
-            Text("Artist")
+            Text("Date of Birth")
                 .fontWeight(.light)
-            Text(item.artistDisplay)
-            Text(item.dateDisplay)
-                .padding()
+            Text(String(item.birthDate ?? 0))
 
-            Text("Origin")
-                .fontWeight(.light)
-            Text(item.placeOfOrigin)
                 .padding()
 
             HStack {
                 Spacer()
                 Button {
-                    routeModel.push(screenView: LazyView(ArtImageScreen(artwork: item)).toAnyView())
+                    routeModel.push(screenView: LazyView(ArtistsWorksScreen(artist: item)).toAnyView())
                 } label: {
-                    Text("Show Image")
+                    Text("Show Artworks")
                         .padding()
                         .background(.green)
                         .foregroundColor(.white)
@@ -59,4 +53,8 @@ struct ArtworkItemView: View {
     }
 }
 
-
+struct ArtistDetailsScreen_Previews: PreviewProvider {
+    static var previews: some View {
+        ArtistDetailsScreen(item: ArtistData(id: 0, title: "", birthDate: 0, birthPlace: "", deathDate: "", artworkIds: []))
+    }
+}

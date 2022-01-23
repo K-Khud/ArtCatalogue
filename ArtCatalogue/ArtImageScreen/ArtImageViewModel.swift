@@ -20,7 +20,7 @@ final class ArtImageViewModel: ObservableObject, Loader  {
             Text("")
     }
 
-    func load(_ data: ModelData?) {
+    func load(_ data: ArtworkData?) {
         guard let data = data else {
             return
         }
@@ -31,7 +31,7 @@ final class ArtImageViewModel: ObservableObject, Loader  {
         isImageLoading = true
 
         DispatchQueue.global(qos: .background).async {
-            ArtworksEndpointsAPI.getImage(imageId: data.imageId,
+            ArtEndpointsAPI.getImage(imageId: data.imageId,
                                           iiifUrl: "https://www.artic.edu/iiif/2",
                                           completion: { data, error in
                 if let data = data {
