@@ -30,21 +30,13 @@ struct ArtistDetailsScreen: View {
                 Button {
                     routeModel.push(screenView: LazyView(ArtistsWorksScreen(artist: item)).toAnyView())
                 } label: {
-                    Text("Show Artworks")
-                        .padding()
-                        .background(.green)
-                        .foregroundColor(.white)
-                        .cornerRadius(8)
+                    ButtonLabel(title: "Show Artworks", isGreen: true)
                 }
                 Spacer()
                 Button {
                     self.routeModel.pop()
                 } label: {
-                    Text("Go Back")
-                        .padding()
-                        .background(.gray)
-                        .foregroundColor(.white)
-                        .cornerRadius(8)
+                    ButtonLabel(title: "Go Back", isGreen: false)
                 }
                 Spacer()
 

@@ -26,11 +26,7 @@ struct ArtistsWorksScreen: View {
             Button {
                 self.routeModel.pop()
             } label: {
-                Text("Go Back")
-                    .padding()
-                    .background(.gray)
-                    .foregroundColor(.white)
-                    .cornerRadius(8)
+                ButtonLabel(title: "Go Back", isGreen: false)
             }
             .padding()
         }

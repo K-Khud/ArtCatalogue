@@ -10,7 +10,7 @@ import Networking
 
 struct ArtworksScreenView: View {
     
-    @StateObject var worksViewModel: ArtworksViewModel = .init()
+    @StateObject var worksViewModel: ArtworksViewModel
     
     var body: some View {
         list
@@ -41,6 +41,6 @@ struct ArtworksScreenView: View {
 
 struct ArtworksScreenView_Previews: PreviewProvider {
     static var previews: some View {
-        ArtworksScreenView()
+        ArtworksScreenView(worksViewModel: ArtworksViewModel())
     }
 }

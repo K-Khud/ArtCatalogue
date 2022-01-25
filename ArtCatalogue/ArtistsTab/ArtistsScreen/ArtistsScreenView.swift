@@ -9,7 +9,7 @@ import SwiftUI
 import Networking
 
 struct ArtistsScreenView: View {
-    @StateObject var artistsViewModel: ArtistsViewModel = .init()
+    @StateObject var artistsViewModel: ArtistsViewModel
 
     var body: some View {
         list
@@ -70,6 +70,6 @@ struct ArtistView: View {
 
 struct ArtistsScreenView_Previews: PreviewProvider {
     static var previews: some View {
-        ArtistsScreenView()
+        ArtistsScreenView(artistsViewModel: ArtistsViewModel())
     }
 }

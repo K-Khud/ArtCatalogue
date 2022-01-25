@@ -16,7 +16,9 @@ final class ArtworksViewModel: ObservableObject, Loader {
 
     var page: Int = 0
 
-    init() {}
+    init() {
+        print("Init of ArtworksViewModel")
+    }
 
     var body: some View {
             Text("")

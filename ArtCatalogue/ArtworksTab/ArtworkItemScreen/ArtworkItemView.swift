@@ -36,21 +36,13 @@ struct ArtworkItemView: View {
                 Button {
                     routeModel.push(screenView: LazyView(ArtImageScreen(artwork: item)).toAnyView())
                 } label: {
-                    Text("Show Image")
-                        .padding()
-                        .background(.green)
-                        .foregroundColor(.white)
-                        .cornerRadius(8)
+                    ButtonLabel(title: "Show Image", isGreen: true)
                 }
                 Spacer()
                 Button {
                     self.routeModel.pop()
                 } label: {
-                    Text("Go Back")
-                        .padding()
-                        .background(.gray)
-                        .foregroundColor(.white)
-                        .cornerRadius(8)
+                    ButtonLabel(title: "Go Back", isGreen: false)
                 }
                 Spacer()
 
@@ -58,5 +50,4 @@ struct ArtworkItemView: View {
         }
     }
 }
-
 

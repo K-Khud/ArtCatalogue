@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02159C6D27A08BC7002F504A /* ButtonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02159C6C27A08BC7002F504A /* ButtonLabel.swift */; };
 		0247D06527934A6800B862D4 /* ArtCatalogueApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0247D06427934A6800B862D4 /* ArtCatalogueApp.swift */; };
 		0247D06927934A6800B862D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0247D06827934A6800B862D4 /* Assets.xcassets */; };
 		0247D06C27934A6800B862D4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0247D06B27934A6800B862D4 /* Preview Assets.xcassets */; };
@@ -40,6 +41,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02159C6C27A08BC7002F504A /* ButtonLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLabel.swift; sourceTree = "<group>"; };
 		0247D06127934A6800B862D4 /* ArtCatalogue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtCatalogue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0247D06427934A6800B862D4 /* ArtCatalogueApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtCatalogueApp.swift; sourceTree = "<group>"; };
 		0247D06827934A6800B862D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				025A0422279C99D900E97E57 /* LoaderProtocol.swift */,
 				025A0420279C994A00E97E57 /* LoadButton.swift */,
 				02DA4569279DBC8C00E8B515 /* LoadArtistsButton.swift */,
+				02159C6C27A08BC7002F504A /* ButtonLabel.swift */,
 				0247D0822794A0F400B862D4 /* NavigationStack */,
 				02DA4571279DD7A000E8B515 /* ArtistsTab */,
 				02DA4572279DD7B500E8B515 /* ArtworksTab */,
@@ -315,6 +318,7 @@
 				028C7DF027A076CC003AA548 /* AnimatingCellModifier.swift in Sources */,
 				0247D07E279499A100B862D4 /* Array.swift in Sources */,
 				028C7DEC27A0763D003AA548 /* ArtworkView.swift in Sources */,
+				02159C6D27A08BC7002F504A /* ButtonLabel.swift in Sources */,
 				02DA456C279DBFBD00E8B515 /* ArtistDetailsScreen.swift in Sources */,
 				0247D07727934CBC00B862D4 /* ArtworksScreenView.swift in Sources */,
 				02DA4565279DBA1500E8B515 /* ArtistsViewModel.swift in Sources */,

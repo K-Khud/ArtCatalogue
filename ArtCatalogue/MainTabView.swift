@@ -14,14 +14,14 @@ struct MainTabView: View {
         ZStack(alignment: .top) {
         TabView(selection: $router.tabSelection, content: {
             NavigationContainerView(transition: Transition.custom(.opacity), content: {
-                ArtworksScreenView()
+                ArtworksScreenView(worksViewModel: router.artworksViewModel)
             })
                 .tabItem {
                     Label("Artworks", systemImage: "photo.artframe")
             }.tag(0)
 
             NavigationContainerView(transition: Transition.custom(.opacity), content: {
-                ArtistsScreenView()
+                ArtistsScreenView(artistsViewModel: router.artistsViewModel)
             })
                 .tabItem {
                 Label("Artists", systemImage: "person")
