@@ -30,6 +30,12 @@
 		0247D09D2794A71E00B862D4 /* ArtImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0247D09C2794A71E00B862D4 /* ArtImageViewModel.swift */; };
 		025A0421279C994A00E97E57 /* LoadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A0420279C994A00E97E57 /* LoadButton.swift */; };
 		025A0423279C99D900E97E57 /* LoaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A0422279C99D900E97E57 /* LoaderProtocol.swift */; };
+		027F1B8327A6E08900247908 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 027F1B8227A6E08900247908 /* WidgetKit.framework */; };
+		027F1B8527A6E08900247908 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 027F1B8427A6E08900247908 /* SwiftUI.framework */; };
+		027F1B8827A6E08900247908 /* Artworks_Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027F1B8727A6E08900247908 /* Artworks_Widget.swift */; };
+		027F1B8A27A6E08A00247908 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 027F1B8927A6E08A00247908 /* Assets.xcassets */; };
+		027F1B8E27A6E08A00247908 /* Artworks WidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 027F1B8127A6E08900247908 /* Artworks WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		027F1B9427A6E11500247908 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 027F1B9327A6E11500247908 /* Networking */; };
 		028C7DEC27A0763D003AA548 /* ArtworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C7DEB27A0763D003AA548 /* ArtworkView.swift */; };
 		028C7DEE27A0766F003AA548 /* AnimationOffsetModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C7DED27A0766F003AA548 /* AnimationOffsetModifier.swift */; };
 		028C7DF027A076CC003AA548 /* AnimatingCellModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C7DEF27A076CC003AA548 /* AnimatingCellModifier.swift */; };
@@ -39,6 +45,30 @@
 		02DA456C279DBFBD00E8B515 /* ArtistDetailsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA456B279DBFBD00E8B515 /* ArtistDetailsScreen.swift */; };
 		02DA456F279DD3C300E8B515 /* ArtistsWorksScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA456E279DD3C300E8B515 /* ArtistsWorksScreen.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		027F1B8C27A6E08A00247908 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0247D05927934A6800B862D4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 027F1B8027A6E08900247908;
+			remoteInfo = "Artworks WidgetExtension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		027F1B8F27A6E08A00247908 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				027F1B8E27A6E08A00247908 /* Artworks WidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		02159C6C27A08BC7002F504A /* ButtonLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLabel.swift; sourceTree = "<group>"; };
@@ -65,6 +95,12 @@
 		0247D09C2794A71E00B862D4 /* ArtImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtImageViewModel.swift; sourceTree = "<group>"; };
 		025A0420279C994A00E97E57 /* LoadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadButton.swift; sourceTree = "<group>"; };
 		025A0422279C99D900E97E57 /* LoaderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderProtocol.swift; sourceTree = "<group>"; };
+		027F1B8127A6E08900247908 /* Artworks WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Artworks WidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		027F1B8227A6E08900247908 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		027F1B8427A6E08900247908 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		027F1B8727A6E08900247908 /* Artworks_Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artworks_Widget.swift; sourceTree = "<group>"; };
+		027F1B8927A6E08A00247908 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		027F1B8B27A6E08A00247908 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		028C7DEB27A0763D003AA548 /* ArtworkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkView.swift; sourceTree = "<group>"; };
 		028C7DED27A0766F003AA548 /* AnimationOffsetModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationOffsetModifier.swift; sourceTree = "<group>"; };
 		028C7DEF27A076CC003AA548 /* AnimatingCellModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatingCellModifier.swift; sourceTree = "<group>"; };
@@ -84,6 +120,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		027F1B7E27A6E08900247908 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				027F1B9427A6E11500247908 /* Networking in Frameworks */,
+				027F1B8527A6E08900247908 /* SwiftUI.framework in Frameworks */,
+				027F1B8327A6E08900247908 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -91,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				0247D06327934A6800B862D4 /* ArtCatalogue */,
+				027F1B8627A6E08900247908 /* Artworks Widget */,
 				0247D06227934A6800B862D4 /* Products */,
 				0247D07327934AA500B862D4 /* Frameworks */,
 			);
@@ -100,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				0247D06127934A6800B862D4 /* ArtCatalogue.app */,
+				027F1B8127A6E08900247908 /* Artworks WidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,6 +185,8 @@
 		0247D07327934AA500B862D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				027F1B8227A6E08900247908 /* WidgetKit.framework */,
+				027F1B8427A6E08900247908 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -190,6 +240,16 @@
 				0247D09C2794A71E00B862D4 /* ArtImageViewModel.swift */,
 			);
 			path = ArtImageScreen;
+			sourceTree = "<group>";
+		};
+		027F1B8627A6E08900247908 /* Artworks Widget */ = {
+			isa = PBXGroup;
+			children = (
+				027F1B8727A6E08900247908 /* Artworks_Widget.swift */,
+				027F1B8927A6E08A00247908 /* Assets.xcassets */,
+				027F1B8B27A6E08A00247908 /* Info.plist */,
+			);
+			path = "Artworks Widget";
 			sourceTree = "<group>";
 		};
 		02DA4568279DBA2A00E8B515 /* ArtistsScreen */ = {
@@ -247,10 +307,12 @@
 				0247D05D27934A6800B862D4 /* Sources */,
 				0247D05E27934A6800B862D4 /* Frameworks */,
 				0247D05F27934A6800B862D4 /* Resources */,
+				027F1B8F27A6E08A00247908 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				027F1B8D27A6E08A00247908 /* PBXTargetDependency */,
 			);
 			name = ArtCatalogue;
 			packageProductDependencies = (
@@ -259,6 +321,26 @@
 			productName = ArtCatalogue;
 			productReference = 0247D06127934A6800B862D4 /* ArtCatalogue.app */;
 			productType = "com.apple.product-type.application";
+		};
+		027F1B8027A6E08900247908 /* Artworks WidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 027F1B9227A6E08A00247908 /* Build configuration list for PBXNativeTarget "Artworks WidgetExtension" */;
+			buildPhases = (
+				027F1B7D27A6E08900247908 /* Sources */,
+				027F1B7E27A6E08900247908 /* Frameworks */,
+				027F1B7F27A6E08900247908 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Artworks WidgetExtension";
+			packageProductDependencies = (
+				027F1B9327A6E11500247908 /* Networking */,
+			);
+			productName = "Artworks WidgetExtension";
+			productReference = 027F1B8127A6E08900247908 /* Artworks WidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -271,6 +353,9 @@
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
 					0247D06027934A6800B862D4 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					027F1B8027A6E08900247908 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
 				};
@@ -289,6 +374,7 @@
 			projectRoot = "";
 			targets = (
 				0247D06027934A6800B862D4 /* ArtCatalogue */,
+				027F1B8027A6E08900247908 /* Artworks WidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -300,6 +386,14 @@
 			files = (
 				0247D06C27934A6800B862D4 /* Preview Assets.xcassets in Resources */,
 				0247D06927934A6800B862D4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		027F1B7F27A6E08900247908 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				027F1B8A27A6E08A00247908 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,7 +435,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		027F1B7D27A6E08900247908 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				027F1B8827A6E08900247908 /* Artworks_Widget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		027F1B8D27A6E08A00247908 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 027F1B8027A6E08900247908 /* Artworks WidgetExtension */;
+			targetProxy = 027F1B8C27A6E08A00247908 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0247D06D27934A6800B862D4 /* Debug */ = {
@@ -463,6 +573,7 @@
 		0247D07027934A6800B862D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -492,6 +603,7 @@
 		0247D07127934A6800B862D4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -512,6 +624,60 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.khudzhamkulova.ArtCatalogue;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		027F1B9027A6E08A00247908 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4485DWBU98;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Artworks Widget/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Artworks Widget";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.khudzhamkulova.ArtCatalogue.Artworks-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		027F1B9127A6E08A00247908 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4485DWBU98;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Artworks Widget/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Artworks Widget";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.khudzhamkulova.ArtCatalogue.Artworks-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -539,10 +705,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		027F1B9227A6E08A00247908 /* Build configuration list for PBXNativeTarget "Artworks WidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				027F1B9027A6E08A00247908 /* Debug */,
+				027F1B9127A6E08A00247908 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		0247D07427934AA500B862D4 /* Networking */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Networking;
+		};
+		027F1B9327A6E11500247908 /* Networking */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Networking;
 		};

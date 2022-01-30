@@ -11,29 +11,38 @@ import Networking
 struct ArtworksScreenView: View {
     
     @StateObject var worksViewModel: ArtworksViewModel
-    
+    @State var email = "" {
+        didSet {
+            print("set!")
+        }
+    }
+
     var body: some View {
         list
     }
     
     var list: some View {
-        List {
+        VStack {
             HStack {
                 Spacer()
                 LoadButton(viewModel: worksViewModel, buttonTitle: "Load Artworks")
                 Spacer()
             }
-            ForEach(worksViewModel.artworks) { artwork in
-                ArtworkView(worksViewModel: worksViewModel, artwork: artwork)
-                    .onAppear() {
-                        if worksViewModel.artworks.isLast(artwork) {
-                            worksViewModel.load()
+            List {
+                ForEach(worksViewModel.artworks) { artwork in
+                    ArtworkView(worksViewModel: worksViewModel, artwork: artwork)
+                        .onAppear() {
+                            if worksViewModel.artworks.isLast(artwork) {
+                                worksViewModel.load()
+                            }
                         }
-                    }
+                }
             }
+            .listStyle(.plain)
+            TextFieldView(worksViewModel: worksViewModel)
         }
-        .listStyle(.plain)
     }
+
     func removeRows(at index: Int) {
         worksViewModel.artworks.remove(at: index)
     }
@@ -42,5 +51,21 @@ struct ArtworksScreenView: View {
 struct ArtworksScreenView_Previews: PreviewProvider {
     static var previews: some View {
         ArtworksScreenView(worksViewModel: ArtworksViewModel())
+    }
+}
+
+struct TextFieldView: View {
+    @ObservedObject var worksViewModel: ArtworksViewModel
+
+    var body: some View {
+        TextField("Enter suffix", text: $worksViewModel.suffix)
+            .padding(.horizontal)
+            .background(.thinMaterial)
+            .cornerRadius(8)
+            .frame(height: 30, alignment: .leading)
+//            .onChange(of: email) { text in
+//                print(text)
+//            }
+
     }
 }
