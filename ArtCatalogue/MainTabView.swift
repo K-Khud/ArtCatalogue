@@ -9,7 +9,6 @@ import SwiftUI
 
 struct MainTabView: View {
     @EnvironmentObject var router: Router
-//    @State var tabSelection: Int = 0
     var body: some View {
         ZStack(alignment: .top) {
         TabView(selection: $router.tabSelection, content: {
@@ -26,6 +25,12 @@ struct MainTabView: View {
                 .tabItem {
                 Label("Artists", systemImage: "person")
             }.tag(1)
+            NavigationContainerView(transition: Transition.custom(.opacity), content: {
+                SuffixesScreenView(viewModel: router.suffixesViewModel, isAscOrder: true)
+            })
+                .tabItem {
+                Label("Suffixes", systemImage: "rectangle.and.pencil.and.ellipsis")
+            }.tag(2)
         })
         }
     }

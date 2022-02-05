@@ -13,14 +13,6 @@ final class ArtworksViewModel: ObservableObject, Loader {
 
     @Published var artworks: [ArtworkData] = []
     @Published var isPageLoading: Bool = false
-    @Published var suffix: String = "" {
-        didSet {
-            guard suffix.count < 3 else {
-                searchSuffixes()
-                return
-            }
-        }
-    }
 
     var page: Int = 0
 
@@ -44,9 +36,5 @@ final class ArtworksViewModel: ObservableObject, Loader {
 
             })
         }
-    }
-
-    private func searchSuffixes() {
-        print("Search for: \(suffix)")
     }
 }

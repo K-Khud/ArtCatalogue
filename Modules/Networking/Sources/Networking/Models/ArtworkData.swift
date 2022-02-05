@@ -14,12 +14,12 @@ public struct ArtworkData: Codable, Hashable, Identifiable {
 
     public var id: Double
     public var title: String
-    public var dateDisplay: String
-    public var artistDisplay: String
-    public var placeOfOrigin: String
-    public var imageId: String
+    public var dateDisplay: String?
+    public var artistDisplay: String?
+    public var placeOfOrigin: String?
+    public var imageId: String?
 
-    public init(id: Double, title: String, imageId: String, dateDisplay: String, artistDisplay: String, placeOfOrigin: String) {
+    public init(id: Double, title: String, imageId: String?, dateDisplay: String?, artistDisplay: String?, placeOfOrigin: String?) {
         self.id = id
         self.title = title
         self.dateDisplay = dateDisplay

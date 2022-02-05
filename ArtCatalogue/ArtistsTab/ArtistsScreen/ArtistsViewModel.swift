@@ -13,7 +13,14 @@ final class ArtistsViewModel: ObservableObject {
 
     @Published var artists: [ArtistData] = []
     @Published var isPageLoading: Bool = false
-
+    @Published var suffix: String = "" {
+        didSet {
+            guard suffix.count < 3 else {
+                searchSuffixes()
+                return
+            }
+        }
+    }
     var page: Int = 0
 
     init() {}
@@ -38,5 +45,8 @@ final class ArtistsViewModel: ObservableObject {
 
             })
         }
+    }
+    private func searchSuffixes() {
+        print("Search for: \(suffix)")
     }
 }

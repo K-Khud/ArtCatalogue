@@ -22,13 +22,13 @@ struct ArtworkItemView: View {
                 .padding()
             Text("Artist")
                 .fontWeight(.light)
-            Text(item.artistDisplay)
-            Text(item.dateDisplay)
+            Text(item.artistDisplay ?? "")
+            Text(item.dateDisplay ?? "")
                 .padding()
 
             Text("Origin")
                 .fontWeight(.light)
-            Text(item.placeOfOrigin)
+            Text(item.placeOfOrigin ?? "")
                 .padding()
 
             HStack {

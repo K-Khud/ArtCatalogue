@@ -11,11 +11,6 @@ import Networking
 struct ArtworksScreenView: View {
     
     @StateObject var worksViewModel: ArtworksViewModel
-    @State var email = "" {
-        didSet {
-            print("set!")
-        }
-    }
 
     var body: some View {
         list
@@ -38,8 +33,10 @@ struct ArtworksScreenView: View {
                         }
                 }
             }
+//            .onAppear(perform: {
+//                worksViewModel.load()
+//            })
             .listStyle(.plain)
-            TextFieldView(worksViewModel: worksViewModel)
         }
     }
 
@@ -51,21 +48,5 @@ struct ArtworksScreenView: View {
 struct ArtworksScreenView_Previews: PreviewProvider {
     static var previews: some View {
         ArtworksScreenView(worksViewModel: ArtworksViewModel())
-    }
-}
-
-struct TextFieldView: View {
-    @ObservedObject var worksViewModel: ArtworksViewModel
-
-    var body: some View {
-        TextField("Enter suffix", text: $worksViewModel.suffix)
-            .padding(.horizontal)
-            .background(.thinMaterial)
-            .cornerRadius(8)
-            .frame(height: 30, alignment: .leading)
-//            .onChange(of: email) { text in
-//                print(text)
-//            }
-
     }
 }

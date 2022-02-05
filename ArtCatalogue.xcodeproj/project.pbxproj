@@ -7,7 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		021150B427A994A000FE427A /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021150B327A994A000FE427A /* TextFieldView.swift */; };
+		021150B727A997CC00FE427A /* ArtistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021150B627A997CC00FE427A /* ArtistView.swift */; };
+		021150B827A997CC00FE427A /* ArtistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021150B627A997CC00FE427A /* ArtistView.swift */; };
+		021150B927A997F900FE427A /* ArtistsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA4564279DBA1500E8B515 /* ArtistsViewModel.swift */; };
+		021150BA27A997FE00FE427A /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021150B327A994A000FE427A /* TextFieldView.swift */; };
+		021150BB27A9980400FE427A /* ArtistsScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA4566279DBA2500E8B515 /* ArtistsScreenView.swift */; };
+		021150BC27A9986D00FE427A /* NavigationContainerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0247D0872794A1C300B862D4 /* NavigationContainerViewModel.swift */; };
+		021150BD27A998D000FE427A /* AnimatingCellModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C7DEF27A076CC003AA548 /* AnimatingCellModifier.swift */; };
+		021150BE27A9990400FE427A /* LoadArtistsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA4569279DBC8C00E8B515 /* LoadArtistsButton.swift */; };
+		021150BF27A9992F00FE427A /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0247D07D279499A100B862D4 /* Array.swift */; };
+		021150C027A9997C00FE427A /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0247D0832794A13200B862D4 /* Screen.swift */; };
+		021150C127A9998100FE427A /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0247D0852794A19800B862D4 /* Transition.swift */; };
+		021150C227A9998B00FE427A /* NavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0247D0802794A0EB00B862D4 /* NavigationStack.swift */; };
+		021150C327A9999D00FE427A /* AnimationOffsetModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C7DED27A0766F003AA548 /* AnimationOffsetModifier.swift */; };
+		021150C427A999A600FE427A /* LazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0247D08D2794A29A00B862D4 /* LazyView.swift */; };
+		021150C527A999AF00FE427A /* ArtistDetailsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA456B279DBFBD00E8B515 /* ArtistDetailsScreen.swift */; };
+		021150C627A999BC00FE427A /* ArtistsWorksScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA456E279DD3C300E8B515 /* ArtistsWorksScreen.swift */; };
+		021150C727A999C400FE427A /* ButtonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02159C6C27A08BC7002F504A /* ButtonLabel.swift */; };
+		021150C827A999D600FE427A /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0247D08B2794A26C00B862D4 /* SwiftUIView.swift */; };
+		021150CA27A99F5000FE427A /* SuffixesScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021150C927A99F5000FE427A /* SuffixesScreenView.swift */; };
+		021150CB27A99F5000FE427A /* SuffixesScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021150C927A99F5000FE427A /* SuffixesScreenView.swift */; };
 		02159C6D27A08BC7002F504A /* ButtonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02159C6C27A08BC7002F504A /* ButtonLabel.swift */; };
+		023A092F27AC5F0C0005454B /* SearchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023A092E27AC5F0C0005454B /* SearchResultView.swift */; };
+		023A093027AC5F0C0005454B /* SearchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023A092E27AC5F0C0005454B /* SearchResultView.swift */; };
+		023A093227AC5FDB0005454B /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023A093127AC5FDB0005454B /* SearchResult.swift */; };
+		023A093327AC5FDB0005454B /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023A093127AC5FDB0005454B /* SearchResult.swift */; };
 		0247D06527934A6800B862D4 /* ArtCatalogueApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0247D06427934A6800B862D4 /* ArtCatalogueApp.swift */; };
 		0247D06927934A6800B862D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0247D06827934A6800B862D4 /* Assets.xcassets */; };
 		0247D06C27934A6800B862D4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0247D06B27934A6800B862D4 /* Preview Assets.xcassets */; };
@@ -44,6 +69,14 @@
 		02DA456A279DBC8C00E8B515 /* LoadArtistsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA4569279DBC8C00E8B515 /* LoadArtistsButton.swift */; };
 		02DA456C279DBFBD00E8B515 /* ArtistDetailsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA456B279DBFBD00E8B515 /* ArtistDetailsScreen.swift */; };
 		02DA456F279DD3C300E8B515 /* ArtistsWorksScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA456E279DD3C300E8B515 /* ArtistsWorksScreen.swift */; };
+		02EC8F1427AADC960023BCDE /* SuffixesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EC8F1327AADC960023BCDE /* SuffixesViewModel.swift */; };
+		02EC8F1727AADE430023BCDE /* LoadSuffixesButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EC8F1627AADE430023BCDE /* LoadSuffixesButton.swift */; };
+		02EC8F1827AADF3D0023BCDE /* SuffixesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EC8F1327AADC960023BCDE /* SuffixesViewModel.swift */; };
+		02EC8F1927AADF480023BCDE /* LoadSuffixesButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EC8F1627AADE430023BCDE /* LoadSuffixesButton.swift */; };
+		02EC8F1B27AAE1300023BCDE /* WrappedSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EC8F1A27AAE1300023BCDE /* WrappedSequence.swift */; };
+		02EC8F1C27AAE1300023BCDE /* WrappedSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EC8F1A27AAE1300023BCDE /* WrappedSequence.swift */; };
+		02EC8F1E27AAE1680023BCDE /* SuffixIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EC8F1D27AAE1680023BCDE /* SuffixIterator.swift */; };
+		02EC8F1F27AAE1680023BCDE /* SuffixIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EC8F1D27AAE1680023BCDE /* SuffixIterator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +104,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		021150B327A994A000FE427A /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		021150B627A997CC00FE427A /* ArtistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistView.swift; sourceTree = "<group>"; };
+		021150C927A99F5000FE427A /* SuffixesScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixesScreenView.swift; sourceTree = "<group>"; };
 		02159C6C27A08BC7002F504A /* ButtonLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLabel.swift; sourceTree = "<group>"; };
+		023A092E27AC5F0C0005454B /* SearchResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultView.swift; sourceTree = "<group>"; };
+		023A093127AC5FDB0005454B /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		0247D06127934A6800B862D4 /* ArtCatalogue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtCatalogue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0247D06427934A6800B862D4 /* ArtCatalogueApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtCatalogueApp.swift; sourceTree = "<group>"; };
 		0247D06827934A6800B862D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -109,6 +147,10 @@
 		02DA4569279DBC8C00E8B515 /* LoadArtistsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadArtistsButton.swift; sourceTree = "<group>"; };
 		02DA456B279DBFBD00E8B515 /* ArtistDetailsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailsScreen.swift; sourceTree = "<group>"; };
 		02DA456E279DD3C300E8B515 /* ArtistsWorksScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsWorksScreen.swift; sourceTree = "<group>"; };
+		02EC8F1327AADC960023BCDE /* SuffixesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixesViewModel.swift; sourceTree = "<group>"; };
+		02EC8F1627AADE430023BCDE /* LoadSuffixesButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadSuffixesButton.swift; sourceTree = "<group>"; };
+		02EC8F1A27AAE1300023BCDE /* WrappedSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrappedSequence.swift; sourceTree = "<group>"; };
+		02EC8F1D27AAE1680023BCDE /* SuffixIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixIterator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,8 +205,10 @@
 				025A0422279C99D900E97E57 /* LoaderProtocol.swift */,
 				025A0420279C994A00E97E57 /* LoadButton.swift */,
 				02DA4569279DBC8C00E8B515 /* LoadArtistsButton.swift */,
+				02EC8F1627AADE430023BCDE /* LoadSuffixesButton.swift */,
 				02159C6C27A08BC7002F504A /* ButtonLabel.swift */,
 				0247D0822794A0F400B862D4 /* NavigationStack */,
+				02EC8F1527AADC9D0023BCDE /* SuffixesScreen */,
 				02DA4571279DD7A000E8B515 /* ArtistsTab */,
 				02DA4572279DD7B500E8B515 /* ArtworksTab */,
 				0247D07F279499B700B862D4 /* Extensions */,
@@ -255,7 +299,9 @@
 		02DA4568279DBA2A00E8B515 /* ArtistsScreen */ = {
 			isa = PBXGroup;
 			children = (
+				021150B327A994A000FE427A /* TextFieldView.swift */,
 				02DA4564279DBA1500E8B515 /* ArtistsViewModel.swift */,
+				021150B627A997CC00FE427A /* ArtistView.swift */,
 				02DA4566279DBA2500E8B515 /* ArtistsScreenView.swift */,
 			);
 			path = ArtistsScreen;
@@ -295,6 +341,19 @@
 				0247D07A27934CD100B862D4 /* ArtworksScreen */,
 			);
 			path = ArtworksTab;
+			sourceTree = "<group>";
+		};
+		02EC8F1527AADC9D0023BCDE /* SuffixesScreen */ = {
+			isa = PBXGroup;
+			children = (
+				021150C927A99F5000FE427A /* SuffixesScreenView.swift */,
+				023A092E27AC5F0C0005454B /* SearchResultView.swift */,
+				02EC8F1327AADC960023BCDE /* SuffixesViewModel.swift */,
+				023A093127AC5FDB0005454B /* SearchResult.swift */,
+				02EC8F1D27AAE1680023BCDE /* SuffixIterator.swift */,
+				02EC8F1A27AAE1300023BCDE /* WrappedSequence.swift */,
+			);
+			path = SuffixesScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -408,20 +467,29 @@
 				0247D09B2794A70F00B862D4 /* ArtImageScreen.swift in Sources */,
 				0247D0882794A1C300B862D4 /* NavigationContainerViewModel.swift in Sources */,
 				0247D0842794A13200B862D4 /* Screen.swift in Sources */,
+				021150B427A994A000FE427A /* TextFieldView.swift in Sources */,
+				023A093227AC5FDB0005454B /* SearchResult.swift in Sources */,
 				0247D08C2794A26C00B862D4 /* SwiftUIView.swift in Sources */,
 				028C7DF027A076CC003AA548 /* AnimatingCellModifier.swift in Sources */,
 				0247D07E279499A100B862D4 /* Array.swift in Sources */,
 				028C7DEC27A0763D003AA548 /* ArtworkView.swift in Sources */,
 				02159C6D27A08BC7002F504A /* ButtonLabel.swift in Sources */,
+				021150CA27A99F5000FE427A /* SuffixesScreenView.swift in Sources */,
+				02EC8F1427AADC960023BCDE /* SuffixesViewModel.swift in Sources */,
+				02EC8F1727AADE430023BCDE /* LoadSuffixesButton.swift in Sources */,
 				02DA456C279DBFBD00E8B515 /* ArtistDetailsScreen.swift in Sources */,
+				02EC8F1E27AAE1680023BCDE /* SuffixIterator.swift in Sources */,
 				0247D07727934CBC00B862D4 /* ArtworksScreenView.swift in Sources */,
 				02DA4565279DBA1500E8B515 /* ArtistsViewModel.swift in Sources */,
+				02EC8F1B27AAE1300023BCDE /* WrappedSequence.swift in Sources */,
 				0247D0902794A37000B862D4 /* MainTabView.swift in Sources */,
 				0247D0942794A3D100B862D4 /* ConfigManager.swift in Sources */,
 				0247D0962794A4E100B862D4 /* ArtworkItemView.swift in Sources */,
 				0247D06527934A6800B862D4 /* ArtCatalogueApp.swift in Sources */,
+				021150B727A997CC00FE427A /* ArtistView.swift in Sources */,
 				0247D09D2794A71E00B862D4 /* ArtImageViewModel.swift in Sources */,
 				0247D0812794A0EB00B862D4 /* NavigationStack.swift in Sources */,
+				023A092F27AC5F0C0005454B /* SearchResultView.swift in Sources */,
 				02DA4567279DBA2500E8B515 /* ArtistsScreenView.swift in Sources */,
 				0247D0922794A3B500B862D4 /* Router.swift in Sources */,
 				02DA456A279DBC8C00E8B515 /* LoadArtistsButton.swift in Sources */,
@@ -439,7 +507,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				021150BF27A9992F00FE427A /* Array.swift in Sources */,
+				023A093027AC5F0C0005454B /* SearchResultView.swift in Sources */,
+				021150BE27A9990400FE427A /* LoadArtistsButton.swift in Sources */,
+				02EC8F1C27AAE1300023BCDE /* WrappedSequence.swift in Sources */,
+				021150C827A999D600FE427A /* SwiftUIView.swift in Sources */,
+				021150CB27A99F5000FE427A /* SuffixesScreenView.swift in Sources */,
+				021150BC27A9986D00FE427A /* NavigationContainerViewModel.swift in Sources */,
+				021150C627A999BC00FE427A /* ArtistsWorksScreen.swift in Sources */,
+				021150BB27A9980400FE427A /* ArtistsScreenView.swift in Sources */,
 				027F1B8827A6E08900247908 /* Artworks_Widget.swift in Sources */,
+				021150C127A9998100FE427A /* Transition.swift in Sources */,
+				021150C427A999A600FE427A /* LazyView.swift in Sources */,
+				023A093327AC5FDB0005454B /* SearchResult.swift in Sources */,
+				021150C027A9997C00FE427A /* Screen.swift in Sources */,
+				02EC8F1827AADF3D0023BCDE /* SuffixesViewModel.swift in Sources */,
+				021150C327A9999D00FE427A /* AnimationOffsetModifier.swift in Sources */,
+				021150C727A999C400FE427A /* ButtonLabel.swift in Sources */,
+				021150BD27A998D000FE427A /* AnimatingCellModifier.swift in Sources */,
+				021150C527A999AF00FE427A /* ArtistDetailsScreen.swift in Sources */,
+				021150B827A997CC00FE427A /* ArtistView.swift in Sources */,
+				021150BA27A997FE00FE427A /* TextFieldView.swift in Sources */,
+				02EC8F1F27AAE1680023BCDE /* SuffixIterator.swift in Sources */,
+				02EC8F1927AADF480023BCDE /* LoadSuffixesButton.swift in Sources */,
+				021150C227A9998B00FE427A /* NavigationStack.swift in Sources */,
+				021150B927A997F900FE427A /* ArtistsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
