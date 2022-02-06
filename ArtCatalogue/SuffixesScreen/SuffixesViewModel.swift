@@ -100,9 +100,10 @@ final class SuffixesViewModel: ObservableObject {
                 return
             }
             allSuffixes.append(SearchResult(suffix: suffix, count: String(value)))
-            changeOrder()
-            getTopTen()
         }
+        changeOrder()
+        getTopTen()
+        saveToUserDefaults(allSuffixes)
     }
 
     private func searchSuffixes(searchItems: String) {
@@ -124,5 +125,17 @@ final class SuffixesViewModel: ObservableObject {
         }
 
         searchResult[index].counter = newElement.counter
+    }
+
+    private func saveToUserDefaults(_ suffixes: [SearchResult]) {
+        let sorted = suffixes
+            .sorted(by: {$0.counter > $1.counter})
+            .filter({$0.suffix.count > 3})
+        guard sorted.count >= 3 else {return}
+        let topThree = Array(sorted[..<3]).map({String($0.suffix + "-" + $0.counter)}).compactMap({$0})
+
+        let defaults = UserDefaults.standard
+        defaults.set(topThree, forKey: "SavedSuffixes")
+        WidgetBridget.shared.topThree = topThree
     }
 }

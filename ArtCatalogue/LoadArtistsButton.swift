@@ -23,7 +23,7 @@ struct LoadArtistsButton: View {
             } label: {
                 Text(buttonTitle)
                     .padding()
-                    .background(buttonTapped ? .gray : .green)
+                    .background(buttonTapped ? Colors.fuchsia : Colors.blueGreen)
                     .foregroundColor(.white)
                     .cornerRadius(8)
                     .frame(alignment: .center)

@@ -64,6 +64,10 @@
 		028C7DEC27A0763D003AA548 /* ArtworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C7DEB27A0763D003AA548 /* ArtworkView.swift */; };
 		028C7DEE27A0766F003AA548 /* AnimationOffsetModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C7DED27A0766F003AA548 /* AnimationOffsetModifier.swift */; };
 		028C7DF027A076CC003AA548 /* AnimatingCellModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C7DEF27A076CC003AA548 /* AnimatingCellModifier.swift */; };
+		02AF611927AEBAE800B250DA /* LinkNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AF611827AEBAE800B250DA /* LinkNames.swift */; };
+		02AF611A27AEBAE800B250DA /* LinkNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AF611827AEBAE800B250DA /* LinkNames.swift */; };
+		02AF611D27AF0AAF00B250DA /* WidgetBridget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AF611C27AF0AAF00B250DA /* WidgetBridget.swift */; };
+		02AF611E27AF0AAF00B250DA /* WidgetBridget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AF611C27AF0AAF00B250DA /* WidgetBridget.swift */; };
 		02DA4565279DBA1500E8B515 /* ArtistsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA4564279DBA1500E8B515 /* ArtistsViewModel.swift */; };
 		02DA4567279DBA2500E8B515 /* ArtistsScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA4566279DBA2500E8B515 /* ArtistsScreenView.swift */; };
 		02DA456A279DBC8C00E8B515 /* LoadArtistsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA4569279DBC8C00E8B515 /* LoadArtistsButton.swift */; };
@@ -77,6 +81,10 @@
 		02EC8F1C27AAE1300023BCDE /* WrappedSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EC8F1A27AAE1300023BCDE /* WrappedSequence.swift */; };
 		02EC8F1E27AAE1680023BCDE /* SuffixIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EC8F1D27AAE1680023BCDE /* SuffixIterator.swift */; };
 		02EC8F1F27AAE1680023BCDE /* SuffixIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EC8F1D27AAE1680023BCDE /* SuffixIterator.swift */; };
+		02FEF13327AEA5FC00DDB33B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FEF13227AEA5FC00DDB33B /* Colors.swift */; };
+		02FEF13427AEA5FC00DDB33B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FEF13227AEA5FC00DDB33B /* Colors.swift */; };
+		02FEF13727AEACCD00DDB33B /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FEF13527AEACCD00DDB33B /* PlaceholderView.swift */; };
+		02FEF13927AEAE9E00DDB33B /* SnapshotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FEF13827AEAE9E00DDB33B /* SnapshotView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +150,9 @@
 		028C7DEB27A0763D003AA548 /* ArtworkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkView.swift; sourceTree = "<group>"; };
 		028C7DED27A0766F003AA548 /* AnimationOffsetModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationOffsetModifier.swift; sourceTree = "<group>"; };
 		028C7DEF27A076CC003AA548 /* AnimatingCellModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatingCellModifier.swift; sourceTree = "<group>"; };
+		02AF611827AEBAE800B250DA /* LinkNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkNames.swift; sourceTree = "<group>"; };
+		02AF611B27AEC27800B250DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		02AF611C27AF0AAF00B250DA /* WidgetBridget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetBridget.swift; sourceTree = "<group>"; };
 		02DA4564279DBA1500E8B515 /* ArtistsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsViewModel.swift; sourceTree = "<group>"; };
 		02DA4566279DBA2500E8B515 /* ArtistsScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsScreenView.swift; sourceTree = "<group>"; };
 		02DA4569279DBC8C00E8B515 /* LoadArtistsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadArtistsButton.swift; sourceTree = "<group>"; };
@@ -151,6 +162,9 @@
 		02EC8F1627AADE430023BCDE /* LoadSuffixesButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadSuffixesButton.swift; sourceTree = "<group>"; };
 		02EC8F1A27AAE1300023BCDE /* WrappedSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrappedSequence.swift; sourceTree = "<group>"; };
 		02EC8F1D27AAE1680023BCDE /* SuffixIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixIterator.swift; sourceTree = "<group>"; };
+		02FEF13227AEA5FC00DDB33B /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		02FEF13527AEACCD00DDB33B /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
+		02FEF13827AEAE9E00DDB33B /* SnapshotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +211,7 @@
 		0247D06327934A6800B862D4 /* ArtCatalogue */ = {
 			isa = PBXGroup;
 			children = (
+				02AF611B27AEC27800B250DA /* Info.plist */,
 				0247D07227934A9A00B862D4 /* Networking */,
 				0247D06427934A6800B862D4 /* ArtCatalogueApp.swift */,
 				0247D08F2794A37000B862D4 /* MainTabView.swift */,
@@ -207,6 +222,8 @@
 				02DA4569279DBC8C00E8B515 /* LoadArtistsButton.swift */,
 				02EC8F1627AADE430023BCDE /* LoadSuffixesButton.swift */,
 				02159C6C27A08BC7002F504A /* ButtonLabel.swift */,
+				02FEF13227AEA5FC00DDB33B /* Colors.swift */,
+				02AF611C27AF0AAF00B250DA /* WidgetBridget.swift */,
 				0247D0822794A0F400B862D4 /* NavigationStack */,
 				02EC8F1527AADC9D0023BCDE /* SuffixesScreen */,
 				02DA4571279DD7A000E8B515 /* ArtistsTab */,
@@ -290,6 +307,9 @@
 			isa = PBXGroup;
 			children = (
 				027F1B8727A6E08900247908 /* Artworks_Widget.swift */,
+				02FEF13527AEACCD00DDB33B /* PlaceholderView.swift */,
+				02AF611827AEBAE800B250DA /* LinkNames.swift */,
+				02FEF13827AEAE9E00DDB33B /* SnapshotView.swift */,
 				027F1B8927A6E08A00247908 /* Assets.xcassets */,
 				027F1B8B27A6E08A00247908 /* Info.plist */,
 			);
@@ -465,6 +485,8 @@
 			files = (
 				0247D08E2794A29A00B862D4 /* LazyView.swift in Sources */,
 				0247D09B2794A70F00B862D4 /* ArtImageScreen.swift in Sources */,
+				02AF611927AEBAE800B250DA /* LinkNames.swift in Sources */,
+				02AF611D27AF0AAF00B250DA /* WidgetBridget.swift in Sources */,
 				0247D0882794A1C300B862D4 /* NavigationContainerViewModel.swift in Sources */,
 				0247D0842794A13200B862D4 /* Screen.swift in Sources */,
 				021150B427A994A000FE427A /* TextFieldView.swift in Sources */,
@@ -494,6 +516,7 @@
 				0247D0922794A3B500B862D4 /* Router.swift in Sources */,
 				02DA456A279DBC8C00E8B515 /* LoadArtistsButton.swift in Sources */,
 				0247D0862794A19800B862D4 /* Transition.swift in Sources */,
+				02FEF13327AEA5FC00DDB33B /* Colors.swift in Sources */,
 				028C7DEE27A0766F003AA548 /* AnimationOffsetModifier.swift in Sources */,
 				02DA456F279DD3C300E8B515 /* ArtistsWorksScreen.swift in Sources */,
 				025A0423279C99D900E97E57 /* LoaderProtocol.swift in Sources */,
@@ -507,6 +530,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02FEF13927AEAE9E00DDB33B /* SnapshotView.swift in Sources */,
 				021150BF27A9992F00FE427A /* Array.swift in Sources */,
 				023A093027AC5F0C0005454B /* SearchResultView.swift in Sources */,
 				021150BE27A9990400FE427A /* LoadArtistsButton.swift in Sources */,
@@ -515,9 +539,11 @@
 				021150CB27A99F5000FE427A /* SuffixesScreenView.swift in Sources */,
 				021150BC27A9986D00FE427A /* NavigationContainerViewModel.swift in Sources */,
 				021150C627A999BC00FE427A /* ArtistsWorksScreen.swift in Sources */,
+				02FEF13727AEACCD00DDB33B /* PlaceholderView.swift in Sources */,
 				021150BB27A9980400FE427A /* ArtistsScreenView.swift in Sources */,
 				027F1B8827A6E08900247908 /* Artworks_Widget.swift in Sources */,
 				021150C127A9998100FE427A /* Transition.swift in Sources */,
+				02AF611E27AF0AAF00B250DA /* WidgetBridget.swift in Sources */,
 				021150C427A999A600FE427A /* LazyView.swift in Sources */,
 				023A093327AC5FDB0005454B /* SearchResult.swift in Sources */,
 				021150C027A9997C00FE427A /* Screen.swift in Sources */,
@@ -528,9 +554,11 @@
 				021150C527A999AF00FE427A /* ArtistDetailsScreen.swift in Sources */,
 				021150B827A997CC00FE427A /* ArtistView.swift in Sources */,
 				021150BA27A997FE00FE427A /* TextFieldView.swift in Sources */,
+				02FEF13427AEA5FC00DDB33B /* Colors.swift in Sources */,
 				02EC8F1F27AAE1680023BCDE /* SuffixIterator.swift in Sources */,
 				02EC8F1927AADF480023BCDE /* LoadSuffixesButton.swift in Sources */,
 				021150C227A9998B00FE427A /* NavigationStack.swift in Sources */,
+				02AF611A27AEBAE800B250DA /* LinkNames.swift in Sources */,
 				021150B927A997F900FE427A /* ArtistsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -674,6 +702,7 @@
 				DEVELOPMENT_TEAM = 4485DWBU98;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ArtCatalogue/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -704,6 +733,7 @@
 				DEVELOPMENT_TEAM = 4485DWBU98;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ArtCatalogue/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

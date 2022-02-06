@@ -9,40 +9,67 @@ import WidgetKit
 import SwiftUI
 
 struct Provider: TimelineProvider {
+
     func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date())
+        SimpleEntry(date: Date(), suffixes: ["Placeholder"])
     }
 
     func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date())
+        let entry = SimpleEntry(date: Date(), suffixes: ["Snapshot"])
         completion(entry)
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        var entries: [SimpleEntry] = []
-
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
-        let currentDate = Date()
-        for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate)
-            entries.append(entry)
-        }
-
-        let timeline = Timeline(entries: entries, policy: .atEnd)
-        completion(timeline)
+        let nextUpdate = Calendar.current.date(byAdding: .second, value: 1, to: Date())
+        let timeLine = Timeline(entries: [SimpleEntry(date: Date(), suffixes: WidgetBridget.shared.topThree)],
+                                policy: .after(nextUpdate!))
+        completion(timeLine)
     }
 }
 
 struct SimpleEntry: TimelineEntry {
-    let date: Date
+    var date: Date
+    var suffixes: [String]
+
 }
 
 struct Artworks_WidgetEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        Text(entry.date, style: .time)
+            ZStack {
+                Colors.blueGreen
+                HStack {
+                    Spacer(minLength: 0)
+                    VStack(alignment: .leading, spacing: 10) {
+                        Text("Artworks")
+                            .widgetURL(LinkNames.artworks!)
+                            .foregroundColor(Colors.freesia)
+                            .background(.ultraThinMaterial)
+                            .cornerRadius(6)
+                        Text("Artists")
+                            .widgetURL(LinkNames.artists!)
+                            .foregroundColor(Colors.coral)
+                            .background(.ultraThinMaterial)
+                            .cornerRadius(6)
+                        Text("Suffixes")
+                            .widgetURL(LinkNames.suffixes!)
+                            .foregroundColor(Colors.fuchsia)
+                            .background(.ultraThinMaterial)
+                            .cornerRadius(6)
+                    }
+                    .padding(.vertical)
+                    Spacer(minLength: 0)
+                    VStack {
+                        ForEach(entry.suffixes, id: \.self) { suffix in
+                            Text(suffix)
+                                .foregroundColor(Colors.blueGreen)
+                        }
+                    }
+                    .background(ContainerRelativeShape().fill(.thinMaterial))
+                    Spacer(minLength: 0)
+                }
+            }
     }
 }
 
@@ -54,14 +81,24 @@ struct Artworks_Widget: Widget {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             Artworks_WidgetEntryView(entry: entry)
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("Artworks Widget")
+        .description("Dispalys suffixes analysis. Provides navigation to artworks app. ")
     }
 }
 
 struct Artworks_Widget_Previews: PreviewProvider {
     static var previews: some View {
-        Artworks_WidgetEntryView(entry: SimpleEntry(date: Date()))
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
+        Group {
+            Artworks_WidgetEntryView(entry: SimpleEntry(date: Date(), suffixes: [""]))
+                .previewContext(WidgetPreviewContext(family: .systemSmall))
+            Artworks_WidgetEntryView(entry: SimpleEntry(date: Date(), suffixes: [""]))
+                .previewContext(WidgetPreviewContext(family: .systemSmall))
+            Artworks_WidgetEntryView(entry: SimpleEntry(date: Date(), suffixes: [""]))
+                .previewContext(WidgetPreviewContext(family: .systemSmall))
+            Artworks_WidgetEntryView(entry: SimpleEntry(date: Date(), suffixes: [""]))
+                .previewContext(WidgetPreviewContext(family: .systemMedium))
+            Artworks_WidgetEntryView(entry: SimpleEntry(date: Date(), suffixes: [""]))
+                .previewContext(WidgetPreviewContext(family: .systemMedium))
+        }
     }
 }

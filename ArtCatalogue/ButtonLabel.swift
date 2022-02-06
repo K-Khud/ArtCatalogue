@@ -15,7 +15,7 @@ struct ButtonLabel: View {
         Text(title)
             .padding()
             .foregroundColor(.white)
-            .background(isGreen ? .green : .gray)
+            .background(isGreen ? Colors.blueGreen : Colors.freesia)
             .cornerRadius(8)
     }
 }
