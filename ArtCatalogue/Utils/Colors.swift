@@ -2,7 +2,7 @@
 //  Colors.swift
 //  ArtCatalogue
 //
-//  Created by Ekaterina Khudzhamkulova on 5.2.2022.
+//  Created by Ekaterina Khudzhamkulova on 9.2.2022.
 //
 
 import SwiftUI
