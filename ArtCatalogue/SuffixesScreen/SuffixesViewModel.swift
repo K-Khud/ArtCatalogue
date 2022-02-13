@@ -21,7 +21,7 @@ final class SuffixesViewModel: ObservableObject {
     @Published var allSuffixes: [SearchResult] = []
     @Published var allSuffixesSorted: [SearchResult] = []
     @Published var allSuffixesSelectedTab: Int = 0
-    @Published var searchResultsSelectedTab: Int = 0
+    @Published var searchResultsSelectedTab: Int = 1
     @Published var topTen: [SearchResult] = []
 
     @ObservedObject var scheduler: JobScheduler = JobScheduler<SearchResult>()
