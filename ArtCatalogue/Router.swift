@@ -12,6 +12,7 @@ class Router : ObservableObject {
     @Published var tabSelection: Int = 0
     var artworksViewModel: ArtworksViewModel = ArtworksViewModel()
     var artistsViewModel: ArtistsViewModel = ArtistsViewModel()
+    var scheduler: JobScheduler = JobScheduler<SearchResult>()
     var suffixesViewModel: SuffixesViewModel = SuffixesViewModel()
 
 }

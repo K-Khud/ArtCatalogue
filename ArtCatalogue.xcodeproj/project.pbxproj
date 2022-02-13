@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		020EE8F727B94D4700A8DD3A /* SearchResultDebouncedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020EE8F627B94D4700A8DD3A /* SearchResultDebouncedView.swift */; };
+		020EE8F827B94D4700A8DD3A /* SearchResultDebouncedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020EE8F627B94D4700A8DD3A /* SearchResultDebouncedView.swift */; };
+		020EE8FA27B94DD400A8DD3A /* ViewColorModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020EE8F927B94DD400A8DD3A /* ViewColorModifier.swift */; };
+		020EE8FB27B94DD400A8DD3A /* ViewColorModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020EE8F927B94DD400A8DD3A /* ViewColorModifier.swift */; };
+		020EE8FD27B94E6000A8DD3A /* SearchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020EE8FC27B94E6000A8DD3A /* SearchResultView.swift */; };
+		020EE8FE27B94E6000A8DD3A /* SearchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020EE8FC27B94E6000A8DD3A /* SearchResultView.swift */; };
 		021150B427A994A000FE427A /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021150B327A994A000FE427A /* TextFieldView.swift */; };
 		021150B727A997CC00FE427A /* ArtistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021150B627A997CC00FE427A /* ArtistView.swift */; };
 		021150B827A997CC00FE427A /* ArtistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021150B627A997CC00FE427A /* ArtistView.swift */; };
@@ -32,9 +38,11 @@
 		0214BEFA27B457200097F3B8 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0214BEF827B457200097F3B8 /* Colors.swift */; };
 		0214BEFC27B4573E0097F3B8 /* WidgetBridget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0214BEFB27B4573E0097F3B8 /* WidgetBridget.swift */; };
 		0214BEFD27B4573E0097F3B8 /* WidgetBridget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0214BEFB27B4573E0097F3B8 /* WidgetBridget.swift */; };
+		0214BEFF27B45A3F0097F3B8 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0214BEFE27B45A3F0097F3B8 /* Job.swift */; };
+		0214BF0127B45A5D0097F3B8 /* JobScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0214BF0027B45A5D0097F3B8 /* JobScheduler.swift */; };
 		02159C6D27A08BC7002F504A /* ButtonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02159C6C27A08BC7002F504A /* ButtonLabel.swift */; };
-		023A092F27AC5F0C0005454B /* SearchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023A092E27AC5F0C0005454B /* SearchResultView.swift */; };
-		023A093027AC5F0C0005454B /* SearchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023A092E27AC5F0C0005454B /* SearchResultView.swift */; };
+		023A092F27AC5F0C0005454B /* SuffixInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023A092E27AC5F0C0005454B /* SuffixInfoView.swift */; };
+		023A093027AC5F0C0005454B /* SuffixInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023A092E27AC5F0C0005454B /* SuffixInfoView.swift */; };
 		023A093227AC5FDB0005454B /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023A093127AC5FDB0005454B /* SearchResult.swift */; };
 		023A093327AC5FDB0005454B /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023A093127AC5FDB0005454B /* SearchResult.swift */; };
 		0247D06527934A6800B862D4 /* ArtCatalogueApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0247D06427934A6800B862D4 /* ArtCatalogueApp.swift */; };
@@ -59,6 +67,8 @@
 		0247D09D2794A71E00B862D4 /* ArtImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0247D09C2794A71E00B862D4 /* ArtImageViewModel.swift */; };
 		025A0421279C994A00E97E57 /* LoadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A0420279C994A00E97E57 /* LoadButton.swift */; };
 		025A0423279C99D900E97E57 /* LoaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A0422279C99D900E97E57 /* LoaderProtocol.swift */; };
+		025F6C4C27B59DD500DC0B5F /* JobScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0214BF0027B45A5D0097F3B8 /* JobScheduler.swift */; };
+		025F6C4D27B59DD500DC0B5F /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0214BEFE27B45A3F0097F3B8 /* Job.swift */; };
 		027F1B8327A6E08900247908 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 027F1B8227A6E08900247908 /* WidgetKit.framework */; };
 		027F1B8527A6E08900247908 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 027F1B8427A6E08900247908 /* SwiftUI.framework */; };
 		027F1B8827A6E08900247908 /* Artworks_Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027F1B8727A6E08900247908 /* Artworks_Widget.swift */; };
@@ -112,13 +122,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		020EE8F627B94D4700A8DD3A /* SearchResultDebouncedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultDebouncedView.swift; sourceTree = "<group>"; };
+		020EE8F927B94DD400A8DD3A /* ViewColorModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewColorModifier.swift; sourceTree = "<group>"; };
+		020EE8FC27B94E6000A8DD3A /* SearchResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultView.swift; sourceTree = "<group>"; };
 		021150B327A994A000FE427A /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		021150B627A997CC00FE427A /* ArtistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistView.swift; sourceTree = "<group>"; };
 		021150C927A99F5000FE427A /* SuffixesScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixesScreenView.swift; sourceTree = "<group>"; };
 		0214BEF827B457200097F3B8 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		0214BEFB27B4573E0097F3B8 /* WidgetBridget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetBridget.swift; sourceTree = "<group>"; };
+		0214BEFE27B45A3F0097F3B8 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
+		0214BF0027B45A5D0097F3B8 /* JobScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobScheduler.swift; sourceTree = "<group>"; };
 		02159C6C27A08BC7002F504A /* ButtonLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLabel.swift; sourceTree = "<group>"; };
-		023A092E27AC5F0C0005454B /* SearchResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultView.swift; sourceTree = "<group>"; };
+		023A092E27AC5F0C0005454B /* SuffixInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixInfoView.swift; sourceTree = "<group>"; };
 		023A093127AC5FDB0005454B /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		0247D06127934A6800B862D4 /* ArtCatalogue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtCatalogue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0247D06427934A6800B862D4 /* ArtCatalogueApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtCatalogueApp.swift; sourceTree = "<group>"; };
@@ -375,6 +390,8 @@
 				025A0422279C99D900E97E57 /* LoaderProtocol.swift */,
 				0214BEFB27B4573E0097F3B8 /* WidgetBridget.swift */,
 				0214BEF827B457200097F3B8 /* Colors.swift */,
+				0214BEFE27B45A3F0097F3B8 /* Job.swift */,
+				0214BF0027B45A5D0097F3B8 /* JobScheduler.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -383,7 +400,10 @@
 			isa = PBXGroup;
 			children = (
 				021150C927A99F5000FE427A /* SuffixesScreenView.swift */,
-				023A092E27AC5F0C0005454B /* SearchResultView.swift */,
+				023A092E27AC5F0C0005454B /* SuffixInfoView.swift */,
+				020EE8F927B94DD400A8DD3A /* ViewColorModifier.swift */,
+				020EE8F627B94D4700A8DD3A /* SearchResultDebouncedView.swift */,
+				020EE8FC27B94E6000A8DD3A /* SearchResultView.swift */,
 				02EC8F1327AADC960023BCDE /* SuffixesViewModel.swift */,
 				023A093127AC5FDB0005454B /* SearchResult.swift */,
 				02EC8F1D27AAE1680023BCDE /* SuffixIterator.swift */,
@@ -506,6 +526,7 @@
 				02AF611927AEBAE800B250DA /* LinkNames.swift in Sources */,
 				0247D0882794A1C300B862D4 /* NavigationContainerViewModel.swift in Sources */,
 				0247D0842794A13200B862D4 /* Screen.swift in Sources */,
+				0214BF0127B45A5D0097F3B8 /* JobScheduler.swift in Sources */,
 				021150B427A994A000FE427A /* TextFieldView.swift in Sources */,
 				023A093227AC5FDB0005454B /* SearchResult.swift in Sources */,
 				0247D08C2794A26C00B862D4 /* SwiftUIView.swift in Sources */,
@@ -513,11 +534,14 @@
 				0247D07E279499A100B862D4 /* Array.swift in Sources */,
 				028C7DEC27A0763D003AA548 /* ArtworkView.swift in Sources */,
 				02159C6D27A08BC7002F504A /* ButtonLabel.swift in Sources */,
+				020EE8FA27B94DD400A8DD3A /* ViewColorModifier.swift in Sources */,
 				021150CA27A99F5000FE427A /* SuffixesScreenView.swift in Sources */,
+				0214BEFF27B45A3F0097F3B8 /* Job.swift in Sources */,
 				02EC8F1427AADC960023BCDE /* SuffixesViewModel.swift in Sources */,
 				02EC8F1727AADE430023BCDE /* LoadSuffixesButton.swift in Sources */,
 				02DA456C279DBFBD00E8B515 /* ArtistDetailsScreen.swift in Sources */,
 				02EC8F1E27AAE1680023BCDE /* SuffixIterator.swift in Sources */,
+				020EE8F727B94D4700A8DD3A /* SearchResultDebouncedView.swift in Sources */,
 				0247D07727934CBC00B862D4 /* ArtworksScreenView.swift in Sources */,
 				02DA4565279DBA1500E8B515 /* ArtistsViewModel.swift in Sources */,
 				02EC8F1B27AAE1300023BCDE /* WrappedSequence.swift in Sources */,
@@ -528,7 +552,8 @@
 				021150B727A997CC00FE427A /* ArtistView.swift in Sources */,
 				0247D09D2794A71E00B862D4 /* ArtImageViewModel.swift in Sources */,
 				0247D0812794A0EB00B862D4 /* NavigationStack.swift in Sources */,
-				023A092F27AC5F0C0005454B /* SearchResultView.swift in Sources */,
+				023A092F27AC5F0C0005454B /* SuffixInfoView.swift in Sources */,
+				020EE8FD27B94E6000A8DD3A /* SearchResultView.swift in Sources */,
 				02DA4567279DBA2500E8B515 /* ArtistsScreenView.swift in Sources */,
 				0247D0922794A3B500B862D4 /* Router.swift in Sources */,
 				02DA456A279DBC8C00E8B515 /* LoadArtistsButton.swift in Sources */,
@@ -548,7 +573,7 @@
 			files = (
 				02FEF13927AEAE9E00DDB33B /* SnapshotView.swift in Sources */,
 				021150BF27A9992F00FE427A /* Array.swift in Sources */,
-				023A093027AC5F0C0005454B /* SearchResultView.swift in Sources */,
+				023A093027AC5F0C0005454B /* SuffixInfoView.swift in Sources */,
 				021150BE27A9990400FE427A /* LoadArtistsButton.swift in Sources */,
 				02EC8F1C27AAE1300023BCDE /* WrappedSequence.swift in Sources */,
 				021150C827A999D600FE427A /* SwiftUIView.swift in Sources */,
@@ -558,6 +583,7 @@
 				02FEF13727AEACCD00DDB33B /* PlaceholderView.swift in Sources */,
 				021150BB27A9980400FE427A /* ArtistsScreenView.swift in Sources */,
 				027F1B8827A6E08900247908 /* Artworks_Widget.swift in Sources */,
+				020EE8F827B94D4700A8DD3A /* SearchResultDebouncedView.swift in Sources */,
 				021150C127A9998100FE427A /* Transition.swift in Sources */,
 				0214BEFD27B4573E0097F3B8 /* WidgetBridget.swift in Sources */,
 				021150C427A999A600FE427A /* LazyView.swift in Sources */,
@@ -574,8 +600,12 @@
 				02EC8F1F27AAE1680023BCDE /* SuffixIterator.swift in Sources */,
 				02EC8F1927AADF480023BCDE /* LoadSuffixesButton.swift in Sources */,
 				021150C227A9998B00FE427A /* NavigationStack.swift in Sources */,
+				020EE8FE27B94E6000A8DD3A /* SearchResultView.swift in Sources */,
+				020EE8FB27B94DD400A8DD3A /* ViewColorModifier.swift in Sources */,
 				02AF611A27AEBAE800B250DA /* LinkNames.swift in Sources */,
+				025F6C4C27B59DD500DC0B5F /* JobScheduler.swift in Sources */,
 				021150B927A997F900FE427A /* ArtistsViewModel.swift in Sources */,
+				025F6C4D27B59DD500DC0B5F /* Job.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

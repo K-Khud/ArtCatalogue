@@ -12,22 +12,30 @@ import Combine
 final class SuffixesViewModel: ObservableObject {
     @Published var artists: [ArtistData] = []
     @Published var isPageLoading: Bool = false
+
     @Published var searchText: String = ""
+    @Published var debouncedText = ""
+
     @Published var searchResult: [SearchResult] = []
+
     @Published var allSuffixes: [SearchResult] = []
     @Published var allSuffixesSorted: [SearchResult] = []
-    @Published var selectedPickerTab: Int = 0
+    @Published var allSuffixesSelectedTab: Int = 0
+    @Published var searchResultsSelectedTab: Int = 0
     @Published var topTen: [SearchResult] = []
 
+    @ObservedObject var scheduler: JobScheduler = JobScheduler<SearchResult>()
+
     private var suffixStat: [String : Int] = [:]
+    private let dateFormatter = DateFormatter()
 
     var page: Int = 0
+
 
     var subscription: Set<AnyCancellable> = []
 
     init() {
         $searchText
-            .debounce(for: .milliseconds(800), scheduler: RunLoop.main)
             .map({ (string) -> String? in
                 if string.count < 3 {
                     return nil
@@ -35,9 +43,13 @@ final class SuffixesViewModel: ObservableObject {
                 return string
             })
             .compactMap{ $0 }
+            .debounce(for: .milliseconds(800), scheduler: RunLoop.main)
+            .removeDuplicates()
             .sink { (_) in
-            } receiveValue: { [self] (searchField) in
-                searchSuffixes(searchItems: searchField)
+            } receiveValue: { [unowned self] searchField in
+                self.debouncedText = searchField
+                let firstJob = Job(findSuffix(debouncedText))
+                scheduler.scheduleJob(firstJob)
             }.store(in: &subscription)
    }
 
@@ -74,6 +86,17 @@ final class SuffixesViewModel: ObservableObject {
         let sorted = allSuffixes.sorted(by: {$0.counter > $1.counter})
         guard sorted.count >= 10 else {return}
         topTen = Array(sorted[..<10])
+    }
+
+// MARK: - Private methods
+    private func findSuffix(_ suffix: String) -> SearchResult {
+        let start = CFAbsoluteTimeGetCurrent()
+
+        searchSuffixes(searchItems: suffix)
+
+        let diff = CFAbsoluteTimeGetCurrent() - start
+
+        return SearchResult(suffix: suffix, count: "n/a", timeEst: diff)
     }
 
     private func splitIntoSuffixes() {

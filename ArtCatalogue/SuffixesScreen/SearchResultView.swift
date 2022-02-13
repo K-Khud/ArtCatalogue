@@ -2,25 +2,23 @@
 //  SearchResultView.swift
 //  ArtCatalogue
 //
-//  Created by Ekaterina Khudzhamkulova on 3.2.2022.
+//  Created by Ekaterina Khudzhamkulova on 13.2.2022.
 //
 
+import Foundation
 import SwiftUI
 
 struct SearchResultView: View {
-    @State var suffix: String
-    @State var count: String
-    var body: some View {
-        HStack {
-            Text(suffix)
-            Spacer()
-            Text(count)
-        }
-    }
-}
+    @ObservedObject var viewModel: SuffixesViewModel
+    @State var suffixes: [SearchResult] = []
 
-struct SearchResultView_Previews: PreviewProvider {
-    static var previews: some View {
-        SearchResultView(suffix: "suffix", count: "1")
+    var body: some View {
+        List {
+            ForEach(suffixes, id: \.self) { suffixInfo in
+                SuffixInfoView(suffix: suffixInfo.suffix, count: suffixInfo.counter)
+            }.onReceive(viewModel.$searchResult) { searchResult in
+                suffixes = searchResult
+            }
+        }
     }
 }
