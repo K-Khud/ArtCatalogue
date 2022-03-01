@@ -35,6 +35,9 @@ struct SuffixesScreenView: View {
                 } else {
                     SearchResultDebouncedView(viewModel: viewModel)
                 }
+            }.onAppear {
+                viewModel.load()
+                viewModel.loadFromFile()
             }
             Group {
                 Picker("Suffix lists", selection: $viewModel.allSuffixesSelectedTab) {

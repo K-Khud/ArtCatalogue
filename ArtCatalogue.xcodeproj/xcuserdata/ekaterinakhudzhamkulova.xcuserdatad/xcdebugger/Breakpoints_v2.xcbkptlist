@@ -7,64 +7,64 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "6891CABA-F7E5-4F77-983D-33635BAE1EC8"
+            uuid = "FD03CDCB-E169-485A-B6B2-1ABACDDF5F38"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ArtCatalogue/SuffixesScreen/FileService.swift"
+            filePath = "ArtCatalogue/SuffixesScreen/SuffixesViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "save(_:)"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
+            landmarkName = "loadFromFile()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "6891CABA-F7E5-4F77-983D-33635BAE1EC8 - b19c3b1280c4b867"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static ArtCatalogue.FileService.save(Swift.Array&lt;ArtCatalogue.SearchResult&gt;) -&gt; ()"
-                  moduleName = "ArtCatalogue"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ekaterinakhudzhamkulova/Desktop/Otus/ArtCatalogue/ArtCatalogue/SuffixesScreen/FileService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "308">
-               </Location>
-               <Location
-                  uuid = "6891CABA-F7E5-4F77-983D-33635BAE1EC8 - b19c3b1280c4b867"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static ArtCatalogue.FileService.save(Swift.Array&lt;ArtCatalogue.SearchResult&gt;) -&gt; ()"
-                  moduleName = "ArtCatalogue"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ekaterinakhudzhamkulova/Desktop/Otus/ArtCatalogue/ArtCatalogue/SuffixesScreen/FileService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "368">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "88A66DFF-C0C3-4E28-A0F9-F458C5A44774"
+            uuid = "BE166078-FEE7-41DB-8C38-4C39062080E1"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ArtCatalogue/SuffixesScreen/FileService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "load()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FF382D14-5498-4D12-ACCE-8BE38D83689D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ArtCatalogue/SuffixesScreen/FileService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
             landmarkName = "createString(from:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "91AC461B-C12F-4B5E-9D38-EDA6F7C140B7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ArtCatalogue/SuffixesScreen/FileService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "save(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

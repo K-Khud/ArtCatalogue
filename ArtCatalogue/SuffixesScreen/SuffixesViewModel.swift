@@ -111,7 +111,7 @@ final class SuffixesViewModel: ObservableObject {
     }
 
     func loadFromFile() {
-        guard debouncedResult.count > 0 else {
+        guard debouncedResult.count == 0 else {
             return
         }
         debouncedResult = FileService.load()
@@ -120,6 +120,7 @@ final class SuffixesViewModel: ObservableObject {
     // MARK: - Network Request Caching Methods
 
     private func loadFromCache(_ lastPageCached: inout Int) {
+        artists.removeAll()
         do {
             let items = try cacheService.queryObjects(with: ArtistsCache.self)
             items.forEach { cachedObject in
@@ -131,7 +132,7 @@ final class SuffixesViewModel: ObservableObject {
                 lastPageCached = cachedObject.page
                 
             }
-            print("Success in loafing pages frome cache")
+            print("Success in loading pages frome cache")
 
         } catch {
             print("Error fetching cache from realm: \(error.localizedDescription)")

@@ -18,8 +18,6 @@ struct SearchResultDebouncedView: View {
                 SuffixInfoView(suffix: searchResult.suffix,
                                  count: String(searchResult.timeEst), index: index, totalQty: totalQty)
             }
-        }.onAppear {
-            viewModel.loadFromFile()
         }
     }
 }
