@@ -6,35 +6,34 @@
 //
 
 import Foundation
-//import SwiftUI
+import SwiftUI
 
 class JobScheduler<T: Comparable>: ObservableObject {
-    @Published var sortedResults: [T] = []
-    @Published private var bufferResults: [T] = []
+    @Published var debouncedResults: [T] = []
 
-    init() {
-        $bufferResults
-            .receive(on: RunLoop.main)
-            .assign(to: &$sortedResults)
-    }
+    init() {    }
 
 
     func scheduleJob(_ job: Job<T>) {
         Task {
-            var bufferArray: [T] = sortedResults
+            var bufferArray: [T] = debouncedResults
             let newResult = await job.performJob()
 
             let index = bufferArray.firstIndex(of: newResult)
 
             guard let index = index else {
                 bufferArray.append(newResult)
-                bufferResults = bufferArray.sorted()
+                debouncedResults = bufferArray.sorted()
                 return
 
             }
             bufferArray[index] = newResult
 
-            bufferResults = bufferArray.sorted()
+            debouncedResults = bufferArray.sorted()
+            print("bufferResults")
+
+            print(debouncedResults)
+
 
         }
     }

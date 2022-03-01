@@ -41,6 +41,8 @@
 		0214BEFF27B45A3F0097F3B8 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0214BEFE27B45A3F0097F3B8 /* Job.swift */; };
 		0214BF0127B45A5D0097F3B8 /* JobScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0214BF0027B45A5D0097F3B8 /* JobScheduler.swift */; };
 		02159C6D27A08BC7002F504A /* ButtonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02159C6C27A08BC7002F504A /* ButtonLabel.swift */; };
+		0227FE2827CEB65800856D6C /* FileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0227FE2727CEB65800856D6C /* FileService.swift */; };
+		0227FE2927CEBD0B00856D6C /* FileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0227FE2727CEB65800856D6C /* FileService.swift */; };
 		023A092F27AC5F0C0005454B /* SuffixInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023A092E27AC5F0C0005454B /* SuffixInfoView.swift */; };
 		023A093027AC5F0C0005454B /* SuffixInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023A092E27AC5F0C0005454B /* SuffixInfoView.swift */; };
 		023A093227AC5FDB0005454B /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023A093127AC5FDB0005454B /* SearchResult.swift */; };
@@ -69,12 +71,18 @@
 		025A0423279C99D900E97E57 /* LoaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A0422279C99D900E97E57 /* LoaderProtocol.swift */; };
 		025F6C4C27B59DD500DC0B5F /* JobScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0214BF0027B45A5D0097F3B8 /* JobScheduler.swift */; };
 		025F6C4D27B59DD500DC0B5F /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0214BEFE27B45A3F0097F3B8 /* Job.swift */; };
+		026F000027BC3F2B00E32EA2 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 026FFFFF27BC3F2B00E32EA2 /* RealmSwift */; };
+		026FFFFC27BC3F0600E32EA2 /* CacheService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0289E09E27BC097D00A751E5 /* CacheService.swift */; };
+		026FFFFE27BC3F2B00E32EA2 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 026FFFFD27BC3F2B00E32EA2 /* Realm */; };
 		027F1B8327A6E08900247908 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 027F1B8227A6E08900247908 /* WidgetKit.framework */; };
 		027F1B8527A6E08900247908 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 027F1B8427A6E08900247908 /* SwiftUI.framework */; };
 		027F1B8827A6E08900247908 /* Artworks_Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027F1B8727A6E08900247908 /* Artworks_Widget.swift */; };
 		027F1B8A27A6E08A00247908 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 027F1B8927A6E08A00247908 /* Assets.xcassets */; };
 		027F1B8E27A6E08A00247908 /* Artworks WidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 027F1B8127A6E08900247908 /* Artworks WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		027F1B9427A6E11500247908 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 027F1B9327A6E11500247908 /* Networking */; };
+		0289E09B27BC093B00A751E5 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 0289E09A27BC093B00A751E5 /* Realm */; };
+		0289E09D27BC093B00A751E5 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0289E09C27BC093B00A751E5 /* RealmSwift */; };
+		0289E09F27BC097D00A751E5 /* CacheService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0289E09E27BC097D00A751E5 /* CacheService.swift */; };
 		028C7DEC27A0763D003AA548 /* ArtworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C7DEB27A0763D003AA548 /* ArtworkView.swift */; };
 		028C7DEE27A0766F003AA548 /* AnimationOffsetModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C7DED27A0766F003AA548 /* AnimationOffsetModifier.swift */; };
 		028C7DF027A076CC003AA548 /* AnimatingCellModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C7DEF27A076CC003AA548 /* AnimatingCellModifier.swift */; };
@@ -133,6 +141,7 @@
 		0214BEFE27B45A3F0097F3B8 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 		0214BF0027B45A5D0097F3B8 /* JobScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobScheduler.swift; sourceTree = "<group>"; };
 		02159C6C27A08BC7002F504A /* ButtonLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLabel.swift; sourceTree = "<group>"; };
+		0227FE2727CEB65800856D6C /* FileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileService.swift; sourceTree = "<group>"; };
 		023A092E27AC5F0C0005454B /* SuffixInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixInfoView.swift; sourceTree = "<group>"; };
 		023A093127AC5FDB0005454B /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		0247D06127934A6800B862D4 /* ArtCatalogue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtCatalogue.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,6 +173,7 @@
 		027F1B8727A6E08900247908 /* Artworks_Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artworks_Widget.swift; sourceTree = "<group>"; };
 		027F1B8927A6E08A00247908 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		027F1B8B27A6E08A00247908 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0289E09E27BC097D00A751E5 /* CacheService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheService.swift; sourceTree = "<group>"; };
 		028C7DEB27A0763D003AA548 /* ArtworkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkView.swift; sourceTree = "<group>"; };
 		028C7DED27A0766F003AA548 /* AnimationOffsetModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationOffsetModifier.swift; sourceTree = "<group>"; };
 		028C7DEF27A076CC003AA548 /* AnimatingCellModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatingCellModifier.swift; sourceTree = "<group>"; };
@@ -187,6 +197,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0289E09D27BC093B00A751E5 /* RealmSwift in Frameworks */,
+				0289E09B27BC093B00A751E5 /* Realm in Frameworks */,
 				0247D07527934AA500B862D4 /* Networking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,6 +209,8 @@
 			files = (
 				027F1B9427A6E11500247908 /* Networking in Frameworks */,
 				027F1B8527A6E08900247908 /* SwiftUI.framework in Frameworks */,
+				026FFFFE27BC3F2B00E32EA2 /* Realm in Frameworks */,
+				026F000027BC3F2B00E32EA2 /* RealmSwift in Frameworks */,
 				027F1B8327A6E08900247908 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,6 +246,7 @@
 				0247D08F2794A37000B862D4 /* MainTabView.swift */,
 				0247D0912794A3B500B862D4 /* Router.swift */,
 				0247D0932794A3D100B862D4 /* ConfigManager.swift */,
+				0289E0A027BC098300A751E5 /* CacheService */,
 				02EA812227B4553C00483413 /* Utils */,
 				02EA812127B4551C00483413 /* Views */,
 				0247D0822794A0F400B862D4 /* NavigationStack */,
@@ -326,6 +341,14 @@
 			path = "Artworks Widget";
 			sourceTree = "<group>";
 		};
+		0289E0A027BC098300A751E5 /* CacheService */ = {
+			isa = PBXGroup;
+			children = (
+				0289E09E27BC097D00A751E5 /* CacheService.swift */,
+			);
+			path = CacheService;
+			sourceTree = "<group>";
+		};
 		02DA4568279DBA2A00E8B515 /* ArtistsScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -404,6 +427,7 @@
 				020EE8F927B94DD400A8DD3A /* ViewColorModifier.swift */,
 				020EE8F627B94D4700A8DD3A /* SearchResultDebouncedView.swift */,
 				020EE8FC27B94E6000A8DD3A /* SearchResultView.swift */,
+				0227FE2727CEB65800856D6C /* FileService.swift */,
 				02EC8F1327AADC960023BCDE /* SuffixesViewModel.swift */,
 				023A093127AC5FDB0005454B /* SearchResult.swift */,
 				02EC8F1D27AAE1680023BCDE /* SuffixIterator.swift */,
@@ -432,6 +456,8 @@
 			name = ArtCatalogue;
 			packageProductDependencies = (
 				0247D07427934AA500B862D4 /* Networking */,
+				0289E09A27BC093B00A751E5 /* Realm */,
+				0289E09C27BC093B00A751E5 /* RealmSwift */,
 			);
 			productName = ArtCatalogue;
 			productReference = 0247D06127934A6800B862D4 /* ArtCatalogue.app */;
@@ -452,6 +478,8 @@
 			name = "Artworks WidgetExtension";
 			packageProductDependencies = (
 				027F1B9327A6E11500247908 /* Networking */,
+				026FFFFD27BC3F2B00E32EA2 /* Realm */,
+				026FFFFF27BC3F2B00E32EA2 /* RealmSwift */,
 			);
 			productName = "Artworks WidgetExtension";
 			productReference = 027F1B8127A6E08900247908 /* Artworks WidgetExtension.appex */;
@@ -484,6 +512,9 @@
 				Base,
 			);
 			mainGroup = 0247D05827934A6800B862D4;
+			packageReferences = (
+				0289E09927BC093B00A751E5 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = 0247D06227934A6800B862D4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -526,11 +557,13 @@
 				02AF611927AEBAE800B250DA /* LinkNames.swift in Sources */,
 				0247D0882794A1C300B862D4 /* NavigationContainerViewModel.swift in Sources */,
 				0247D0842794A13200B862D4 /* Screen.swift in Sources */,
+				0227FE2827CEB65800856D6C /* FileService.swift in Sources */,
 				0214BF0127B45A5D0097F3B8 /* JobScheduler.swift in Sources */,
 				021150B427A994A000FE427A /* TextFieldView.swift in Sources */,
 				023A093227AC5FDB0005454B /* SearchResult.swift in Sources */,
 				0247D08C2794A26C00B862D4 /* SwiftUIView.swift in Sources */,
 				028C7DF027A076CC003AA548 /* AnimatingCellModifier.swift in Sources */,
+				0289E09F27BC097D00A751E5 /* CacheService.swift in Sources */,
 				0247D07E279499A100B862D4 /* Array.swift in Sources */,
 				028C7DEC27A0763D003AA548 /* ArtworkView.swift in Sources */,
 				02159C6D27A08BC7002F504A /* ButtonLabel.swift in Sources */,
@@ -586,6 +619,7 @@
 				020EE8F827B94D4700A8DD3A /* SearchResultDebouncedView.swift in Sources */,
 				021150C127A9998100FE427A /* Transition.swift in Sources */,
 				0214BEFD27B4573E0097F3B8 /* WidgetBridget.swift in Sources */,
+				0227FE2927CEBD0B00856D6C /* FileService.swift in Sources */,
 				021150C427A999A600FE427A /* LazyView.swift in Sources */,
 				023A093327AC5FDB0005454B /* SearchResult.swift in Sources */,
 				021150C027A9997C00FE427A /* Screen.swift in Sources */,
@@ -605,6 +639,7 @@
 				02AF611A27AEBAE800B250DA /* LinkNames.swift in Sources */,
 				025F6C4C27B59DD500DC0B5F /* JobScheduler.swift in Sources */,
 				021150B927A997F900FE427A /* ArtistsViewModel.swift in Sources */,
+				026FFFFC27BC3F0600E32EA2 /* CacheService.swift in Sources */,
 				025F6C4D27B59DD500DC0B5F /* Job.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -807,6 +842,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4485DWBU98;
@@ -822,6 +858,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.khudzhamkulova.ArtCatalogue.Artworks-Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -834,6 +871,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4485DWBU98;
@@ -849,6 +887,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.khudzhamkulova.ArtCatalogue.Artworks-Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -888,14 +927,45 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		0289E09927BC093B00A751E5 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		0247D07427934AA500B862D4 /* Networking */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Networking;
 		};
+		026FFFFD27BC3F2B00E32EA2 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0289E09927BC093B00A751E5 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		026FFFFF27BC3F2B00E32EA2 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0289E09927BC093B00A751E5 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
 		027F1B9327A6E11500247908 /* Networking */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Networking;
+		};
+		0289E09A27BC093B00A751E5 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0289E09927BC093B00A751E5 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		0289E09C27BC093B00A751E5 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0289E09927BC093B00A751E5 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

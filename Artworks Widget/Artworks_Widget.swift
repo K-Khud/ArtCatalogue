@@ -66,8 +66,7 @@ struct Artworks_WidgetEntryView : View {
                                 .foregroundColor(Colors.blueGreen)
                         }
                     }
-                    .background(ContainerRelativeShape().fill(.thinMaterial))
-                    Spacer(minLength: 0)
+                     Spacer(minLength: 0)
                 }
             }
     }

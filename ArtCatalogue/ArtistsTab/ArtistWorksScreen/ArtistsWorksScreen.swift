@@ -35,6 +35,6 @@ struct ArtistsWorksScreen: View {
 
 struct ArtistsWorksScreen_Previews: PreviewProvider {
     static var previews: some View {
-        ArtistsWorksScreen(artist: ArtistData(id: 0, title: "", birthDate: 0, birthPlace: 0, deathDate: 0, artworkIds: [0]))
+        ArtistsWorksScreen(artist: ArtistData(id: 0, title: "", birthDate: 0, birthPlace: "", deathDate: 0, artworkIds: [0]))
     }
 }

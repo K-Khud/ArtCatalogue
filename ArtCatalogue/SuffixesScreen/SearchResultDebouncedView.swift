@@ -9,20 +9,17 @@ import SwiftUI
 
 struct SearchResultDebouncedView: View {
     @ObservedObject var viewModel: SuffixesViewModel
-    @State var suffixes: [SearchResult] = []
 
     var body: some View {
         List {
-
-            ForEach(suffixes.indices, id: \.self) { index in
-                let searchResult = suffixes[index]
-                let totalQty = suffixes.count
+            ForEach(viewModel.debouncedResult.indices, id: \.self) { index in
+                let searchResult = viewModel.debouncedResult[index]
+                let totalQty = viewModel.debouncedResult.count
                 SuffixInfoView(suffix: searchResult.suffix,
                                  count: String(searchResult.timeEst), index: index, totalQty: totalQty)
-
-            }.onReceive(viewModel.scheduler.$sortedResults) { sortedResults in
-                suffixes = sortedResults
             }
+        }.onAppear {
+            viewModel.loadFromFile()
         }
     }
 }

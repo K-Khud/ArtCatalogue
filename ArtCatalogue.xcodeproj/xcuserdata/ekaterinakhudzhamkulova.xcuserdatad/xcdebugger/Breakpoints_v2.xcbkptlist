@@ -7,32 +7,64 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "17D31904-C4EA-4A96-9950-2F18F86440FE"
+            uuid = "6891CABA-F7E5-4F77-983D-33635BAE1EC8"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Modules/Networking/Sources/Networking/APIs/ArtEndpointsAPI.swift"
+            filePath = "ArtCatalogue/SuffixesScreen/FileService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
-            landmarkName = "getArtworks(page:apiResponseQueue:completion:)"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "save(_:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6891CABA-F7E5-4F77-983D-33635BAE1EC8 - b19c3b1280c4b867"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static ArtCatalogue.FileService.save(Swift.Array&lt;ArtCatalogue.SearchResult&gt;) -&gt; ()"
+                  moduleName = "ArtCatalogue"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ekaterinakhudzhamkulova/Desktop/Otus/ArtCatalogue/ArtCatalogue/SuffixesScreen/FileService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "308">
+               </Location>
+               <Location
+                  uuid = "6891CABA-F7E5-4F77-983D-33635BAE1EC8 - b19c3b1280c4b867"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static ArtCatalogue.FileService.save(Swift.Array&lt;ArtCatalogue.SearchResult&gt;) -&gt; ()"
+                  moduleName = "ArtCatalogue"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ekaterinakhudzhamkulova/Desktop/Otus/ArtCatalogue/ArtCatalogue/SuffixesScreen/FileService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "368">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "CB5CF688-B713-4CAD-A7A0-71FEA675AEF9"
+            uuid = "88A66DFF-C0C3-4E28-A0F9-F458C5A44774"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Modules/Networking/Sources/Networking/APIs/ArtEndpointsAPI.swift"
+            filePath = "ArtCatalogue/SuffixesScreen/FileService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
-            landmarkName = "getArtworksWithRequestBuilder(page:)"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "createString(from:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

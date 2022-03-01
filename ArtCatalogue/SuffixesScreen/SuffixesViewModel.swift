@@ -23,16 +23,19 @@ final class SuffixesViewModel: ObservableObject {
     @Published var allSuffixesSelectedTab: Int = 0
     @Published var searchResultsSelectedTab: Int = 1
     @Published var topTen: [SearchResult] = []
+    @Published var debouncedResult: [SearchResult] = []
 
     @ObservedObject var scheduler: JobScheduler = JobScheduler<SearchResult>()
+
+    private var cacheService = try! CacheService()
 
     private var suffixStat: [String : Int] = [:]
     private let dateFormatter = DateFormatter()
 
     var page: Int = 0
 
-
     var subscription: Set<AnyCancellable> = []
+    var debouncedSubscription: Set<AnyCancellable> = []
 
     init() {
         $searchText
@@ -51,6 +54,15 @@ final class SuffixesViewModel: ObservableObject {
                 let firstJob = Job(findSuffix(debouncedText))
                 scheduler.scheduleJob(firstJob)
             }.store(in: &subscription)
+
+        scheduler.$debouncedResults
+            .subscribe(on: RunLoop.main)
+            .receive(on: RunLoop.main)
+            .sink { sortedResults in
+                self.debouncedResult = sortedResults
+                self.saveToFile()
+            }
+            .store(in: &debouncedSubscription)
    }
 
     var body: some View {
@@ -58,22 +70,87 @@ final class SuffixesViewModel: ObservableObject {
     }
 
     func load() {
+        
         guard isPageLoading == false else {
             return
         }
+
         allSuffixes.removeAll()
         suffixStat.removeAll()
         isPageLoading = true
-
         page += 1
+
+        var lastPageCached = 0
+
+        loadFromCache(&lastPageCached)
+
+        guard artists.isEmpty && lastPageCached < page else {
+            self.isPageLoading = false
+            self.splitIntoSuffixes()
+            return
+        }
 
         DispatchQueue.global(qos: .background).async {
             ArtEndpointsAPI.getArtists(page: self.page, completion: { data, error in
                 self.artists.append(contentsOf: data?.data ?? [])
                 self.isPageLoading = false
                 self.splitIntoSuffixes()
+                guard let data = data else { return }
+                self.addToCache(items: data.data, page: self.page)
             })
         }
+    }
+
+    // MARK: - Saving and loading of cached testing results
+
+    private func saveToFile() {
+        guard debouncedResult.count > 0 else {
+            return
+        }
+        FileService.save(debouncedResult)
+    }
+
+    func loadFromFile() {
+        guard debouncedResult.count > 0 else {
+            return
+        }
+        debouncedResult = FileService.load()
+    }
+
+    // MARK: - Network Request Caching Methods
+
+    private func loadFromCache(_ lastPageCached: inout Int) {
+        do {
+            let items = try cacheService.queryObjects(with: ArtistsCache.self)
+            items.forEach { cachedObject in
+                let cachedArtists = cachedObject.payload
+                cachedArtists.forEach { artistObject in
+                    let newElement = ArtistData(managedObject: artistObject)
+                    artists.append(newElement)
+                }
+                lastPageCached = cachedObject.page
+                
+            }
+            print("Success in loafing pages frome cache")
+
+        } catch {
+            print("Error fetching cache from realm: \(error.localizedDescription)")
+        }
+    }
+
+    private func addToCache(items: [ArtistData], page: Int) {
+        var dataObject: [ArtistDataObject] = []
+        items.forEach { artistItem in
+            dataObject.append(ArtistDataObject(id: artistItem.id,
+                                               title: artistItem.title,
+                                               birthDate: artistItem.birthDate ?? 0,
+                                               birthPlace: artistItem.birthPlace ?? "",
+                                               deathDate: artistItem.deathDate ?? 0,
+                                               artworkIds: artistItem.artworkIds))
+        }
+        let cache = ArtistsCache(page: page, payload: dataObject)
+        cacheService.add(cache)
+
     }
 
     func changeOrder(isAscOrder: Bool = true) {

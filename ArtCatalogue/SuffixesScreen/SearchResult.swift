@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SearchResult: Equatable, Hashable, Comparable {
+struct SearchResult: Equatable, Hashable, Comparable, Codable {
 
     let suffix: String
     var counter: String

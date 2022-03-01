@@ -15,11 +15,11 @@ public struct ArtistData: Codable, Hashable, Identifiable {
     public var id: Double
     public var title: String
     public var birthDate: Double?
-    public var birthPlace: AnyCodable?
-    public var deathDate: AnyCodable?
+    public var birthPlace: String?
+    public var deathDate: Double?
     public var artworkIds: [Int]
 
-    public init(id: Double, title: String, birthDate: Double? = nil, birthPlace: AnyCodable? = nil, deathDate: AnyCodable? = nil, artworkIds: [Int]) {
+    public init(id: Double, title: String, birthDate: Double? = nil, birthPlace: String? = nil, deathDate: Double? = nil, artworkIds: [Int]) {
         self.id = id
         self.title = title
         self.birthDate = birthDate
