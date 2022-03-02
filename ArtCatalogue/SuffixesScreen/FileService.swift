@@ -38,18 +38,21 @@ class FileService {
         
         let jsonData = createString(from: searchResults)
         
-        if !fileManager.fileExists(atPath: newFileUrl.path) {
-            
-            fileManager.createFile(atPath: newFileUrl.path, contents: jsonData, attributes: nil)
-            
-        } else {
-            // update file
-            if let fileUpdater = try? FileHandle(forUpdating: newFileUrl) {
-                fileUpdater.seekToEndOfFile()
-                fileUpdater.write(jsonData)
-                fileUpdater.closeFile()
+        if fileManager.fileExists(atPath: newFileUrl.path) {
+            do {
+                try fileManager.removeItem(atPath: newFileUrl.path)
+            } catch let error {
+                print("error occurred, here are the details:\n \(error)")
             }
         }
+        fileManager.createFile(atPath: newFileUrl.path, contents: jsonData, attributes: nil)
+
+//        if let fileUpdater = try? FileHandle(forUpdating: newFileUrl) {
+//            fileUpdater.seekToEndOfFile()
+//            fileUpdater.write(jsonData)
+//            fileUpdater.closeFile()
+//
+//        }
         
     }
     
