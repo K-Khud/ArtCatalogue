@@ -8,8 +8,14 @@
 import Networking
 import SwiftUI
 import Combine
+import RealmSwift
 
 final class SuffixesViewModel: ObservableObject {
+    // инжектинг в переменные инстанса класса
+
+    @Injected var network: NetworkService?
+    @Injected var cache: CacheService?
+
     @Published var artists: [ArtistData] = []
     @Published var isPageLoading: Bool = false
 
@@ -27,7 +33,7 @@ final class SuffixesViewModel: ObservableObject {
 
     @ObservedObject var scheduler: JobScheduler = JobScheduler<SearchResult>()
 
-    private var cacheService = try! CacheService()
+//    private var cacheService = try! CacheService()
 
     private var suffixStat: [String : Int] = [:]
     private let dateFormatter = DateFormatter()
@@ -38,6 +44,7 @@ final class SuffixesViewModel: ObservableObject {
     var debouncedSubscription: Set<AnyCancellable> = []
 
     init() {
+        loadFromFile()
         $searchText
             .map({ (string) -> String? in
                 if string.count < 3 {
@@ -59,6 +66,9 @@ final class SuffixesViewModel: ObservableObject {
             .subscribe(on: RunLoop.main)
             .receive(on: RunLoop.main)
             .sink { sortedResults in
+                guard !sortedResults.isEmpty else {
+                    return
+                }
                 self.debouncedResult = sortedResults
                 self.saveToFile()
             }
@@ -91,7 +101,7 @@ final class SuffixesViewModel: ObservableObject {
         }
 
         DispatchQueue.global(qos: .background).async {
-            ArtEndpointsAPI.getArtists(page: self.page, completion: { data, error in
+            self.network?.getArtists(page: self.page, completion: { data, error in
                 self.artists.append(contentsOf: data?.data ?? [])
                 self.isPageLoading = false
                 self.splitIntoSuffixes()
@@ -122,8 +132,8 @@ final class SuffixesViewModel: ObservableObject {
     private func loadFromCache(_ lastPageCached: inout Int) {
         artists.removeAll()
         do {
-            let items = try cacheService.queryObjects(with: ArtistsCache.self)
-            items.forEach { cachedObject in
+            let items = try cache?.queryObjects(with: ArtistsCache.self)
+            items?.forEach { cachedObject in
                 let cachedArtists = cachedObject.payload
                 cachedArtists.forEach { artistObject in
                     let newElement = ArtistData(managedObject: artistObject)
@@ -149,9 +159,8 @@ final class SuffixesViewModel: ObservableObject {
                                                deathDate: artistItem.deathDate ?? 0,
                                                artworkIds: artistItem.artworkIds))
         }
-        let cache = ArtistsCache(page: page, payload: dataObject)
-        cacheService.add(cache)
-
+        let newCache = ArtistsCache(page: page, payload: dataObject)
+        cache?.add(newCache)
     }
 
     func changeOrder(isAscOrder: Bool = true) {

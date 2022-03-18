@@ -33,9 +33,9 @@ struct ArtworksScreenView: View {
                         }
                 }
             }
-//            .onAppear(perform: {
-//                worksViewModel.load()
-//            })
+            .onAppear(perform: {
+                worksViewModel.load()
+            })
             .listStyle(.plain)
         }
     }

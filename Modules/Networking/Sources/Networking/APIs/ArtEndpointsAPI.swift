@@ -91,17 +91,6 @@ open class ArtEndpointsAPI {
        }
    }
 
-//    open class func getArtworks(apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: ResponseArtworks?, _ error: Error?) -> Void)) -> RequestTask {
-//        return getArtworksWithRequestBuilder().execute(apiResponseQueue) { result in
-//            switch result {
-//            case let .success(response):
-//                completion(response.body, nil)
-//            case let .failure(error):
-//                completion(nil, error)
-//            }
-//        }
-//    }
-
     /**
      Artworks Endpoint
      - GET /artworks
@@ -145,23 +134,4 @@ open class ArtEndpointsAPI {
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters)
     }
-
-
-//    open class func getArtworksWithRequestBuilder() -> RequestBuilder<ResponseArtworks> {
-//        let localVariablePath = "/artworks"
-//        let localVariableURLString = OpenAPIClientAPI.basePath + localVariablePath
-//        let localVariableParameters: [String: Any]? = nil
-//
-//        let localVariableUrlComponents = URLComponents(string: localVariableURLString)
-//
-//        let localVariableNillableHeaders: [String: Any?] = [
-//            :
-//        ]
-//
-//        let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
-//
-//        let localVariableRequestBuilder: RequestBuilder<ResponseArtworks>.Type = OpenAPIClientAPI.requestBuilderFactory.getBuilder()
-//
-//        return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters)
-//    }
 }

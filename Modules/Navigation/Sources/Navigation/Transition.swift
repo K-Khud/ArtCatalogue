@@ -5,15 +5,14 @@
 //  Created by Ekaterina Khudzhamkulova on 16.1.2022.
 //
 
-import Foundation
 import SwiftUI
 
-enum Transition {
+public enum Transition {
     case none
     case custom(AnyTransition)
 }
 
-enum NavigationType {
+public enum NavigationType {
     case pop
     case push
     case popToRoot

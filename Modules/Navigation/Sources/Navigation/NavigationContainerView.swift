@@ -5,17 +5,16 @@
 //  Created by Ekaterina Khudzhamkulova on 16.1.2022.
 //
 
-import Foundation
 import SwiftUI
 
-struct NavigationContainerView<Content: View>: View {
+public struct NavigationContainerView<Content: View>: View {
     @ObservedObject var viewModel = NavigationContainerViewModel()
 
     private let content: Content
     private let animation: Animation = .easeOut(duration: 0.3)
     private let transition: (push: AnyTransition, pop: AnyTransition)
 
-    init(transition: Transition, @ViewBuilder content: @escaping () -> Content) {
+    public init(transition: Transition, @ViewBuilder content: @escaping () -> Content) {
         self.content = content()
         switch transition {
         case .none:
@@ -25,8 +24,8 @@ struct NavigationContainerView<Content: View>: View {
         }
     }
 
-    var body: some View {
-        var isRoot = viewModel.currentScreen == nil
+    public var body: some View {
+        let isRoot = viewModel.currentScreen == nil
         return ZStack {
             if isRoot {
                 self.content.environmentObject(self.viewModel)

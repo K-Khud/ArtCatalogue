@@ -13,5 +13,5 @@ protocol Loader: ObservableObject {
     associatedtype Body: View
     var body: Body { get }
 
-    func load(_ data: ArtworkData?)
+    func load(_ data: Codable?)
 }

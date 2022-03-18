@@ -10,6 +10,9 @@ import Networking
 import SwiftUI
 
 final class ArtworksViewModel: ObservableObject, Loader {
+    // инжектинг в переменные инстанса класса
+
+    @Injected var network: NetworkService?
 
     @Published var artworks: [ArtworkData] = []
     @Published var isPageLoading: Bool = false
@@ -20,7 +23,7 @@ final class ArtworksViewModel: ObservableObject, Loader {
             Text("")
     }
 
-    func load(_ data: ArtworkData? = nil) {
+    func load(_ data: Codable? = nil) {
         guard isPageLoading == false else {
             return
         }
@@ -29,7 +32,7 @@ final class ArtworksViewModel: ObservableObject, Loader {
         page += 1
 
         DispatchQueue.global(qos: .background).async {
-            ArtEndpointsAPI.getArtworks(page: self.page, completion: { data, error in
+            self.network?.getArtworks(page: self.page, completion: { data, error in
 
                 self.artworks.append(contentsOf: data?.data ?? [])
                 self.isPageLoading = false

@@ -15,7 +15,6 @@ struct SuffixesScreenView: View {
         list
     }
 
-
     var list: some View {
         VStack {
             Group {
@@ -37,7 +36,6 @@ struct SuffixesScreenView: View {
                 }
             }.onAppear {
                 viewModel.load()
-                viewModel.loadFromFile()
             }
             Group {
                 Picker("Suffix lists", selection: $viewModel.allSuffixesSelectedTab) {

@@ -6,6 +6,7 @@
 //
 import Networking
 import SwiftUI
+import Navigation
 
 struct ArtistView: View {
     @EnvironmentObject var routeModel: NavigationContainerViewModel

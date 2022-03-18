@@ -46,13 +46,6 @@ class FileService {
             }
         }
         fileManager.createFile(atPath: newFileUrl.path, contents: jsonData, attributes: nil)
-
-//        if let fileUpdater = try? FileHandle(forUpdating: newFileUrl) {
-//            fileUpdater.seekToEndOfFile()
-//            fileUpdater.write(jsonData)
-//            fileUpdater.closeFile()
-//
-//        }
         
     }
     

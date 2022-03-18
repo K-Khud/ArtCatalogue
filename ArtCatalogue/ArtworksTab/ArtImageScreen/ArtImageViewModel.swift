@@ -10,6 +10,9 @@ import SwiftUI
 import Networking
 
 final class ArtImageViewModel: ObservableObject, Loader  {
+    // инжектинг в переменные инстанса класса
+
+    @Injected var network: NetworkService?
 
     @Published var artImage: UIImage = UIImage()
     @Published var isImageLoading: Bool = false
@@ -20,8 +23,8 @@ final class ArtImageViewModel: ObservableObject, Loader  {
             Text("")
     }
 
-    func load(_ data: ArtworkData?) {
-        guard let data = data else {
+    func load(_ data: Codable?) {
+        guard let data = data as? ArtworkData else {
             return
         }
 
@@ -31,7 +34,7 @@ final class ArtImageViewModel: ObservableObject, Loader  {
         isImageLoading = true
 
         DispatchQueue.global(qos: .background).async {
-            ArtEndpointsAPI.getImage(imageId: data.imageId ?? "",
+            self.network?.getImage(imageId: data.imageId ?? "",
                                           iiifUrl: "https://www.artic.edu/iiif/2",
                                           completion: { data, error in
                 if let data = data {

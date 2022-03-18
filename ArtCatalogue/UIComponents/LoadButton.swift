@@ -6,11 +6,10 @@
 //
 
 import SwiftUI
-import Networking
 
 struct LoadButton<T: Loader>: View {
     @ObservedObject var viewModel: T
-    var artwork: ArtworkData?
+    var artwork: Codable?
     var buttonTitle: String
     @State var buttonTapped = false
 

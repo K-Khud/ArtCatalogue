@@ -10,6 +10,9 @@ import Networking
 import SwiftUI
 
 final class ArtistsViewModel: ObservableObject {
+    // инжектинг в переменные инстанса класса
+
+    @Injected var network: NetworkService?
 
     @Published var artists: [ArtistData] = []
     @Published var isPageLoading: Bool = false
@@ -38,7 +41,7 @@ final class ArtistsViewModel: ObservableObject {
         page += 1
 
         DispatchQueue.global(qos: .background).async {
-            ArtEndpointsAPI.getArtists(page: self.page, completion: { data, error in
+            self.network?.getArtists(page: self.page, completion: { data, error in
 
                 self.artists.append(contentsOf: data?.data ?? [])
                 self.isPageLoading = false

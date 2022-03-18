@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Networking
+import Navigation
 
 struct ArtistsWorksScreen: View {
     @State var artist: ArtistData

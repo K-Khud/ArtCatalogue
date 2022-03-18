@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 import Networking
+import Navigation
 
 struct ArtImageScreen: View {
     @State var artwork: ArtworkData

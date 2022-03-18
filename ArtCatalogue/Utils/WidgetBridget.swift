@@ -15,6 +15,4 @@ class WidgetBridget {
             print("topThree set to \(topThree)")
         }
     }
-
-
 }

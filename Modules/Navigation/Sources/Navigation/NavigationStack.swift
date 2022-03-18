@@ -7,23 +7,22 @@
 
 import Foundation
 
-struct NavigationStack {
+public struct NavigationStack {
     private var screens = [Screen]()
 
-    mutating func push(_ s: Screen) {
+    public mutating func push(_ s: Screen) {
         self.screens.append(s)
     }
 
-    mutating func pop() {
+    public mutating func pop() {
         _ = self.screens.popLast()
     }
 
-    mutating func popToRoot() {
+    public mutating func popToRoot() {
         self.screens.removeAll()
     }
 
-    func top() -> Screen? {
+    public func top() -> Screen? {
         return self.screens.last
     }
-
 }

@@ -5,7 +5,7 @@
 //  Created by Ekaterina Khudzhamkulova on 9.2.2022.
 //
 
-import SwiftUI
+import Foundation
 
 actor Job<T: Equatable> {
     private var action: (() -> T)

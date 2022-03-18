@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Networking
 
 struct LoadArtistsButton: View {
     @ObservedObject var viewModel: ArtistsViewModel

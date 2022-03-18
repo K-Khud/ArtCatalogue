@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Navigation
 
 struct MainTabView: View {
     @EnvironmentObject var router: Router
@@ -37,7 +38,6 @@ struct MainTabView: View {
         }
     }
 }
-
 
 struct MainTabView_Previews: PreviewProvider {
     static var previews: some View {

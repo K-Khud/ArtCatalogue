@@ -6,13 +6,11 @@
 //
 
 import Foundation
-import SwiftUI
 
 class JobScheduler<T: Comparable>: ObservableObject {
     @Published var debouncedResults: [T] = []
 
     init() {    }
-
 
     func scheduleJob(_ job: Job<T>) {
         Task {
@@ -33,8 +31,6 @@ class JobScheduler<T: Comparable>: ObservableObject {
             print("bufferResults")
 
             print(debouncedResults)
-
-
         }
     }
 }

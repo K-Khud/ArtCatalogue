@@ -8,6 +8,7 @@
 import UIKit
 import SwiftUI
 import Networking
+import Navigation
 
 struct ArtworkView: View {
     @EnvironmentObject var routeModel: NavigationContainerViewModel
