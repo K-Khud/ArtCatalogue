@@ -60,8 +60,6 @@ open class ArtEndpointsAPI {
      - parameter apiResponseQueue: The queue on which api response is dispatched.
      - parameter completion: completion handler to receive the data and the error objects
      */
-
-    
     @discardableResult
     open class func getArtworks(page: Int, apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: ResponseArtworks?, _ error: Error?) -> Void)) -> RequestTask {
         return getArtworksWithRequestBuilder(page: page).execute(apiResponseQueue) { result in

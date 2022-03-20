@@ -5,7 +5,6 @@
 //  Created by Ekaterina Khudzhamkulova on 25.1.2022.
 //
 
-import Foundation
 import SwiftUI
 
 struct AnimatingOffsetModifier: AnimatableModifier {

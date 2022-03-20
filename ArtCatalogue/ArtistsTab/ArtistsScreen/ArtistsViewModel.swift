@@ -5,7 +5,6 @@
 //  Created by Ekaterina Khudzhamkulova on 23.1.2022.
 //
 
-import Foundation
 import Networking
 import SwiftUI
 

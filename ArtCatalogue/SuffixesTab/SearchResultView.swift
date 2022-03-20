@@ -5,7 +5,6 @@
 //  Created by Ekaterina Khudzhamkulova on 13.2.2022.
 //
 
-import Foundation
 import SwiftUI
 
 struct SearchResultView: View {
