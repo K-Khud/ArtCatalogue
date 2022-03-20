@@ -8,6 +8,11 @@
 import SwiftUI
 
 public struct LoadSuffixesButton<T: Loader>: View {
+    public init(viewModel: T, buttonTitle: String) {
+        self.viewModel = viewModel
+        self.buttonTitle = buttonTitle
+    }
+
     @ObservedObject public var viewModel: T
     @State public var buttonTapped = false
 

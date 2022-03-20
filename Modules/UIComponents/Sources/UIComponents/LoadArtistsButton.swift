@@ -8,12 +8,9 @@
 import SwiftUI
 
 public struct LoadArtistsButton<T: Loader>: View {
-    internal init(buttonTitle: String) {
+    public init(buttonTitle: String, viewModel: T) {
         self.buttonTitle = buttonTitle
-    }
-    
-    public init(buttonTitle: String) {
-        self.buttonTitle = buttonTitle
+        self.viewModel = viewModel
     }
 
     @ObservedObject public var viewModel: T

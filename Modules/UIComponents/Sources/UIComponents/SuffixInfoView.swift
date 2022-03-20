@@ -8,6 +8,13 @@
 import SwiftUI
 
 public struct SuffixInfoView: View {
+    public init(index: Int = -1, totalQty: Int = -1, suffix: String, count: String) {
+        self.index = index
+        self.totalQty = totalQty
+        self.suffix = suffix
+        self.count = count
+    }
+    
     @State public var suffix: String
     @State public var count: String
 
@@ -22,11 +29,5 @@ public struct SuffixInfoView: View {
             Text(count)
         }
         .modifier(ViewColorModifier(index: index, totalQty: totalQty))
-    }
-}
-
-public struct SearchResultView_Previews: PreviewProvider {
-    public static var previews: some View {
-        SuffixInfoView(suffix: "suffix", count: "1")
     }
 }

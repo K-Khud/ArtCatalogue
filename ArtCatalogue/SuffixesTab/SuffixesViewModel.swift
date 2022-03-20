@@ -9,8 +9,9 @@ import Networking
 import SwiftUI
 import Combine
 import RealmSwift
+import UIComponents
 
-final class SuffixesViewModel: ObservableObject {
+final class SuffixesViewModel: ObservableObject, Loader, SearchSource {
     // инжектинг в переменные инстанса класса
 
     @Injected var network: NetworkService?
@@ -79,8 +80,8 @@ final class SuffixesViewModel: ObservableObject {
         Text("")
     }
 
-    func load() {
-        
+    func load(_ data: Codable? = nil) {
+
         guard isPageLoading == false else {
             return
         }

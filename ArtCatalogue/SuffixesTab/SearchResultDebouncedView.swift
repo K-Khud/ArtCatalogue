@@ -15,8 +15,8 @@ struct SearchResultDebouncedView: View {
             ForEach(viewModel.debouncedResult.indices, id: \.self) { index in
                 let searchResult = viewModel.debouncedResult[index]
                 let totalQty = viewModel.debouncedResult.count
-                SuffixInfoView(suffix: searchResult.suffix,
-                                 count: String(searchResult.timeEst), index: index, totalQty: totalQty)
+                SuffixInfoView(index: index, totalQty: totalQty, suffix: searchResult.suffix,
+                               count: String(searchResult.timeEst))
             }
         }
     }

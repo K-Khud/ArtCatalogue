@@ -7,6 +7,7 @@
 
 import Networking
 import SwiftUI
+import UIComponents
 
 final class ArtworksViewModel: ObservableObject, Loader {
     // инжектинг в переменные инстанса класса

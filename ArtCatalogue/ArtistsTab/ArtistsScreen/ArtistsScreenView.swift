@@ -21,7 +21,7 @@ struct ArtistsScreenView: View {
             List {
                 HStack {
                     Spacer()
-                    LoadArtistsButton(viewModel: artistsViewModel, buttonTitle: "Load Artists")
+                    LoadArtistsButton(buttonTitle: "Load Artists", viewModel: artistsViewModel)
                     Spacer()
                 }
                 ForEach(artistsViewModel.artists) { artist in

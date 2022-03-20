@@ -8,6 +8,9 @@
 import SwiftUI
 
 public struct TextFieldView<T: SearchSource>: View {
+    public init(viewModel: T) {
+        self.viewModel = viewModel
+    }
     @ObservedObject public var viewModel: T
 
     public var body: some View {

@@ -7,8 +7,10 @@
 
 import Networking
 import SwiftUI
+import UIComponents
 
-final class ArtistsViewModel: ObservableObject {
+final class ArtistsViewModel: ObservableObject, Loader {
+
     // инжектинг в переменные инстанса класса
 
     @Injected var network: NetworkService?
@@ -31,7 +33,7 @@ final class ArtistsViewModel: ObservableObject {
             Text("")
     }
 
-    func load() {
+    func load(_ data: Codable? = nil) {
         guard isPageLoading == false else {
             return
         }
