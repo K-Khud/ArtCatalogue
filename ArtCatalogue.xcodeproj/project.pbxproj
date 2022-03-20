@@ -7,30 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		020D7D7227E77DD70061A6C2 /* UIComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 020D7D7127E77DD70061A6C2 /* UIComponents */; };
 		020EE8F727B94D4700A8DD3A /* SearchResultDebouncedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020EE8F627B94D4700A8DD3A /* SearchResultDebouncedView.swift */; };
-		020EE8FA27B94DD400A8DD3A /* ViewColorModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020EE8F927B94DD400A8DD3A /* ViewColorModifier.swift */; };
-		020EE8FB27B94DD400A8DD3A /* ViewColorModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020EE8F927B94DD400A8DD3A /* ViewColorModifier.swift */; };
 		020EE8FD27B94E6000A8DD3A /* SearchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020EE8FC27B94E6000A8DD3A /* SearchResultView.swift */; };
-		021150B427A994A000FE427A /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021150B327A994A000FE427A /* TextFieldView.swift */; };
 		021150B727A997CC00FE427A /* ArtistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021150B627A997CC00FE427A /* ArtistView.swift */; };
 		021150BD27A998D000FE427A /* AnimatingCellModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C7DEF27A076CC003AA548 /* AnimatingCellModifier.swift */; };
 		021150BF27A9992F00FE427A /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0247D07D279499A100B862D4 /* Array.swift */; };
 		021150C327A9999D00FE427A /* AnimationOffsetModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C7DED27A0766F003AA548 /* AnimationOffsetModifier.swift */; };
 		021150C527A999AF00FE427A /* ArtistDetailsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA456B279DBFBD00E8B515 /* ArtistDetailsScreen.swift */; };
 		021150C627A999BC00FE427A /* ArtistsWorksScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA456E279DD3C300E8B515 /* ArtistsWorksScreen.swift */; };
-		021150C727A999C400FE427A /* ButtonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02159C6C27A08BC7002F504A /* ButtonLabel.swift */; };
 		021150CA27A99F5000FE427A /* SuffixesScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021150C927A99F5000FE427A /* SuffixesScreenView.swift */; };
-		0214BEF927B457200097F3B8 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0214BEF827B457200097F3B8 /* Colors.swift */; };
-		0214BEFA27B457200097F3B8 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0214BEF827B457200097F3B8 /* Colors.swift */; };
 		0214BEFC27B4573E0097F3B8 /* WidgetBridget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0214BEFB27B4573E0097F3B8 /* WidgetBridget.swift */; };
 		0214BEFD27B4573E0097F3B8 /* WidgetBridget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0214BEFB27B4573E0097F3B8 /* WidgetBridget.swift */; };
 		0214BEFF27B45A3F0097F3B8 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0214BEFE27B45A3F0097F3B8 /* Job.swift */; };
 		0214BF0127B45A5D0097F3B8 /* JobScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0214BF0027B45A5D0097F3B8 /* JobScheduler.swift */; };
-		02159C6D27A08BC7002F504A /* ButtonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02159C6C27A08BC7002F504A /* ButtonLabel.swift */; };
 		0227FE2827CEB65800856D6C /* FileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0227FE2727CEB65800856D6C /* FileService.swift */; };
 		0227FE2927CEBD0B00856D6C /* FileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0227FE2727CEB65800856D6C /* FileService.swift */; };
-		023A092F27AC5F0C0005454B /* SuffixInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023A092E27AC5F0C0005454B /* SuffixInfoView.swift */; };
-		023A093027AC5F0C0005454B /* SuffixInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023A092E27AC5F0C0005454B /* SuffixInfoView.swift */; };
 		023A093227AC5FDB0005454B /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023A093127AC5FDB0005454B /* SearchResult.swift */; };
 		023A093327AC5FDB0005454B /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023A093127AC5FDB0005454B /* SearchResult.swift */; };
 		0247D06527934A6800B862D4 /* ArtCatalogueApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0247D06427934A6800B862D4 /* ArtCatalogueApp.swift */; };
@@ -46,8 +38,6 @@
 		0247D09B2794A70F00B862D4 /* ArtImageScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0247D09A2794A70F00B862D4 /* ArtImageScreen.swift */; };
 		0247D09D2794A71E00B862D4 /* ArtImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0247D09C2794A71E00B862D4 /* ArtImageViewModel.swift */; };
 		02512C5727DE99AB008858C0 /* Navigation in Frameworks */ = {isa = PBXBuildFile; productRef = 02512C5627DE99AB008858C0 /* Navigation */; };
-		025A0421279C994A00E97E57 /* LoadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A0420279C994A00E97E57 /* LoadButton.swift */; };
-		025A0423279C99D900E97E57 /* LoaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A0422279C99D900E97E57 /* LoaderProtocol.swift */; };
 		025F6C4C27B59DD500DC0B5F /* JobScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0214BF0027B45A5D0097F3B8 /* JobScheduler.swift */; };
 		025F6C4D27B59DD500DC0B5F /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0214BEFE27B45A3F0097F3B8 /* Job.swift */; };
 		02671E6D27DE97CB002E33A2 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 02671E6C27DE97CB002E33A2 /* Networking */; };
@@ -77,6 +67,7 @@
 		027F1B8A27A6E08A00247908 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 027F1B8927A6E08A00247908 /* Assets.xcassets */; };
 		027F1B8E27A6E08A00247908 /* Artworks WidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 027F1B8127A6E08900247908 /* Artworks WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		027F1B9427A6E11500247908 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 027F1B9327A6E11500247908 /* Networking */; };
+		027FFA7927E781D10062358D /* UIComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 027FFA7827E781D10062358D /* UIComponents */; };
 		028C7DEC27A0763D003AA548 /* ArtworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C7DEB27A0763D003AA548 /* ArtworkView.swift */; };
 		028C7DEE27A0766F003AA548 /* AnimationOffsetModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C7DED27A0766F003AA548 /* AnimationOffsetModifier.swift */; };
 		028C7DF027A076CC003AA548 /* AnimatingCellModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C7DEF27A076CC003AA548 /* AnimatingCellModifier.swift */; };
@@ -85,11 +76,9 @@
 		02D5B4F727DF9C760070BD2E /* Navigation in Frameworks */ = {isa = PBXBuildFile; productRef = 02D5B4F627DF9C760070BD2E /* Navigation */; };
 		02DA4565279DBA1500E8B515 /* ArtistsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA4564279DBA1500E8B515 /* ArtistsViewModel.swift */; };
 		02DA4567279DBA2500E8B515 /* ArtistsScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA4566279DBA2500E8B515 /* ArtistsScreenView.swift */; };
-		02DA456A279DBC8C00E8B515 /* LoadArtistsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA4569279DBC8C00E8B515 /* LoadArtistsButton.swift */; };
 		02DA456C279DBFBD00E8B515 /* ArtistDetailsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA456B279DBFBD00E8B515 /* ArtistDetailsScreen.swift */; };
 		02DA456F279DD3C300E8B515 /* ArtistsWorksScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA456E279DD3C300E8B515 /* ArtistsWorksScreen.swift */; };
 		02EC8F1427AADC960023BCDE /* SuffixesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EC8F1327AADC960023BCDE /* SuffixesViewModel.swift */; };
-		02EC8F1727AADE430023BCDE /* LoadSuffixesButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EC8F1627AADE430023BCDE /* LoadSuffixesButton.swift */; };
 		02EC8F1B27AAE1300023BCDE /* WrappedSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EC8F1A27AAE1300023BCDE /* WrappedSequence.swift */; };
 		02EC8F1C27AAE1300023BCDE /* WrappedSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EC8F1A27AAE1300023BCDE /* WrappedSequence.swift */; };
 		02EC8F1E27AAE1680023BCDE /* SuffixIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EC8F1D27AAE1680023BCDE /* SuffixIterator.swift */; };
@@ -123,19 +112,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		020D7D7027E77CE60061A6C2 /* UIComponents */ = {isa = PBXFileReference; lastKnownFileType = text; name = UIComponents; path = Modules/UIComponents; sourceTree = SOURCE_ROOT; };
 		020EE8F627B94D4700A8DD3A /* SearchResultDebouncedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultDebouncedView.swift; sourceTree = "<group>"; };
-		020EE8F927B94DD400A8DD3A /* ViewColorModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewColorModifier.swift; sourceTree = "<group>"; };
 		020EE8FC27B94E6000A8DD3A /* SearchResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultView.swift; sourceTree = "<group>"; };
-		021150B327A994A000FE427A /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		021150B627A997CC00FE427A /* ArtistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistView.swift; sourceTree = "<group>"; };
 		021150C927A99F5000FE427A /* SuffixesScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixesScreenView.swift; sourceTree = "<group>"; };
-		0214BEF827B457200097F3B8 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		0214BEFB27B4573E0097F3B8 /* WidgetBridget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetBridget.swift; sourceTree = "<group>"; };
 		0214BEFE27B45A3F0097F3B8 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 		0214BF0027B45A5D0097F3B8 /* JobScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobScheduler.swift; sourceTree = "<group>"; };
-		02159C6C27A08BC7002F504A /* ButtonLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLabel.swift; sourceTree = "<group>"; };
 		0227FE2727CEB65800856D6C /* FileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileService.swift; sourceTree = "<group>"; };
-		023A092E27AC5F0C0005454B /* SuffixInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixInfoView.swift; sourceTree = "<group>"; };
 		023A093127AC5FDB0005454B /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		0247D06127934A6800B862D4 /* ArtCatalogue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtCatalogue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0247D06427934A6800B862D4 /* ArtCatalogueApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtCatalogueApp.swift; sourceTree = "<group>"; };
@@ -152,8 +137,6 @@
 		0247D09A2794A70F00B862D4 /* ArtImageScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtImageScreen.swift; sourceTree = "<group>"; };
 		0247D09C2794A71E00B862D4 /* ArtImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtImageViewModel.swift; sourceTree = "<group>"; };
 		0250A63827DE90E70079C56C /* Navigation */ = {isa = PBXFileReference; lastKnownFileType = text; name = Navigation; path = Modules/Navigation; sourceTree = SOURCE_ROOT; };
-		025A0420279C994A00E97E57 /* LoadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadButton.swift; sourceTree = "<group>"; };
-		025A0422279C99D900E97E57 /* LoaderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderProtocol.swift; sourceTree = "<group>"; };
 		02671E6727DE96D1002E33A2 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = Modules/Navigation/Package.swift; sourceTree = "<group>"; };
 		026CF35627E289C000D0F57C /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		026CF35A27E28F6800D0F57C /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
@@ -177,11 +160,9 @@
 		02AF611B27AEC27800B250DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		02DA4564279DBA1500E8B515 /* ArtistsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsViewModel.swift; sourceTree = "<group>"; };
 		02DA4566279DBA2500E8B515 /* ArtistsScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsScreenView.swift; sourceTree = "<group>"; };
-		02DA4569279DBC8C00E8B515 /* LoadArtistsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadArtistsButton.swift; sourceTree = "<group>"; };
 		02DA456B279DBFBD00E8B515 /* ArtistDetailsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailsScreen.swift; sourceTree = "<group>"; };
 		02DA456E279DD3C300E8B515 /* ArtistsWorksScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsWorksScreen.swift; sourceTree = "<group>"; };
 		02EC8F1327AADC960023BCDE /* SuffixesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixesViewModel.swift; sourceTree = "<group>"; };
-		02EC8F1627AADE430023BCDE /* LoadSuffixesButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadSuffixesButton.swift; sourceTree = "<group>"; };
 		02EC8F1A27AAE1300023BCDE /* WrappedSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrappedSequence.swift; sourceTree = "<group>"; };
 		02EC8F1D27AAE1680023BCDE /* SuffixIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixIterator.swift; sourceTree = "<group>"; };
 		02FEF13527AEACCD00DDB33B /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
@@ -197,6 +178,7 @@
 				02D5B4F727DF9C760070BD2E /* Navigation in Frameworks */,
 				0270BB4C27E13B010025ED55 /* Realm in Frameworks */,
 				02671E6D27DE97CB002E33A2 /* Networking in Frameworks */,
+				020D7D7227E77DD70061A6C2 /* UIComponents in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +189,7 @@
 				0270BB5027E13B0A0025ED55 /* RealmSwift in Frameworks */,
 				02512C5727DE99AB008858C0 /* Navigation in Frameworks */,
 				027F1B9427A6E11500247908 /* Networking in Frameworks */,
+				027FFA7927E781D10062358D /* UIComponents in Frameworks */,
 				027F1B8527A6E08900247908 /* SwiftUI.framework in Frameworks */,
 				027F1B8327A6E08900247908 /* WidgetKit.framework in Frameworks */,
 				0270BB4E27E13B070025ED55 /* Realm in Frameworks */,
@@ -238,6 +221,7 @@
 		0247D06327934A6800B862D4 /* ArtCatalogue */ = {
 			isa = PBXGroup;
 			children = (
+				020D7D7027E77CE60061A6C2 /* UIComponents */,
 				0250A63827DE90E70079C56C /* Navigation */,
 				02AF611B27AEC27800B250DA /* Info.plist */,
 				0247D07227934A9A00B862D4 /* Networking */,
@@ -250,7 +234,6 @@
 				026CF35527E2899E00D0F57C /* Services */,
 				0289E0A027BC098300A751E5 /* Cache */,
 				02EA812227B4553C00483413 /* Utils */,
-				02EA812127B4551C00483413 /* UIComponents */,
 				02EC8F1527AADC9D0023BCDE /* SuffixesTab */,
 				02DA4571279DD7A000E8B515 /* ArtistsTab */,
 				02DA4572279DD7B500E8B515 /* ArtworksTab */,
@@ -395,26 +378,11 @@
 			path = ArtworksTab;
 			sourceTree = "<group>";
 		};
-		02EA812127B4551C00483413 /* UIComponents */ = {
-			isa = PBXGroup;
-			children = (
-				025A0420279C994A00E97E57 /* LoadButton.swift */,
-				02DA4569279DBC8C00E8B515 /* LoadArtistsButton.swift */,
-				02EC8F1627AADE430023BCDE /* LoadSuffixesButton.swift */,
-				02159C6C27A08BC7002F504A /* ButtonLabel.swift */,
-				023A092E27AC5F0C0005454B /* SuffixInfoView.swift */,
-				021150B327A994A000FE427A /* TextFieldView.swift */,
-			);
-			path = UIComponents;
-			sourceTree = "<group>";
-		};
 		02EA812227B4553C00483413 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				025A0422279C99D900E97E57 /* LoaderProtocol.swift */,
 				026CF36127E2917500D0F57C /* InjectedWrapper.swift */,
 				0214BEFB27B4573E0097F3B8 /* WidgetBridget.swift */,
-				0214BEF827B457200097F3B8 /* Colors.swift */,
 				0214BEFE27B45A3F0097F3B8 /* Job.swift */,
 				0214BF0027B45A5D0097F3B8 /* JobScheduler.swift */,
 			);
@@ -425,7 +393,6 @@
 			isa = PBXGroup;
 			children = (
 				021150C927A99F5000FE427A /* SuffixesScreenView.swift */,
-				020EE8F927B94DD400A8DD3A /* ViewColorModifier.swift */,
 				020EE8F627B94D4700A8DD3A /* SearchResultDebouncedView.swift */,
 				020EE8FC27B94E6000A8DD3A /* SearchResultView.swift */,
 				0227FE2727CEB65800856D6C /* FileService.swift */,
@@ -460,6 +427,7 @@
 				02D5B4F627DF9C760070BD2E /* Navigation */,
 				0270BB4927E13AFD0025ED55 /* RealmSwift */,
 				0270BB4B27E13B010025ED55 /* Realm */,
+				020D7D7127E77DD70061A6C2 /* UIComponents */,
 			);
 			productName = ArtCatalogue;
 			productReference = 0247D06127934A6800B862D4 /* ArtCatalogue.app */;
@@ -483,6 +451,7 @@
 				02512C5627DE99AB008858C0 /* Navigation */,
 				0270BB4D27E13B070025ED55 /* Realm */,
 				0270BB4F27E13B0A0025ED55 /* RealmSwift */,
+				027FFA7827E781D10062358D /* UIComponents */,
 			);
 			productName = "Artworks WidgetExtension";
 			productReference = 027F1B8127A6E08900247908 /* Artworks WidgetExtension.appex */;
@@ -553,28 +522,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0214BEF927B457200097F3B8 /* Colors.swift in Sources */,
 				0270BB4127E137F10025ED55 /* ArtistsCache.swift in Sources */,
 				0247D09B2794A70F00B862D4 /* ArtImageScreen.swift in Sources */,
 				0214BEFC27B4573E0097F3B8 /* WidgetBridget.swift in Sources */,
 				02AF611927AEBAE800B250DA /* LinkNames.swift in Sources */,
 				0227FE2827CEB65800856D6C /* FileService.swift in Sources */,
 				0214BF0127B45A5D0097F3B8 /* JobScheduler.swift in Sources */,
-				021150B427A994A000FE427A /* TextFieldView.swift in Sources */,
 				023A093227AC5FDB0005454B /* SearchResult.swift in Sources */,
 				0270BB4727E137F10025ED55 /* Persistable.swift in Sources */,
 				026CF35B27E28F6800D0F57C /* ServiceLocator.swift in Sources */,
 				028C7DF027A076CC003AA548 /* AnimatingCellModifier.swift in Sources */,
 				0247D07E279499A100B862D4 /* Array.swift in Sources */,
 				028C7DEC27A0763D003AA548 /* ArtworkView.swift in Sources */,
-				02159C6D27A08BC7002F504A /* ButtonLabel.swift in Sources */,
-				020EE8FA27B94DD400A8DD3A /* ViewColorModifier.swift in Sources */,
 				0270BB3F27E137F10025ED55 /* CacheService.swift in Sources */,
 				021150CA27A99F5000FE427A /* SuffixesScreenView.swift in Sources */,
 				0270BB4327E137F10025ED55 /* ArtistDataObject.swift in Sources */,
 				0214BEFF27B45A3F0097F3B8 /* Job.swift in Sources */,
 				02EC8F1427AADC960023BCDE /* SuffixesViewModel.swift in Sources */,
-				02EC8F1727AADE430023BCDE /* LoadSuffixesButton.swift in Sources */,
 				0278E46827D51A0300F02358 /* ArtistDataExtension.swift in Sources */,
 				026CF36227E2917500D0F57C /* InjectedWrapper.swift in Sources */,
 				02DA456C279DBFBD00E8B515 /* ArtistDetailsScreen.swift in Sources */,
@@ -589,17 +553,13 @@
 				0247D06527934A6800B862D4 /* ArtCatalogueApp.swift in Sources */,
 				021150B727A997CC00FE427A /* ArtistView.swift in Sources */,
 				0247D09D2794A71E00B862D4 /* ArtImageViewModel.swift in Sources */,
-				023A092F27AC5F0C0005454B /* SuffixInfoView.swift in Sources */,
 				026CF35E27E28FE400D0F57C /* ServicesConfigurator.swift in Sources */,
 				020EE8FD27B94E6000A8DD3A /* SearchResultView.swift in Sources */,
 				02DA4567279DBA2500E8B515 /* ArtistsScreenView.swift in Sources */,
 				0247D0922794A3B500B862D4 /* Router.swift in Sources */,
-				02DA456A279DBC8C00E8B515 /* LoadArtistsButton.swift in Sources */,
 				028C7DEE27A0766F003AA548 /* AnimationOffsetModifier.swift in Sources */,
 				026CF35727E289C000D0F57C /* NetworkService.swift in Sources */,
 				02DA456F279DD3C300E8B515 /* ArtistsWorksScreen.swift in Sources */,
-				025A0423279C99D900E97E57 /* LoaderProtocol.swift in Sources */,
-				025A0421279C994A00E97E57 /* LoadButton.swift in Sources */,
 				0247D07927934CCB00B862D4 /* ArtworksViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -611,7 +571,6 @@
 				02FEF13927AEAE9E00DDB33B /* SnapshotView.swift in Sources */,
 				026CF35C27E28F6800D0F57C /* ServiceLocator.swift in Sources */,
 				021150BF27A9992F00FE427A /* Array.swift in Sources */,
-				023A093027AC5F0C0005454B /* SuffixInfoView.swift in Sources */,
 				0270BB4427E137F10025ED55 /* ArtistDataObject.swift in Sources */,
 				02EC8F1C27AAE1300023BCDE /* WrappedSequence.swift in Sources */,
 				0278E46927D51A0300F02358 /* ArtistDataExtension.swift in Sources */,
@@ -625,12 +584,9 @@
 				0270BB4827E137F10025ED55 /* Persistable.swift in Sources */,
 				021150C327A9999D00FE427A /* AnimationOffsetModifier.swift in Sources */,
 				026CF35827E289C000D0F57C /* NetworkService.swift in Sources */,
-				021150C727A999C400FE427A /* ButtonLabel.swift in Sources */,
 				021150BD27A998D000FE427A /* AnimatingCellModifier.swift in Sources */,
-				0214BEFA27B457200097F3B8 /* Colors.swift in Sources */,
 				021150C527A999AF00FE427A /* ArtistDetailsScreen.swift in Sources */,
 				02EC8F1F27AAE1680023BCDE /* SuffixIterator.swift in Sources */,
-				020EE8FB27B94DD400A8DD3A /* ViewColorModifier.swift in Sources */,
 				02AF611A27AEBAE800B250DA /* LinkNames.swift in Sources */,
 				025F6C4C27B59DD500DC0B5F /* JobScheduler.swift in Sources */,
 				026CF35927E28D2A00D0F57C /* CacheService.swift in Sources */,
@@ -935,6 +891,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		020D7D7127E77DD70061A6C2 /* UIComponents */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UIComponents;
+		};
 		02512C5627DE99AB008858C0 /* Navigation */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Navigation;
@@ -966,6 +926,10 @@
 		027F1B9327A6E11500247908 /* Networking */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Networking;
+		};
+		027FFA7827E781D10062358D /* UIComponents */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UIComponents;
 		};
 		02D5B4F627DF9C760070BD2E /* Navigation */ = {
 			isa = XCSwiftPackageProductDependency;

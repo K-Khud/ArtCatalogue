@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct ViewColorModifier: ViewModifier {
-    var index: Int
-    var totalQty: Int
+public struct ViewColorModifier: ViewModifier {
+    public var index: Int
+    public var totalQty: Int
 
     @ViewBuilder
-    func body(content: Content) -> some View {
+    public func body(content: Content) -> some View {
         if index == -1 {
             content
         } else if totalQty == 1 {

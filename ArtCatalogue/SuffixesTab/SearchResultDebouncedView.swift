@@ -5,6 +5,7 @@
 //  Created by Ekaterina Khudzhamkulova on 13.2.2022.
 //
 import SwiftUI
+import UIComponents
 
 struct SearchResultDebouncedView: View {
     @ObservedObject var viewModel: SuffixesViewModel

@@ -7,9 +7,8 @@
 
 import Foundation
 import SwiftUI
-import Networking
 
-protocol Loader: ObservableObject {
+public protocol Loader: ObservableObject {
     associatedtype Body: View
     var body: Body { get }
 

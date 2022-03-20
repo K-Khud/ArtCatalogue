@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Networking
+import UIComponents
 
 struct ArtistsScreenView: View {
     @StateObject var artistsViewModel: ArtistsViewModel

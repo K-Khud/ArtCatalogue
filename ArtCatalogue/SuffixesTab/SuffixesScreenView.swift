@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIComponents
 
 struct SuffixesScreenView: View {
     @StateObject var viewModel: SuffixesViewModel

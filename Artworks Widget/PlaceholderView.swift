@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIComponents
 
 struct PlaceholderView: View {
     var body: some View {

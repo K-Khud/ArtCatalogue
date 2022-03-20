@@ -7,16 +7,16 @@
 
 import SwiftUI
 
-struct LoadSuffixesButton: View {
-    @ObservedObject var viewModel: SuffixesViewModel
-    @State var buttonTapped = false
+public struct LoadSuffixesButton<T: Loader>: View {
+    @ObservedObject public var viewModel: T
+    @State public var buttonTapped = false
 
-    var buttonTitle: String
+    public var buttonTitle: String
 
-    var body: some View {
+    public var body: some View {
         HStack {
             Button {
-                viewModel.load()
+                viewModel.load(nil)
                 buttonTapped.toggle()
 
             } label: {
@@ -29,11 +29,5 @@ struct LoadSuffixesButton: View {
             }
             .padding(.horizontal)
         }
-    }
-}
-
-struct LoadSuffixesButton_Previews: PreviewProvider {
-    static var previews: some View {
-        LoadSuffixesButton(viewModel: SuffixesViewModel(), buttonTitle: "Load smth with suffixes")
     }
 }
