@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "39968FE6-2E07-4DF2-8B6D-2F3766638C94",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "NetworkingTests",
+        "name" : "NetworkingTests"
+      }
+    }
+  ],
+  "version" : 1
+}
