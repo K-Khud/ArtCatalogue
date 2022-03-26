@@ -5,9 +5,9 @@
 //  Created by Ekaterina Khudzhamkulova on 15.1.2022.
 //
 
-import Foundation
 import Networking
 import SwiftUI
+import UIComponents
 
 final class ArtworksViewModel: ObservableObject, Loader {
     // инжектинг в переменные инстанса класса

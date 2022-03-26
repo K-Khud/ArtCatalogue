@@ -1,22 +1,27 @@
 //
-//  LoadButton.swift
+//  LoadSuffixesButton.swift
 //  ArtCatalogue
 //
-//  Created by Ekaterina Khudzhamkulova on 22.1.2022.
+//  Created by Ekaterina Khudzhamkulova on 2.2.2022.
 //
 
 import SwiftUI
 
-struct LoadButton<T: Loader>: View {
-    @ObservedObject var viewModel: T
-    var artwork: Codable?
-    var buttonTitle: String
-    @State var buttonTapped = false
+public struct LoadSuffixesButton<T: Loader>: View {
+    public init(viewModel: T, buttonTitle: String) {
+        self.viewModel = viewModel
+        self.buttonTitle = buttonTitle
+    }
 
-    var body: some View {
+    @ObservedObject public var viewModel: T
+    @State public var buttonTapped = false
+
+    public var buttonTitle: String
+
+    public var body: some View {
         HStack {
             Button {
-                viewModel.load(artwork)
+                viewModel.load(nil)
                 buttonTapped.toggle()
 
             } label: {
@@ -29,11 +34,5 @@ struct LoadButton<T: Loader>: View {
             }
             .padding(.horizontal)
         }
-    }
-}
-
-struct LoadButton_Previews: PreviewProvider {
-    static var previews: some View {
-        LoadButton(viewModel: ArtworksViewModel(), buttonTitle: "Title")
     }
 }

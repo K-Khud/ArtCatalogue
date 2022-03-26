@@ -7,16 +7,21 @@
 
 import SwiftUI
 
-struct LoadArtistsButton: View {
-    @ObservedObject var viewModel: ArtistsViewModel
-    @State var buttonTapped = false
+public struct LoadArtistsButton<T: Loader>: View {
+    public init(buttonTitle: String, viewModel: T) {
+        self.buttonTitle = buttonTitle
+        self.viewModel = viewModel
+    }
 
-    var buttonTitle: String
+    @ObservedObject public var viewModel: T
+    @State public var buttonTapped = false
 
-    var body: some View {
+    public var buttonTitle: String
+
+    public var body: some View {
         HStack {
             Button {
-                viewModel.load()
+                viewModel.load(nil)
                 buttonTapped.toggle()
 
             } label: {
@@ -29,11 +34,5 @@ struct LoadArtistsButton: View {
             }
             .padding(.horizontal)
         }
-    }
-}
-
-struct LoadArtistsButton_Previews: PreviewProvider {
-    static var previews: some View {
-        LoadArtistsButton(viewModel: ArtistsViewModel(), buttonTitle: "Load")
     }
 }

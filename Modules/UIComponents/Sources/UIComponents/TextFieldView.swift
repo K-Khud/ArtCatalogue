@@ -7,10 +7,13 @@
 
 import SwiftUI
 
-struct TextFieldView: View {
-    @ObservedObject var viewModel: SuffixesViewModel
+public struct TextFieldView<T: SearchSource>: View {
+    public init(viewModel: T) {
+        self.viewModel = viewModel
+    }
+    @ObservedObject public var viewModel: T
 
-    var body: some View {
+    public var body: some View {
         TextField("Enter suffix", text: $viewModel.searchText)
             .padding(.horizontal)
             .background(.thinMaterial)

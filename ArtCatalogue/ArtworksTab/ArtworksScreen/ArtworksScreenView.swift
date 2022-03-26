@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Networking
+import UIComponents
 
 struct ArtworksScreenView: View {
     

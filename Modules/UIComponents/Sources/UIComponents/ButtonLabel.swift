@@ -7,11 +7,16 @@
 
 import SwiftUI
 
-struct ButtonLabel: View {
-    var title: String
-    var isGreen: Bool
+public struct ButtonLabel: View {
+    public init(title: String, isGreen: Bool) {
+        self.title = title
+        self.isGreen = isGreen
+    }
 
-    var body: some View {
+    public var title: String
+    public var isGreen: Bool
+
+    public var body: some View {
         Text(title)
             .padding()
             .foregroundColor(.white)
@@ -20,8 +25,8 @@ struct ButtonLabel: View {
     }
 }
 
-struct ButtonLabel_Previews: PreviewProvider {
-    static var previews: some View {
+public struct ButtonLabel_Previews: PreviewProvider {
+    public static var previews: some View {
         ButtonLabel(title: "Title", isGreen: true)
     }
 }

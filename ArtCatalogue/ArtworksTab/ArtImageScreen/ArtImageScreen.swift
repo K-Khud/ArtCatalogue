@@ -5,10 +5,10 @@
 //  Created by Ekaterina Khudzhamkulova on 16.1.2022.
 //
 
-import Foundation
 import SwiftUI
 import Networking
 import Navigation
+import UIComponents
 
 struct ArtImageScreen: View {
     @State var artwork: ArtworkData

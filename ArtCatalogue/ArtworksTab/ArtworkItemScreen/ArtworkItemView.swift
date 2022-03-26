@@ -9,6 +9,7 @@
 import SwiftUI
 import Networking
 import Navigation
+import UIComponents
 
 struct ArtworkItemView: View {
     @State var item: ArtworkData
