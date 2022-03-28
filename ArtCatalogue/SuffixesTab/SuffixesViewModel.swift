@@ -16,6 +16,8 @@ final class SuffixesViewModel: ObservableObject, Loader, SearchSource {
 
     @Injected var network: NetworkService?
     @Injected var cache: CacheService?
+    @Injected var fileService: FileService?
+
 
     @Published var artists: [ArtistData] = []
     @Published var isPageLoading: Bool = false
@@ -23,7 +25,7 @@ final class SuffixesViewModel: ObservableObject, Loader, SearchSource {
     @Published var searchText: String = ""
     @Published var debouncedText = ""
 
-    @Published var searchResult: [SearchResult] = []
+    var searchResult: [SearchResult] = []
 
     @Published var allSuffixes: [SearchResult] = []
     @Published var allSuffixesSorted: [SearchResult] = []
@@ -33,8 +35,6 @@ final class SuffixesViewModel: ObservableObject, Loader, SearchSource {
     @Published var debouncedResult: [SearchResult] = []
 
     @ObservedObject var scheduler: JobScheduler = JobScheduler<SearchResult>()
-
-//    private var cacheService = try! CacheService()
 
     private var suffixStat: [String : Int] = [:]
     private let dateFormatter = DateFormatter()
@@ -56,24 +56,23 @@ final class SuffixesViewModel: ObservableObject, Loader, SearchSource {
             .compactMap{ $0 }
             .debounce(for: .milliseconds(800), scheduler: RunLoop.main)
             .removeDuplicates()
-            .sink { (_) in
-            } receiveValue: { [unowned self] searchField in
-                self.debouncedText = searchField
-                let firstJob = Job(findSuffix(debouncedText))
+            .sink(receiveValue: { [unowned self] output in
+                self.debouncedText = output
+                let firstJob = Job(self.findSuffix(self.debouncedText))
                 scheduler.scheduleJob(firstJob)
-            }.store(in: &subscription)
+            }).store(in: &subscription)
 
-        scheduler.$debouncedResults
+        scheduler
+            .$debouncedResults
             .subscribe(on: RunLoop.main)
             .receive(on: RunLoop.main)
-            .sink { sortedResults in
+            .sink(receiveValue: { sortedResults in
                 guard !sortedResults.isEmpty else {
                     return
                 }
                 self.debouncedResult = sortedResults
                 self.saveToFile()
-            }
-            .store(in: &debouncedSubscription)
+            }).store(in: &debouncedSubscription)
    }
 
     var body: some View {

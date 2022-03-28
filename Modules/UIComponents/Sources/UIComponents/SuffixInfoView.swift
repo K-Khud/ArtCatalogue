@@ -22,12 +22,12 @@ public struct SuffixInfoView: View {
     public var totalQty: Int = -1
 
     public var body: some View {
-        
         HStack {
             Text(suffix)
             Spacer()
             Text(count)
         }
+        .frame(height: 40)
         .modifier(ViewColorModifier(index: index, totalQty: totalQty))
     }
 }

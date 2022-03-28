@@ -330,6 +330,7 @@
 			isa = PBXGroup;
 			children = (
 				0270BB3E27E137F10025ED55 /* CacheService.swift */,
+				0227FE2727CEB65800856D6C /* FileService.swift */,
 				026CF35627E289C000D0F57C /* NetworkService.swift */,
 			);
 			path = Services;
@@ -422,7 +423,6 @@
 				021150C927A99F5000FE427A /* SuffixesScreenView.swift */,
 				020EE8F627B94D4700A8DD3A /* SearchResultDebouncedView.swift */,
 				020EE8FC27B94E6000A8DD3A /* SearchResultView.swift */,
-				0227FE2727CEB65800856D6C /* FileService.swift */,
 				02EC8F1327AADC960023BCDE /* SuffixesViewModel.swift */,
 				023A093127AC5FDB0005454B /* SearchResult.swift */,
 				02EC8F1D27AAE1680023BCDE /* SuffixIterator.swift */,

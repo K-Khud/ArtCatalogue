@@ -10,14 +10,11 @@ import UIComponents
 
 struct SearchResultView: View {
     @ObservedObject var viewModel: SuffixesViewModel
-    @State var suffixes: [SearchResult] = []
 
     var body: some View {
         List {
-            ForEach(suffixes, id: \.self) { suffixInfo in
+            ForEach(viewModel.searchResult, id: \.self) { suffixInfo in
                 SuffixInfoView(suffix: suffixInfo.suffix, count: suffixInfo.counter)
-            }.onReceive(viewModel.$searchResult) { searchResult in
-                suffixes = searchResult
             }
         }
     }
