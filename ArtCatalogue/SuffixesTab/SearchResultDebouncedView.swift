@@ -8,15 +8,14 @@ import SwiftUI
 import UIComponents
 
 struct SearchResultDebouncedView: View {
-    @ObservedObject var viewModel: SuffixesViewModel
+    @StateObject var viewModel: SuffixesViewModel
 
     var body: some View {
         List {
             ForEach(viewModel.debouncedResult.indices, id: \.self) { index in
-                let searchResult = viewModel.debouncedResult[index]
-                let totalQty = viewModel.debouncedResult.count
-                SuffixInfoView(index: index, totalQty: totalQty, suffix: searchResult.suffix,
-                               count: String(searchResult.timeEst))
+                SuffixInfoWithTimeView(viewModel: viewModel, index: index)
+                    .modifier(ViewColorModifierLight(index: index, totalQty: viewModel.debouncedResult.count))
+                    .cornerRadius(4)
             }
         }
     }

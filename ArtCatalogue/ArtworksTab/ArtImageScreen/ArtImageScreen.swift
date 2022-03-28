@@ -24,6 +24,7 @@ struct ArtImageScreen: View {
                 .bold()
                 .padding()
             Image(uiImage: itemViewModel.artImage)
+                .frame(width: 150, height: 100, alignment: .center)
                 .padding()
 
             HStack {

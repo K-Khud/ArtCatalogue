@@ -14,8 +14,10 @@ final class ArtImageViewModel: ObservableObject, Loader  {
 
     @Injected var network: NetworkService?
 
-    @Published var artImage: UIImage = UIImage()
+    @Published var artImage: UIImage = UIImage(systemName: "photo") ?? UIImage()
     @Published var isImageLoading: Bool = false
+    @Published var imageIsLoaded: Bool = false
+
 
     init() {}
 
@@ -43,6 +45,7 @@ final class ArtImageViewModel: ObservableObject, Loader  {
                     }
                 }
                 self.isImageLoading = false
+                self.imageIsLoaded = true
 
             })
         }

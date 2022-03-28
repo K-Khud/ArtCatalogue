@@ -23,6 +23,8 @@
 		0214BF0127B45A5D0097F3B8 /* JobScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0214BF0027B45A5D0097F3B8 /* JobScheduler.swift */; };
 		0227FE2827CEB65800856D6C /* FileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0227FE2727CEB65800856D6C /* FileService.swift */; };
 		0227FE2927CEBD0B00856D6C /* FileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0227FE2727CEB65800856D6C /* FileService.swift */; };
+		022D6EB027F235DA001F5D58 /* SuffixInfoWithTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022D6EAF27F235DA001F5D58 /* SuffixInfoWithTimeView.swift */; };
+		022D6EB227F2364C001F5D58 /* ViewColorModifierLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022D6EB127F2364C001F5D58 /* ViewColorModifierLight.swift */; };
 		023A093227AC5FDB0005454B /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023A093127AC5FDB0005454B /* SearchResult.swift */; };
 		023A093327AC5FDB0005454B /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023A093127AC5FDB0005454B /* SearchResult.swift */; };
 		0247D06527934A6800B862D4 /* ArtCatalogueApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0247D06427934A6800B862D4 /* ArtCatalogueApp.swift */; };
@@ -129,6 +131,8 @@
 		0214BEFE27B45A3F0097F3B8 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 		0214BF0027B45A5D0097F3B8 /* JobScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobScheduler.swift; sourceTree = "<group>"; };
 		0227FE2727CEB65800856D6C /* FileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileService.swift; sourceTree = "<group>"; };
+		022D6EAF27F235DA001F5D58 /* SuffixInfoWithTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixInfoWithTimeView.swift; sourceTree = "<group>"; };
+		022D6EB127F2364C001F5D58 /* ViewColorModifierLight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewColorModifierLight.swift; sourceTree = "<group>"; };
 		023A093127AC5FDB0005454B /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		0247D06127934A6800B862D4 /* ArtCatalogue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtCatalogue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0247D06427934A6800B862D4 /* ArtCatalogueApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtCatalogueApp.swift; sourceTree = "<group>"; };
@@ -422,6 +426,8 @@
 			children = (
 				021150C927A99F5000FE427A /* SuffixesScreenView.swift */,
 				020EE8F627B94D4700A8DD3A /* SearchResultDebouncedView.swift */,
+				022D6EAF27F235DA001F5D58 /* SuffixInfoWithTimeView.swift */,
+				022D6EB127F2364C001F5D58 /* ViewColorModifierLight.swift */,
 				020EE8FC27B94E6000A8DD3A /* SearchResultView.swift */,
 				02EC8F1327AADC960023BCDE /* SuffixesViewModel.swift */,
 				023A093127AC5FDB0005454B /* SearchResult.swift */,
@@ -595,6 +601,7 @@
 				028C7DEC27A0763D003AA548 /* ArtworkView.swift in Sources */,
 				0270BB3F27E137F10025ED55 /* CacheService.swift in Sources */,
 				021150CA27A99F5000FE427A /* SuffixesScreenView.swift in Sources */,
+				022D6EB027F235DA001F5D58 /* SuffixInfoWithTimeView.swift in Sources */,
 				0270BB4327E137F10025ED55 /* ArtistDataObject.swift in Sources */,
 				0214BEFF27B45A3F0097F3B8 /* Job.swift in Sources */,
 				02EC8F1427AADC960023BCDE /* SuffixesViewModel.swift in Sources */,
@@ -604,6 +611,7 @@
 				02EC8F1E27AAE1680023BCDE /* SuffixIterator.swift in Sources */,
 				020EE8F727B94D4700A8DD3A /* SearchResultDebouncedView.swift in Sources */,
 				0247D07727934CBC00B862D4 /* ArtworksScreenView.swift in Sources */,
+				022D6EB227F2364C001F5D58 /* ViewColorModifierLight.swift in Sources */,
 				02DA4565279DBA1500E8B515 /* ArtistsViewModel.swift in Sources */,
 				02EC8F1B27AAE1300023BCDE /* WrappedSequence.swift in Sources */,
 				0247D0902794A37000B862D4 /* MainTabView.swift in Sources */,
