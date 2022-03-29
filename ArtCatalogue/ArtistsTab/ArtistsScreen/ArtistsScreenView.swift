@@ -18,12 +18,12 @@ struct ArtistsScreenView: View {
 
     var list: some View {
         VStack {
+            HStack {
+                Spacer()
+                LoadArtistsButton(buttonTitle: "Load Artists", viewModel: artistsViewModel)
+                Spacer()
+            }
             List {
-                HStack {
-                    Spacer()
-                    LoadArtistsButton(buttonTitle: "Load Artists", viewModel: artistsViewModel)
-                    Spacer()
-                }
                 ForEach(artistsViewModel.artists) { artist in
                     ArtistView(artistsViewModel: artistsViewModel, artist: artist)
                         .onAppear() {
@@ -33,6 +33,9 @@ struct ArtistsScreenView: View {
                         }
                 }
             }
+            .onAppear(perform: {
+                artistsViewModel.load()
+            })
             .listStyle(.plain)
         }
     }

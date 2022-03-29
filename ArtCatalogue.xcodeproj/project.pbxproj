@@ -84,6 +84,8 @@
 		02EB4F7027F349D40087A8A2 /* SuffixManipulationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EB4F6F27F349D40087A8A2 /* SuffixManipulationService.swift */; };
 		02EB4F7C27F378DD0087A8A2 /* ArtCatalogueUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EB4F7B27F378DD0087A8A2 /* ArtCatalogueUITestsLaunchTests.swift */; };
 		02EB4F8327F384B20087A8A2 /* SuffixScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EB4F8227F384B20087A8A2 /* SuffixScreenTests.swift */; };
+		02EB4F8527F38B0D0087A8A2 /* ArtworksScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EB4F8427F38B0D0087A8A2 /* ArtworksScreenTests.swift */; };
+		02EB4F8727F394D50087A8A2 /* ArtistsScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EB4F8627F394D50087A8A2 /* ArtistsScreenTests.swift */; };
 		02EC8F1427AADC960023BCDE /* SuffixesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EC8F1327AADC960023BCDE /* SuffixesViewModel.swift */; };
 		02EC8F1B27AAE1300023BCDE /* WrappedSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EC8F1A27AAE1300023BCDE /* WrappedSequence.swift */; };
 		02EC8F1C27AAE1300023BCDE /* WrappedSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EC8F1A27AAE1300023BCDE /* WrappedSequence.swift */; };
@@ -191,6 +193,8 @@
 		02EB4F7727F378DD0087A8A2 /* ArtCatalogueUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtCatalogueUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		02EB4F7B27F378DD0087A8A2 /* ArtCatalogueUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtCatalogueUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		02EB4F8227F384B20087A8A2 /* SuffixScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixScreenTests.swift; sourceTree = "<group>"; };
+		02EB4F8427F38B0D0087A8A2 /* ArtworksScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworksScreenTests.swift; sourceTree = "<group>"; };
+		02EB4F8627F394D50087A8A2 /* ArtistsScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsScreenTests.swift; sourceTree = "<group>"; };
 		02EC8F1327AADC960023BCDE /* SuffixesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixesViewModel.swift; sourceTree = "<group>"; };
 		02EC8F1A27AAE1300023BCDE /* WrappedSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrappedSequence.swift; sourceTree = "<group>"; };
 		02EC8F1D27AAE1680023BCDE /* SuffixIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixIterator.swift; sourceTree = "<group>"; };
@@ -454,6 +458,8 @@
 			isa = PBXGroup;
 			children = (
 				02EB4F8227F384B20087A8A2 /* SuffixScreenTests.swift */,
+				02EB4F8427F38B0D0087A8A2 /* ArtworksScreenTests.swift */,
+				02EB4F8627F394D50087A8A2 /* ArtistsScreenTests.swift */,
 				02EB4F7B27F378DD0087A8A2 /* ArtCatalogueUITestsLaunchTests.swift */,
 			);
 			path = ArtCatalogueUITests;
@@ -739,6 +745,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02EB4F8727F394D50087A8A2 /* ArtistsScreenTests.swift in Sources */,
+				02EB4F8527F38B0D0087A8A2 /* ArtworksScreenTests.swift in Sources */,
 				02EB4F7C27F378DD0087A8A2 /* ArtCatalogueUITestsLaunchTests.swift in Sources */,
 				02EB4F8327F384B20087A8A2 /* SuffixScreenTests.swift in Sources */,
 			);
