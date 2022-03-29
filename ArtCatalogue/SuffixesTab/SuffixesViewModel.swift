@@ -16,7 +16,7 @@ final class SuffixesViewModel: ObservableObject, Loader, SearchSource {
     @Injected var network: NetworkService?
     @Injected var cache: CacheService?
     @Injected var fileService: FileService?
-    @Injected var suffixService: SuffixSplittingService?
+    @Injected var suffixService: SuffixManipulationService?
 
     @Published var isPageLoading: Bool = false
     @Published var searchText: String = ""
@@ -86,9 +86,9 @@ final class SuffixesViewModel: ObservableObject, Loader, SearchSource {
         guard isPageLoading == false else {
             return
         }
-
-        allSuffixes.removeAll()
-        suffixStat.removeAll()
+// uncomment this if the suffixes new suffixes needed
+//        allSuffixes.removeAll()
+//        suffixStat.removeAll()
         isPageLoading = true
         page += 1
 
@@ -121,6 +121,12 @@ final class SuffixesViewModel: ObservableObject, Loader, SearchSource {
         }
     }
 
+    func changeOrder(isAscOrder: Bool = true) {
+        suffixService?.changeOrder(isAscOrder: isAscOrder,
+                                   &allSuffixesSorted,
+                                   allSuffixes)
+    }
+
     // MARK: - Saving and loading of cached testing results
 
     private func saveToFile() {
@@ -150,7 +156,7 @@ final class SuffixesViewModel: ObservableObject, Loader, SearchSource {
                     artists.append(newElement)
                 }
                 lastPageCached = cachedObject.page
-                
+
             }
             print("Success in loading pages frome cache")
 
@@ -171,12 +177,6 @@ final class SuffixesViewModel: ObservableObject, Loader, SearchSource {
         }
         let newCache = ArtistsCache(page: page, payload: dataObject)
         cache?.add(newCache)
-    }
-
-    func changeOrder(isAscOrder: Bool = true) {
-        suffixService?.changeOrder(isAscOrder: isAscOrder,
-                                   &allSuffixesSorted,
-                                   allSuffixes)
     }
 
 // MARK: - Private methods

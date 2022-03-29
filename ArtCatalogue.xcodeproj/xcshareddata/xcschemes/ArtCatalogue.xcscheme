@@ -38,6 +38,16 @@
                ReferencedContainer = "container:ArtCatalogue.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "02EB4F7627F378DD0087A8A2"
+               BuildableName = "ArtCatalogueUITests.xctest"
+               BlueprintName = "ArtCatalogueUITests"
+               ReferencedContainer = "container:ArtCatalogue.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

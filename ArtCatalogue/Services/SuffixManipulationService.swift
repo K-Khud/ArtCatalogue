@@ -1,5 +1,5 @@
 //
-//  SuffixSplittingService.swift
+//  SuffixManipulationService.swift
 //  ArtCatalogue
 //
 //  Created by Ekaterina Khudzhamkulova on 29.3.2022.
@@ -8,7 +8,7 @@
 import Foundation
 import Networking
 
-final class SuffixSplittingService {
+final class SuffixManipulationService {
 // MARK: - Split into suffixes
     func splitIntoSuffixes(artists: inout [ArtistData], suffixStat: inout [String : Int], allSuffixes: inout [SearchResult], allSuffixesSorted: inout [SearchResult], _ topTen: inout [SearchResult]) {
         var suffixes: [String] = []
@@ -50,8 +50,8 @@ final class SuffixSplittingService {
         guard sorted.count >= 10 else {return}
         topTen = Array(sorted[..<10])
     }
-// MARK: - Search suffix
 
+// MARK: - Search suffix
     func findSuffix(_ suffixStat: [String : Int], _ suffix: String, searchResult: inout [SearchResult]) -> SearchResult {
         let start = CFAbsoluteTimeGetCurrent()
 
@@ -82,7 +82,4 @@ final class SuffixSplittingService {
 
         searchResult[index].counter = newElement.counter
     }
-
-
-
 }
