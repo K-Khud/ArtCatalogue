@@ -9,7 +9,7 @@ import Foundation
 import Networking
 
 final class SuffixSplittingService {
-
+// MARK: - Split into suffixes
     func splitIntoSuffixes(artists: inout [ArtistData], suffixStat: inout [String : Int], allSuffixes: inout [SearchResult], allSuffixesSorted: inout [SearchResult], _ topTen: inout [SearchResult]) {
         var suffixes: [String] = []
 
@@ -50,6 +50,39 @@ final class SuffixSplittingService {
         guard sorted.count >= 10 else {return}
         topTen = Array(sorted[..<10])
     }
+// MARK: - Search suffix
+
+    func findSuffix(_ suffixStat: [String : Int], _ suffix: String, searchResult: inout [SearchResult]) -> SearchResult {
+        let start = CFAbsoluteTimeGetCurrent()
+
+        searchSuffixes(suffixStat, searchText: suffix, &searchResult)
+
+        let diff = CFAbsoluteTimeGetCurrent() - start
+
+        return SearchResult(suffix: suffix, count: "n/a", timeEst: diff)
+    }
+
+    private func searchSuffixes(_ suffixStat: [String : Int], searchText: String, _ searchResult: inout [SearchResult]) {
+        let newElement = suffixStat
+            .filter{$0.0 == searchText}
+            .map{SearchResult(suffix: $0.key, count: String($0.value))}.first
+
+        guard let newElement = newElement else {
+            return
+        }
+
+        let index = searchResult.firstIndex { pair in
+            return pair.suffix == newElement.suffix
+        }
+
+        guard let index = index else {
+            searchResult.append(newElement)
+            return
+        }
+
+        searchResult[index].counter = newElement.counter
+    }
+
 
 
 }

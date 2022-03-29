@@ -19,29 +19,28 @@ final class SuffixesViewModel: ObservableObject, Loader, SearchSource {
     @Injected var suffixService: SuffixSplittingService?
 
     @Published var isPageLoading: Bool = false
-
     @Published var searchText: String = ""
-    @Published var debouncedText = ""
-
-    var searchResult: [SearchResult] = []
 
     @Published var allSuffixes: [SearchResult] = []
     @Published var allSuffixesSorted: [SearchResult] = []
-    @Published var allSuffixesSelectedTab: Int = 0
-    @Published var searchResultsSelectedTab: Int = 1
     @Published var topTen: [SearchResult] = []
     @Published var debouncedResult: [SearchResult] = []
+
+    @Published var allSuffixesSelectedTab: Int = 0
+    @Published var searchResultsSelectedTab: Int = 1
 
     @ObservedObject var scheduler: JobScheduler = JobScheduler<SearchResult>()
 
     private var artists: [ArtistData] = []
     private var suffixStat: [String : Int] = [:]
     private let dateFormatter = DateFormatter()
+    private var debouncedText = ""
+    private var page: Int = 0
 
-    var page: Int = 0
+    var searchResult: [SearchResult] = []
 
-    var subscription: Set<AnyCancellable> = []
-    var debouncedSubscription: Set<AnyCancellable> = []
+    private var subscription: Set<AnyCancellable> = []
+    private var debouncedSubscription: Set<AnyCancellable> = []
 
     init() {
         loadFromFile()
@@ -57,8 +56,12 @@ final class SuffixesViewModel: ObservableObject, Loader, SearchSource {
             .removeDuplicates()
             .sink(receiveValue: { [unowned self] output in
                 self.debouncedText = output
-                let firstJob = Job(self.findSuffix(self.debouncedText))
-                scheduler.scheduleJob(firstJob)
+                if let strongServise = suffixService {
+                    let firstJob = Job(strongServise.findSuffix(self.suffixStat,
+                                                   self.debouncedText,
+                                                   searchResult: &self.searchResult))
+                    scheduler.scheduleJob(firstJob)
+                }
             }).store(in: &subscription)
 
         scheduler
@@ -124,14 +127,14 @@ final class SuffixesViewModel: ObservableObject, Loader, SearchSource {
         guard debouncedResult.count > 0 else {
             return
         }
-        FileService.save(debouncedResult)
+        fileService?.save(debouncedResult)
     }
 
     func loadFromFile() {
         guard debouncedResult.count == 0 else {
             return
         }
-        debouncedResult = FileService.load()
+        debouncedResult = fileService?.load() ?? [SearchResult]()
     }
 
     // MARK: - Network Request Caching Methods
@@ -177,37 +180,6 @@ final class SuffixesViewModel: ObservableObject, Loader, SearchSource {
     }
 
 // MARK: - Private methods
-    private func findSuffix(_ suffix: String) -> SearchResult {
-        let start = CFAbsoluteTimeGetCurrent()
-
-        searchSuffixes(searchItems: suffix)
-
-        let diff = CFAbsoluteTimeGetCurrent() - start
-
-        return SearchResult(suffix: suffix, count: "n/a", timeEst: diff)
-    }
-
-    private func searchSuffixes(searchItems: String) {
-        let newElement = suffixStat
-            .filter{$0.0 == searchText}
-            .map{SearchResult(suffix: $0.key, count: String($0.value))}.first
-
-        guard let newElement = newElement else {
-            return
-        }
-
-        let index = searchResult.firstIndex { pair in
-            return pair.suffix == newElement.suffix
-        }
-
-        guard let index = index else {
-            searchResult.append(newElement)
-            return
-        }
-
-        searchResult[index].counter = newElement.counter
-    }
-
     private func saveToUserDefaults(_ suffixes: [SearchResult]) {
         let sorted = suffixes
             .sorted(by: {$0.counter > $1.counter})

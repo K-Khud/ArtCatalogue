@@ -8,18 +8,18 @@
 import Foundation
 
 class FileService {
-    static func getCacheDirectoryUrl() -> URL? {
+    private func getCacheDirectoryUrl() -> URL? {
         return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?
             .appendingPathComponent("testingCache")
     }
     
-    static func getCacheFileUrl() -> URL? {
+    private func getCacheFileUrl() -> URL? {
         return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?
             .appendingPathComponent("testingCache")
             .appendingPathComponent("testingCache.txt")
     }
     
-    static func save(_ searchResults: [SearchResult]) {
+    func save(_ searchResults: [SearchResult]) {
         
         guard let cacheDirectoryUrl = getCacheDirectoryUrl() else { return }
         let fileManager = FileManager.default
@@ -49,7 +49,7 @@ class FileService {
         
     }
     
-    static private func createString(from results: [SearchResult]) -> Data {
+    private func createString(from results: [SearchResult]) -> Data {
         // creating JSON out of the above array
         var jsonData: Data!
         
@@ -65,7 +65,7 @@ class FileService {
         return jsonData
     }
     
-    static func load() -> [SearchResult] {
+    func load() -> [SearchResult] {
         
         guard let fileUrl = getCacheFileUrl() else { return [] }
         
