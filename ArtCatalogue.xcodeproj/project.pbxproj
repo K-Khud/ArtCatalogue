@@ -133,6 +133,7 @@
 		0227FE2727CEB65800856D6C /* FileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileService.swift; sourceTree = "<group>"; };
 		022D6EAF27F235DA001F5D58 /* SuffixInfoWithTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixInfoWithTimeView.swift; sourceTree = "<group>"; };
 		022D6EB127F2364C001F5D58 /* ViewColorModifierLight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewColorModifierLight.swift; sourceTree = "<group>"; };
+		023105FE27F334CF008F2D49 /* ApiTest.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = ApiTest.xctestplan; path = Modules/Networking/Tests/NetworkingTests/ApiTest.xctestplan; sourceTree = "<group>"; };
 		023A093127AC5FDB0005454B /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		0247D06127934A6800B862D4 /* ArtCatalogue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtCatalogue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0247D06427934A6800B862D4 /* ArtCatalogueApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtCatalogueApp.swift; sourceTree = "<group>"; };
@@ -223,6 +224,7 @@
 		0247D05827934A6800B862D4 = {
 			isa = PBXGroup;
 			children = (
+				023105FE27F334CF008F2D49 /* ApiTest.xctestplan */,
 				0247D06327934A6800B862D4 /* ArtCatalogue */,
 				027F1B8627A6E08900247908 /* Artworks Widget */,
 				0252DB0C27EF9BF0008949DC /* ArtCatalogueTests */,

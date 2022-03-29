@@ -6,8 +6,23 @@
 	<dict>
 		<key>UIComponents.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>2</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>UIComponents</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>UIComponentsTests</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

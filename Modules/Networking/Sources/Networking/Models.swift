@@ -80,7 +80,7 @@ open class Response<T> {
 }
 
 public final class RequestTask {
-    private var task: URLSessionTask?
+    var task: URLSessionTask?
 
     internal func set(task: URLSessionTask) {
         self.task = task
