@@ -12,14 +12,12 @@ import RealmSwift
 import UIComponents
 
 final class SuffixesViewModel: ObservableObject, Loader, SearchSource {
-    // инжектинг в переменные инстанса класса
 
     @Injected var network: NetworkService?
     @Injected var cache: CacheService?
     @Injected var fileService: FileService?
+    @Injected var suffixService: SuffixSplittingService?
 
-
-    @Published var artists: [ArtistData] = []
     @Published var isPageLoading: Bool = false
 
     @Published var searchText: String = ""
@@ -36,6 +34,7 @@ final class SuffixesViewModel: ObservableObject, Loader, SearchSource {
 
     @ObservedObject var scheduler: JobScheduler = JobScheduler<SearchResult>()
 
+    private var artists: [ArtistData] = []
     private var suffixStat: [String : Int] = [:]
     private let dateFormatter = DateFormatter()
 
@@ -96,17 +95,25 @@ final class SuffixesViewModel: ObservableObject, Loader, SearchSource {
 
         guard artists.isEmpty && lastPageCached < page else {
             self.isPageLoading = false
-            self.splitIntoSuffixes()
+            self.suffixService?.splitIntoSuffixes(artists: &artists, suffixStat: &suffixStat, allSuffixes: &allSuffixes, allSuffixesSorted: &allSuffixesSorted, &topTen)
+            saveToUserDefaults(allSuffixes)
+
             return
         }
 
         DispatchQueue.global(qos: .background).async {
-            self.network?.getArtists(page: self.page, completion: { data, error in
-                self.artists.append(contentsOf: data?.data ?? [])
-                self.isPageLoading = false
-                self.splitIntoSuffixes()
+            self.network?.getArtists(page: self.page, completion: { [unowned self] data, error in
+                artists.append(contentsOf: data?.data ?? [])
+                isPageLoading = false
+                suffixService?.splitIntoSuffixes(artists: &artists,
+                                                      suffixStat: &suffixStat,
+                                                      allSuffixes: &allSuffixes,
+                                                      allSuffixesSorted: &allSuffixesSorted,
+                                                      &topTen)
+                saveToUserDefaults(allSuffixes)
+
                 guard let data = data else { return }
-                self.addToCache(items: data.data, page: self.page)
+                addToCache(items: data.data, page: self.page)
             })
         }
     }
@@ -164,15 +171,9 @@ final class SuffixesViewModel: ObservableObject, Loader, SearchSource {
     }
 
     func changeOrder(isAscOrder: Bool = true) {
-        allSuffixesSorted = allSuffixes.sorted(by: {
-            isAscOrder ? $0.suffix > $1.suffix :  $0.suffix < $1.suffix
-        })
-    }
-
-    func getTopTen() {
-        let sorted = allSuffixes.sorted(by: {$0.counter > $1.counter})
-        guard sorted.count >= 10 else {return}
-        topTen = Array(sorted[..<10])
+        suffixService?.changeOrder(isAscOrder: isAscOrder,
+                                   &allSuffixesSorted,
+                                   allSuffixes)
     }
 
 // MARK: - Private methods
@@ -184,36 +185,6 @@ final class SuffixesViewModel: ObservableObject, Loader, SearchSource {
         let diff = CFAbsoluteTimeGetCurrent() - start
 
         return SearchResult(suffix: suffix, count: "n/a", timeEst: diff)
-    }
-
-    private func splitIntoSuffixes() {
-        var suffixes: [String] = []
-
-        let titles = WrappedSequence(wrapping: artists) { iterator in
-            return iterator.next()?.title
-        }
-
-        for string in titles {
-            let sequence = SuffixSequence(suffix: string)
-            for suffix in sequence {
-                suffixes.append((String(suffix)))
-            }
-        }
-
-        suffixes.forEach { suffix in
-            if let value = suffixStat[suffix] {
-                suffixStat.updateValue(value + 1, forKey: suffix)
-            } else {
-                suffixStat.updateValue(1, forKey: suffix)
-            }
-            guard let value = suffixStat[suffix] else {
-                return
-            }
-            allSuffixes.append(SearchResult(suffix: suffix, count: String(value)))
-        }
-        changeOrder()
-        getTopTen()
-        saveToUserDefaults(allSuffixes)
     }
 
     private func searchSuffixes(searchItems: String) {

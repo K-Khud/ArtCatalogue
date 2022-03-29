@@ -13,5 +13,7 @@ final class ServicesConfigurator {
     func register() {
         ServiceLocator.shared.addServices(service: NetworkService())
         ServiceLocator.shared.addServices(service: try! CacheService())
+        ServiceLocator.shared.addServices(service: SuffixSplittingService())
+        ServiceLocator.shared.addServices(service: FileService())
     }
 }
