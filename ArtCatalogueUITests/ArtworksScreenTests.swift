@@ -56,7 +56,7 @@ class ArtworksScreenTests: XCTestCase {
         app.launch()
 
         app.tabBars["Tab Bar"].buttons["Artworks"].tap()
-        sleep(1)
+        sleep(2)
 
         app.tables.element.tap()
         XCTAssert(app.buttons["Show Image"].waitForExistence(timeout: 2))
@@ -69,7 +69,7 @@ class ArtworksScreenTests: XCTestCase {
         app.tabBars["Tab Bar"].buttons["Artworks"].tap()
         sleep(1)
         app.tables.element.tap()
-        sleep(1)
+        sleep(2)
         app.buttons["Show Image"].tap()
         XCTAssert(app.buttons["Load Image"].waitForExistence(timeout: 2))
     }

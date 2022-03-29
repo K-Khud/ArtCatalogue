@@ -10,7 +10,11 @@ import Networking
 
 final class SuffixManipulationService {
 // MARK: - Split into suffixes
-    func splitIntoSuffixes(artists: inout [ArtistData], suffixStat: inout [String : Int], allSuffixes: inout [SearchResult], allSuffixesSorted: inout [SearchResult], _ topTen: inout [SearchResult]) {
+    func splitIntoSuffixes(artists: inout [ArtistData],
+                           suffixStat: inout [String : Int],
+                           allSuffixes: inout [SearchResult],
+                           allSuffixesSorted: inout [SearchResult],
+                           _ topTen: inout [SearchResult]) {
         var suffixes: [String] = []
 
         let titles = WrappedSequence(wrapping: artists) { iterator in
