@@ -4,6 +4,8 @@
 //
 //  Created by Ekaterina Khudzhamkulova on 15.1.2022.
 //
+// swiftlint:disable line_length
+// swiftlint:disable cyclomatic_complexity
 
 import Foundation
 
@@ -92,7 +94,6 @@ extension AnyCodable: ExpressibleByStringLiteral {}
 extension AnyCodable: ExpressibleByArrayLiteral {}
 extension AnyCodable: ExpressibleByDictionaryLiteral {}
 
-
 extension AnyCodable: Hashable {
     public func hash(into hasher: inout Hasher) {
         switch value {
@@ -158,7 +159,7 @@ extension _AnyDecodable {
             #if canImport(Foundation)
                 self.init(NSNull())
             #else
-                self.init(Optional<Self>.none)
+                self.init(Self?.none)
             #endif
         } else if let bool = try? container.decode(Bool.self) {
             self.init(bool)
@@ -368,7 +369,7 @@ extension _AnyEncodable {
 
     #if canImport(Foundation)
     private func encode(nsnumber: NSNumber, into container: inout SingleValueEncodingContainer) throws {
-        switch Character(Unicode.Scalar(UInt8(nsnumber.objCType.pointee)))  {
+        switch Character(Unicode.Scalar(UInt8(nsnumber.objCType.pointee))) {
         case "c", "C":
             try container.encode(nsnumber.boolValue)
         case "s":

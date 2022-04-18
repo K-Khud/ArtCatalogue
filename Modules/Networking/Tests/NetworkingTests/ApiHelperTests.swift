@@ -9,7 +9,7 @@ import XCTest
 @testable import Networking
 
 class ApiHelperTests: XCTestCase {
-    let dictWithNil: [String : Any?] = ["0": nil, "1": 1, "2": "2", "3": false]
+    let dictWithNil: [String: Any?] = ["0": nil, "1": 1, "2": "2", "3": false]
 
     func testRejectNil() throws {
         XCTAssertNil(APIHelper.rejectNil(dictWithNil)?["0"])
@@ -35,6 +35,5 @@ class ApiHelperTests: XCTestCase {
         XCTAssertTrue(query.contains(third))
         XCTAssertTrue(query.count == 3)
     }
-
 
 }

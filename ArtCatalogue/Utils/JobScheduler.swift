@@ -7,10 +7,8 @@
 
 import Foundation
 
-class JobScheduler<T: Comparable>: ObservableObject {
+final class JobScheduler<T: Comparable>: ObservableObject {
     @Published var debouncedResults: [T] = []
-
-    init() {    }
 
     func scheduleJob(_ job: Job<T>) {
         Task {
@@ -23,14 +21,10 @@ class JobScheduler<T: Comparable>: ObservableObject {
                 bufferArray.append(newResult)
                 debouncedResults = bufferArray.sorted()
                 return
-
             }
             bufferArray[index] = newResult
 
             debouncedResults = bufferArray.sorted()
-            print("bufferResults")
-
-            print(debouncedResults)
         }
     }
 }

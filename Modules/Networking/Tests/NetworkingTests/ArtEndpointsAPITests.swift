@@ -53,4 +53,3 @@ class ArtEndpointsAPITests: XCTestCase {
         XCTAssertNotNil(responseData)
     }
 }
-

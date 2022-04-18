@@ -4,6 +4,7 @@
 //
 //  Created by Ekaterina Khudzhamkulova on 30.1.2022.
 //
+// swiftlint:disable type_name
 
 import WidgetKit
 import SwiftUI
@@ -15,12 +16,12 @@ struct Provider: TimelineProvider {
         SimpleEntry(date: Date(), suffixes: ["Placeholder"])
     }
 
-    func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
+    func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> Void) {
         let entry = SimpleEntry(date: Date(), suffixes: ["Snapshot"])
         completion(entry)
     }
 
-    func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
+    func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> Void) {
         let nextUpdate = Calendar.current.date(byAdding: .second, value: 1, to: Date())
         let timeLine = Timeline(entries: [SimpleEntry(date: Date(), suffixes: WidgetBridget.shared.topThree)],
                                 policy: .after(nextUpdate!))
@@ -34,7 +35,7 @@ struct SimpleEntry: TimelineEntry {
 
 }
 
-struct Artworks_WidgetEntryView : View {
+struct Artworks_WidgetEntryView: View {
     var entry: Provider.Entry
 
     var body: some View {

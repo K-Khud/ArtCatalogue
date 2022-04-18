@@ -17,4 +17,3 @@ public struct LazyView<Content: View>: View {
         build()
     }
 }
-

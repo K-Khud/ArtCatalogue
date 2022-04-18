@@ -17,7 +17,7 @@ struct Injected<T: AnyObject> {
     public var wrappedValue: T? {
         mutating get {
             if service == nil {
-                service =  serviceManager?.resolve(type: T.self)
+                service = serviceManager?.resolve(type: T.self)
             }
             return service
         }

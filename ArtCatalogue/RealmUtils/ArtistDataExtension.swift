@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import RealmSwift
 import Networking
 
 extension ArtistData: Persistable {
@@ -27,12 +26,12 @@ extension ArtistData: Persistable {
     }
 
     func managedObject() -> ArtistDataObject {
-        let artist = ArtistDataObject(id: id,
-                                      title: title,
+        let artist = ArtistDataObject(id: id ?? 0,
+                                      title: title ?? "",
                                       birthDate: birthDate ?? 0,
                                       birthPlace: birthPlace ?? "",
                                       deathDate: deathDate ?? 0,
-                                      artworkIds: artworkIds)
+                                      artworkIds: artworkIds ?? [0])
         return artist
     }
 }

@@ -41,4 +41,3 @@ public struct ResponseArtworks: Codable, Hashable {
         try container.encodeIfPresent(config, forKey: .config)
     }
 }
-

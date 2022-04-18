@@ -4,6 +4,7 @@
 //
 //  Created by Ekaterina Khudzhamkulova on 16.1.2022.
 //
+// swiftlint:disable identifier_name
 
 import Foundation
 

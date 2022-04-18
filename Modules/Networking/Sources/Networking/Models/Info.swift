@@ -37,4 +37,3 @@ public struct Info: Codable, Hashable {
         try container.encode(version, forKey: .version)
     }
 }
-

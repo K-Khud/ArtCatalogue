@@ -7,12 +7,8 @@
 
 import Foundation
 
-class WidgetBridget {
+final class WidgetBridget {
     static let shared = WidgetBridget()
 
-    var topThree: [String] = ["doc - 3", "txt - 2", "sky - 1"] {
-        didSet {
-            print("topThree set to \(topThree)")
-        }
-    }
+    var topThree: [String] = ["doc - 3", "txt - 2", "sky - 1"]
 }

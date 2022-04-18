@@ -10,7 +10,7 @@ import Navigation
 
 struct MainTabView: View {
     @EnvironmentObject var router: Router
-    
+
     var body: some View {
         TabView(selection: $router.tabSelection) {
             NavigationContainerView(transition: Transition.custom(.opacity), content: {

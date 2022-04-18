@@ -14,8 +14,6 @@ final class ServiceLocator {
         return [String: AnyObject]()
     }()
 
-    private init() {}
-
     func addServices<T: AnyObject>(service: T) {
         let key = String(describing: T.self)
         if services[key] == nil {

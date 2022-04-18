@@ -9,8 +9,6 @@ import Foundation
 import SwiftUI
 
 public protocol Loader: ObservableObject {
-    associatedtype Body: View
-    var body: Body { get }
 
     func load(_ data: Codable?)
 }

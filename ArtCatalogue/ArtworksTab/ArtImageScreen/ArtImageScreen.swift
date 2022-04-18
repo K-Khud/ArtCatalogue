@@ -20,7 +20,7 @@ struct ArtImageScreen: View {
         VStack {
             Text("Artwork title:")
                 .fontWeight(.light)
-            Text(artwork.title)
+            Text(artwork.title ?? "")
                 .bold()
                 .padding()
             Image(uiImage: itemViewModel.artImage)
@@ -28,9 +28,7 @@ struct ArtImageScreen: View {
                 .padding()
 
             HStack {
-//                Spacer()
                 LoadButton(viewModel: itemViewModel, artwork: artwork, buttonTitle: "Load Image")
-//                Spacer()
                 Button {
                     self.routeModel.pop()
                 } label: {

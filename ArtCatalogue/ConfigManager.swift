@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ConfigManager {
+final class ConfigManager {
     static let shared = ConfigManager()
 
     lazy var router: Router = {

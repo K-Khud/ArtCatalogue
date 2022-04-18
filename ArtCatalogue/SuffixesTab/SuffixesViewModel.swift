@@ -8,7 +8,6 @@
 import Networking
 import SwiftUI
 import Combine
-import RealmSwift
 import UIComponents
 
 final class SuffixesViewModel: ObservableObject, Loader, SearchSource {
@@ -32,7 +31,7 @@ final class SuffixesViewModel: ObservableObject, Loader, SearchSource {
     @ObservedObject var scheduler: JobScheduler = JobScheduler<SearchResult>()
 
     private var artists: [ArtistData] = []
-    private var suffixStat: [String : Int] = [:]
+    private var suffixStat: [String: Int] = [:]
     private let dateFormatter = DateFormatter()
     private var debouncedText = ""
     private var page: Int = 0
@@ -51,16 +50,17 @@ final class SuffixesViewModel: ObservableObject, Loader, SearchSource {
                 }
                 return string
             })
-            .compactMap{ $0 }
+            .compactMap { $0 }
             .debounce(for: .milliseconds(800), scheduler: RunLoop.main)
             .removeDuplicates()
-            .sink(receiveValue: { [unowned self] output in
+            .sink(receiveValue: { [weak self] output in
+                guard let self = self else { return }
                 self.debouncedText = output
-                if let strongServise = suffixService {
-                    let firstJob = Job(strongServise.findSuffix(self.suffixStat,
+                if let strongService = self.suffixService {
+                    let firstJob = Job(strongService.findSuffix(self.suffixStat,
                                                    self.debouncedText,
                                                    searchResult: &self.searchResult))
-                    scheduler.scheduleJob(firstJob)
+                    self.scheduler.scheduleJob(firstJob)
                 }
             }).store(in: &subscription)
 
@@ -77,18 +77,11 @@ final class SuffixesViewModel: ObservableObject, Loader, SearchSource {
             }).store(in: &debouncedSubscription)
    }
 
-    var body: some View {
-        Text("")
-    }
-
     func load(_ data: Codable? = nil) {
 
         guard isPageLoading == false else {
             return
         }
-// uncomment this if the suffixes new suffixes needed
-//        allSuffixes.removeAll()
-//        suffixStat.removeAll()
         isPageLoading = true
         page += 1
 
@@ -98,25 +91,30 @@ final class SuffixesViewModel: ObservableObject, Loader, SearchSource {
 
         guard artists.isEmpty && lastPageCached < page else {
             self.isPageLoading = false
-            self.suffixService?.splitIntoSuffixes(artists: &artists, suffixStat: &suffixStat, allSuffixes: &allSuffixes, allSuffixesSorted: &allSuffixesSorted, &topTen)
+            self.suffixService?.splitIntoSuffixes(artists: artists,
+                                                  suffixStat: &suffixStat,
+                                                  allSuffixes: &allSuffixes,
+                                                  allSuffixesSorted: &allSuffixesSorted,
+                                                  &topTen)
             saveToUserDefaults(allSuffixes)
 
             return
         }
 
         DispatchQueue.global(qos: .background).async {
-            self.network?.getArtists(page: self.page, completion: { [unowned self] data, error in
-                artists.append(contentsOf: data?.data ?? [])
-                isPageLoading = false
-                suffixService?.splitIntoSuffixes(artists: &artists,
-                                                      suffixStat: &suffixStat,
-                                                      allSuffixes: &allSuffixes,
-                                                      allSuffixesSorted: &allSuffixesSorted,
-                                                      &topTen)
-                saveToUserDefaults(allSuffixes)
+            self.network?.getArtists(page: self.page, completion: { [weak self] data, _ in
+                guard let self = self else { return }
+                self.artists.append(contentsOf: data?.data ?? [])
+                self.isPageLoading = false
+                self.suffixService?.splitIntoSuffixes(artists: self.artists,
+                                                      suffixStat: &self.suffixStat,
+                                                      allSuffixes: &self.allSuffixes,
+                                                      allSuffixesSorted: &self.allSuffixesSorted,
+                                                      &self.topTen)
+                self.saveToUserDefaults(self.allSuffixes)
 
                 guard let data = data else { return }
-                addToCache(items: data.data, page: self.page)
+                self.addToCache(items: data.data, page: self.page)
             })
         }
     }
@@ -156,9 +154,7 @@ final class SuffixesViewModel: ObservableObject, Loader, SearchSource {
                     artists.append(newElement)
                 }
                 lastPageCached = cachedObject.page
-
             }
-            print("Success in loading pages frome cache")
 
         } catch {
             print("Error fetching cache from realm: \(error.localizedDescription)")
@@ -168,18 +164,17 @@ final class SuffixesViewModel: ObservableObject, Loader, SearchSource {
     private func addToCache(items: [ArtistData], page: Int) {
         var dataObject: [ArtistDataObject] = []
         items.forEach { artistItem in
-            dataObject.append(ArtistDataObject(id: artistItem.id,
-                                               title: artistItem.title,
+            dataObject.append(ArtistDataObject(id: artistItem.id ?? 0,
+                                               title: artistItem.title ?? "",
                                                birthDate: artistItem.birthDate ?? 0,
                                                birthPlace: artistItem.birthPlace ?? "",
                                                deathDate: artistItem.deathDate ?? 0,
-                                               artworkIds: artistItem.artworkIds))
+                                               artworkIds: artistItem.artworkIds ?? [0]))
         }
         let newCache = ArtistsCache(page: page, payload: dataObject)
         cache?.add(newCache)
     }
 
-// MARK: - Private methods
     private func saveToUserDefaults(_ suffixes: [SearchResult]) {
         let sorted = suffixes
             .sorted(by: {$0.counter > $1.counter})

@@ -10,7 +10,6 @@ import SwiftUI
 import UIComponents
 
 final class ArtworksViewModel: ObservableObject, Loader {
-    // инжектинг в переменные инстанса класса
 
     @Injected var network: NetworkService?
 
@@ -18,10 +17,6 @@ final class ArtworksViewModel: ObservableObject, Loader {
     @Published var isPageLoading: Bool = false
 
     var page: Int = 0
-
-    var body: some View {
-            Text("")
-    }
 
     func load(_ data: Codable? = nil) {
         guard isPageLoading == false else {
@@ -32,7 +27,7 @@ final class ArtworksViewModel: ObservableObject, Loader {
         page += 1
 
         DispatchQueue.global(qos: .background).async {
-            self.network?.getArtworks(page: self.page, completion: { data, error in
+            self.network?.getArtworks(page: self.page, completion: { data, _ in
 
                 self.artworks.append(contentsOf: data?.data ?? [])
                 self.isPageLoading = false

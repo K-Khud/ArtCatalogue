@@ -41,4 +41,3 @@ public struct Thumbnail: Codable, Hashable {
         try container.encode(altText, forKey: .altText)
     }
 }
-

@@ -15,9 +15,9 @@ public struct LoadButton<T: Loader>: View {
     }
 
     @ObservedObject public var viewModel: T
+    @State public var buttonTapped = false
     public var artwork: Codable?
     public var buttonTitle: String
-    @State public var buttonTapped = false
 
     public var body: some View {
         HStack {

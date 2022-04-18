@@ -29,4 +29,3 @@ public struct ArtworkDataContexts: Codable, Hashable {
         try container.encode(groupings, forKey: .groupings)
     }
 }
-

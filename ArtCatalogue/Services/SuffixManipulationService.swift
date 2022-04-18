@@ -10,8 +10,8 @@ import Networking
 
 final class SuffixManipulationService {
 // MARK: - Split into suffixes
-    func splitIntoSuffixes(artists: inout [ArtistData],
-                           suffixStat: inout [String : Int],
+    func splitIntoSuffixes(artists: [ArtistData],
+                           suffixStat: inout [String: Int],
                            allSuffixes: inout [SearchResult],
                            allSuffixesSorted: inout [SearchResult],
                            _ topTen: inout [SearchResult]) {
@@ -43,7 +43,9 @@ final class SuffixManipulationService {
         getTopTen(allSuffixes, &topTen)
     }
 
-    func changeOrder(isAscOrder: Bool = true, _ allSuffixesSorted: inout [SearchResult], _ allSuffixes: [SearchResult]) {
+    func changeOrder(isAscOrder: Bool = true,
+                     _ allSuffixesSorted: inout [SearchResult],
+                     _ allSuffixes: [SearchResult]) {
         allSuffixesSorted = allSuffixes.sorted(by: {
             isAscOrder ? $0.suffix > $1.suffix :  $0.suffix < $1.suffix
         })
@@ -56,7 +58,7 @@ final class SuffixManipulationService {
     }
 
 // MARK: - Search suffix
-    func findSuffix(_ suffixStat: [String : Int], _ suffix: String, searchResult: inout [SearchResult]) -> SearchResult {
+    func findSuffix(_ suffixStat: [String: Int], _ suffix: String, searchResult: inout [SearchResult]) -> SearchResult {
         let start = CFAbsoluteTimeGetCurrent()
 
         searchSuffixes(suffixStat, searchText: suffix, &searchResult)
@@ -66,10 +68,10 @@ final class SuffixManipulationService {
         return SearchResult(suffix: suffix, count: "n/a", timeEst: diff)
     }
 
-    private func searchSuffixes(_ suffixStat: [String : Int], searchText: String, _ searchResult: inout [SearchResult]) {
+    private func searchSuffixes(_ suffixStat: [String: Int], searchText: String, _ searchResult: inout [SearchResult]) {
         let newElement = suffixStat
-            .filter{$0.0 == searchText}
-            .map{SearchResult(suffix: $0.key, count: String($0.value))}.first
+            .filter {$0.0 == searchText}
+            .map {SearchResult(suffix: $0.key, count: String($0.value))}.first
 
         guard let newElement = newElement else {
             return

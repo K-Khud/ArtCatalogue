@@ -4,6 +4,7 @@
 //
 //  Created by Ekaterina Khudzhamkulova on 6.3.2022.
 //
+// swiftlint:disable identifier_name
 
 import Foundation
 import RealmSwift
@@ -21,7 +22,10 @@ import RealmSwift
         return "id"
     }
 
-    convenience init(id: Double, title: String, birthDate: Double, birthPlace: String, deathDate: Double, artworkIds: [Int]) {
+    convenience init(id: Double,
+                     title: String,
+                     birthDate: Double,
+                     birthPlace: String, deathDate: Double, artworkIds: [Int]) {
         self.init()
         self.artistId = id
         self.title = title

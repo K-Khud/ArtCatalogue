@@ -18,7 +18,7 @@ struct ArtistDetailsScreen: View {
         VStack {
             Text("Name:")
                 .fontWeight(.light)
-            Text(item.title)
+            Text(item.title ?? "")
                 .bold()
                 .padding()
             Text("Date of Birth")
@@ -49,6 +49,11 @@ struct ArtistDetailsScreen: View {
 
 struct ArtistDetailsScreen_Previews: PreviewProvider {
     static var previews: some View {
-        ArtistDetailsScreen(item: ArtistData(id: 0, title: "", birthDate: 0, birthPlace: "", deathDate: 0, artworkIds: []))
+        ArtistDetailsScreen(item: ArtistData(id: 0,
+                                             title: "",
+                                             birthDate: 0,
+                                             birthPlace: "",
+                                             deathDate: 0,
+                                             artworkIds: []))
     }
 }

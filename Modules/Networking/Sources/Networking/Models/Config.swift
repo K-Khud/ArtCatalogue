@@ -12,10 +12,10 @@ import AnyCodable
 
 public struct Config: Codable, Hashable {
 
-    public var iiifUrl: String
-    public var websiteUrl: String
+    public var iiifUrl: String?
+    public var websiteUrl: String?
 
-    public init(iiifUrl: String, websiteUrl: String) {
+    public init(iiifUrl: String? = nil, websiteUrl: String? = nil) {
         self.iiifUrl = iiifUrl
         self.websiteUrl = websiteUrl
     }
@@ -33,4 +33,3 @@ public struct Config: Codable, Hashable {
         try container.encode(websiteUrl, forKey: .websiteUrl)
     }
 }
-

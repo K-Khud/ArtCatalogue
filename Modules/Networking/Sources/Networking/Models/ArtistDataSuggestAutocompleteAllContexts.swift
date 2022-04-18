@@ -29,4 +29,3 @@ public struct ArtistDataSuggestAutocompleteAllContexts: Codable, Hashable {
         try container.encode(groupings, forKey: .groupings)
     }
 }
-

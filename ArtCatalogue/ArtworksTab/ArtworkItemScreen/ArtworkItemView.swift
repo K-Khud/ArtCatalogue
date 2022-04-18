@@ -5,7 +5,6 @@
 //  Created by Ekaterina Khudzhamkulova on 16.1.2022.
 //
 
-
 import SwiftUI
 import Networking
 import Navigation
@@ -19,7 +18,7 @@ struct ArtworkItemView: View {
         VStack {
             Text("Artwork title:")
                 .fontWeight(.light)
-            Text(item.title)
+            Text(item.title ?? "")
                 .bold()
                 .padding()
             Text("Artist")
@@ -52,4 +51,3 @@ struct ArtworkItemView: View {
         }
     }
 }
-

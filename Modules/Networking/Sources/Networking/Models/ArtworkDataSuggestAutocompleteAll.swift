@@ -37,4 +37,3 @@ public struct ArtworkDataSuggestAutocompleteAll: Codable, Hashable {
         try container.encodeIfPresent(contexts, forKey: .contexts)
     }
 }
-

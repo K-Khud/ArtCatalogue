@@ -12,15 +12,15 @@ class FileService {
         return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?
             .appendingPathComponent("testingCache")
     }
-    
+
     private func getCacheFileUrl() -> URL? {
         return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?
             .appendingPathComponent("testingCache")
             .appendingPathComponent("testingCache.txt")
     }
-    
+
     func save(_ searchResults: [SearchResult]) {
-        
+
         guard let cacheDirectoryUrl = getCacheDirectoryUrl() else { return }
         let fileManager = FileManager.default
         if !fileManager.fileExists(atPath: cacheDirectoryUrl.path) {
@@ -35,9 +35,9 @@ class FileService {
         guard let newFileUrl = getCacheFileUrl() else {
             return
         }
-        
+
         let jsonData = createString(from: searchResults)
-        
+
         if fileManager.fileExists(atPath: newFileUrl.path) {
             do {
                 try fileManager.removeItem(atPath: newFileUrl.path)
@@ -46,29 +46,29 @@ class FileService {
             }
         }
         fileManager.createFile(atPath: newFileUrl.path, contents: jsonData, attributes: nil)
-        
+
     }
-    
+
     private func createString(from results: [SearchResult]) -> Data {
         // creating JSON out of the above array
         var jsonData: Data!
-        
+
         do {
-            
+
             let encoder = JSONEncoder()
             encoder.keyEncodingStrategy = .convertToSnakeCase
             jsonData = try encoder.encode(results)
-            
+
         } catch {
             print(error)
         }
         return jsonData
     }
-    
+
     func load() -> [SearchResult] {
-        
+
         guard let fileUrl = getCacheFileUrl() else { return [] }
-        
+
         // Read data from .json file and transform data into an array
         do {
             let decoder = JSONDecoder()

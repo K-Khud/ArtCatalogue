@@ -20,8 +20,8 @@ struct ArtistsWorksScreen: View {
             Text("Artworks IDs:")
                 .fontWeight(.light)
             List {
-                ForEach(0..<artist.artworkIds.count) { i in
-                  Text(verbatim: "\(self.artist.artworkIds[i])")
+                ForEach(0..<(artist.artworkIds?.count ?? 1)) { index in
+                  Text(verbatim: "\(self.artist.artworkIds?[index])")
                         .bold()
                 }
             }
@@ -37,6 +37,11 @@ struct ArtistsWorksScreen: View {
 
 struct ArtistsWorksScreen_Previews: PreviewProvider {
     static var previews: some View {
-        ArtistsWorksScreen(artist: ArtistData(id: 0, title: "", birthDate: 0, birthPlace: "", deathDate: 0, artworkIds: [0]))
+        ArtistsWorksScreen(artist: ArtistData(id: 0,
+                                              title: "",
+                                              birthDate: 0,
+                                              birthPlace: "",
+                                              deathDate: 0,
+                                              artworkIds: [0]))
     }
 }

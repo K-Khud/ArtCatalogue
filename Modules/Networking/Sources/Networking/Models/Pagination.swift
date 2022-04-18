@@ -49,4 +49,3 @@ public struct Pagination: Codable, Hashable {
         try container.encode(nextUrl, forKey: .nextUrl)
     }
 }
-

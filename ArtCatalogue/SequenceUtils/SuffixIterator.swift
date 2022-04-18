@@ -12,13 +12,12 @@ struct SuffixIterator: IteratorProtocol {
     let end: String.Index
     let stopIndex: String.Index
     var offset: String.Index
-//    let minLength: Int = 3
 
     init(string: String) {
         self.string = string
         self.end = string.endIndex
         self.offset = string.startIndex
-        self.stopIndex = string.endIndex//.index(end, offsetBy: -minLength + 1)
+        self.stopIndex = string.endIndex
     }
 
     mutating func next() -> Substring? {
@@ -27,13 +26,5 @@ struct SuffixIterator: IteratorProtocol {
         let sub: Substring = string[offset..<end]
         string.formIndex(after: &offset)
         return sub
-    }
-}
-
-struct SuffixSequence: Sequence {
-    let suffix: String
-
-    func makeIterator() -> SuffixIterator {
-        return SuffixIterator(string: suffix)
     }
 }

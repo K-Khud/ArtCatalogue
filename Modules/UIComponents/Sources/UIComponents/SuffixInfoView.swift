@@ -14,7 +14,7 @@ public struct SuffixInfoView: View {
         self.suffix = suffix
         self.count = count
     }
-    
+
     @State public var suffix: String
     @State public var count: String
 

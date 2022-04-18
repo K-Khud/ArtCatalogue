@@ -76,6 +76,7 @@
 		028C7DF027A076CC003AA548 /* AnimatingCellModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C7DEF27A076CC003AA548 /* AnimatingCellModifier.swift */; };
 		02AF611927AEBAE800B250DA /* LinkNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AF611827AEBAE800B250DA /* LinkNames.swift */; };
 		02AF611A27AEBAE800B250DA /* LinkNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AF611827AEBAE800B250DA /* LinkNames.swift */; };
+		02D2FCC9280DEE4500F76525 /* SuffixSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D2FCC8280DEE4500F76525 /* SuffixSequence.swift */; };
 		02D5B4F727DF9C760070BD2E /* Navigation in Frameworks */ = {isa = PBXBuildFile; productRef = 02D5B4F627DF9C760070BD2E /* Navigation */; };
 		02DA4565279DBA1500E8B515 /* ArtistsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA4564279DBA1500E8B515 /* ArtistsViewModel.swift */; };
 		02DA4567279DBA2500E8B515 /* ArtistsScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA4566279DBA2500E8B515 /* ArtistsScreenView.swift */; };
@@ -187,6 +188,8 @@
 		028C7DEF27A076CC003AA548 /* AnimatingCellModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatingCellModifier.swift; sourceTree = "<group>"; };
 		02AF611827AEBAE800B250DA /* LinkNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkNames.swift; sourceTree = "<group>"; };
 		02AF611B27AEC27800B250DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		02D2FCC7280DD5AC00F76525 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		02D2FCC8280DEE4500F76525 /* SuffixSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixSequence.swift; sourceTree = "<group>"; };
 		02DA4564279DBA1500E8B515 /* ArtistsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsViewModel.swift; sourceTree = "<group>"; };
 		02DA4566279DBA2500E8B515 /* ArtistsScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsScreenView.swift; sourceTree = "<group>"; };
 		02DA456B279DBFBD00E8B515 /* ArtistDetailsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailsScreen.swift; sourceTree = "<group>"; };
@@ -253,6 +256,7 @@
 		0247D05827934A6800B862D4 = {
 			isa = PBXGroup;
 			children = (
+				02D2FCC7280DD5AC00F76525 /* README.md */,
 				023105FE27F334CF008F2D49 /* ApiTest.xctestplan */,
 				0247D06327934A6800B862D4 /* ArtCatalogue */,
 				027F1B8627A6E08900247908 /* Artworks Widget */,
@@ -277,18 +281,17 @@
 		0247D06327934A6800B862D4 /* ArtCatalogue */ = {
 			isa = PBXGroup;
 			children = (
+				02AF611B27AEC27800B250DA /* Info.plist */,
 				020D7D7027E77CE60061A6C2 /* UIComponents */,
 				0250A63827DE90E70079C56C /* Navigation */,
-				02AF611B27AEC27800B250DA /* Info.plist */,
 				0247D07227934A9A00B862D4 /* Networking */,
 				0247D06427934A6800B862D4 /* ArtCatalogueApp.swift */,
 				0247D08F2794A37000B862D4 /* MainTabView.swift */,
-				0247D0912794A3B500B862D4 /* Router.swift */,
 				0247D0932794A3D100B862D4 /* ConfigManager.swift */,
-				026CF35A27E28F6800D0F57C /* ServiceLocator.swift */,
-				026CF35D27E28FE400D0F57C /* ServicesConfigurator.swift */,
+				0247D0912794A3B500B862D4 /* Router.swift */,
 				026CF35527E2899E00D0F57C /* Services */,
-				0289E0A027BC098300A751E5 /* Cache */,
+				0289E0A027BC098300A751E5 /* RealmUtils */,
+				02D2FCCA280DEFC000F76525 /* SequenceUtils */,
 				02EA812227B4553C00483413 /* Utils */,
 				02EC8F1527AADC9D0023BCDE /* SuffixesTab */,
 				02DA4571279DD7A000E8B515 /* ArtistsTab */,
@@ -368,6 +371,8 @@
 		026CF35527E2899E00D0F57C /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				026CF35A27E28F6800D0F57C /* ServiceLocator.swift */,
+				026CF35D27E28FE400D0F57C /* ServicesConfigurator.swift */,
 				0270BB3E27E137F10025ED55 /* CacheService.swift */,
 				0227FE2727CEB65800856D6C /* FileService.swift */,
 				026CF35627E289C000D0F57C /* NetworkService.swift */,
@@ -389,7 +394,7 @@
 			path = "Artworks Widget";
 			sourceTree = "<group>";
 		};
-		0289E0A027BC098300A751E5 /* Cache */ = {
+		0289E0A027BC098300A751E5 /* RealmUtils */ = {
 			isa = PBXGroup;
 			children = (
 				0270BB3D27E137F10025ED55 /* ArtistDataObject.swift */,
@@ -397,7 +402,17 @@
 				0270BB3B27E137F10025ED55 /* Persistable.swift */,
 				0278E46727D51A0300F02358 /* ArtistDataExtension.swift */,
 			);
-			path = Cache;
+			path = RealmUtils;
+			sourceTree = "<group>";
+		};
+		02D2FCCA280DEFC000F76525 /* SequenceUtils */ = {
+			isa = PBXGroup;
+			children = (
+				02EC8F1D27AAE1680023BCDE /* SuffixIterator.swift */,
+				02EC8F1A27AAE1300023BCDE /* WrappedSequence.swift */,
+				02D2FCC8280DEE4500F76525 /* SuffixSequence.swift */,
+			);
+			path = SequenceUtils;
 			sourceTree = "<group>";
 		};
 		02DA4568279DBA2A00E8B515 /* ArtistsScreen */ = {
@@ -450,12 +465,10 @@
 			isa = PBXGroup;
 			children = (
 				026CF36127E2917500D0F57C /* InjectedWrapper.swift */,
-				0214BEFB27B4573E0097F3B8 /* WidgetBridget.swift */,
 				0214BEFE27B45A3F0097F3B8 /* Job.swift */,
 				0214BF0027B45A5D0097F3B8 /* JobScheduler.swift */,
-				02EC8F1D27AAE1680023BCDE /* SuffixIterator.swift */,
-				02EC8F1A27AAE1300023BCDE /* WrappedSequence.swift */,
 				023A093127AC5FDB0005454B /* SearchResult.swift */,
+				0214BEFB27B4573E0097F3B8 /* WidgetBridget.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -495,6 +508,7 @@
 				0247D05E27934A6800B862D4 /* Frameworks */,
 				0247D05F27934A6800B862D4 /* Resources */,
 				027F1B8F27A6E08A00247908 /* Embed App Extensions */,
+				02D2FCC62808B40A00F76525 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -659,6 +673,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		02D2FCC62808B40A00F76525 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0247D05D27934A6800B862D4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -700,6 +734,7 @@
 				0247D09D2794A71E00B862D4 /* ArtImageViewModel.swift in Sources */,
 				026CF35E27E28FE400D0F57C /* ServicesConfigurator.swift in Sources */,
 				020EE8FD27B94E6000A8DD3A /* SearchResultView.swift in Sources */,
+				02D2FCC9280DEE4500F76525 /* SuffixSequence.swift in Sources */,
 				02DA4567279DBA2500E8B515 /* ArtistsScreenView.swift in Sources */,
 				0247D0922794A3B500B862D4 /* Router.swift in Sources */,
 				028C7DEE27A0766F003AA548 /* AnimationOffsetModifier.swift in Sources */,

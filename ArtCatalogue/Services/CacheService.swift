@@ -23,13 +23,11 @@ final class CacheService {
         return realm.objects(T.self)
     }
 
-
     func add<T: Object>(_ value: T) {
         do {
             try realm.write({
                 realm.add(value)
             })
-            print("Success in saving data into cache")
 
         } catch {
             print("Error adding data to realm: \(error.localizedDescription)")

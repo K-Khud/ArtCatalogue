@@ -14,9 +14,11 @@ public struct SuffixInfoWithTimeView: View {
 
     public var body: some View {
         HStack {
-            Text((index > -1 && index < viewModel.debouncedResult.count) ? viewModel.debouncedResult[index].suffix : "")
+            Text((index > -1 && index < viewModel.debouncedResult.count) ?
+                 viewModel.debouncedResult[index].suffix : "")
             Spacer()
-            Text((index > -1 && index < viewModel.debouncedResult.count) ? String(viewModel.debouncedResult[index].timeEst) : "")
+            Text((index > -1 && index < viewModel.debouncedResult.count) ?
+                 String(viewModel.debouncedResult[index].timeEst) : "")
         }
         .frame(height: 40)
     }

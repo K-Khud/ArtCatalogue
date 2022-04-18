@@ -10,13 +10,13 @@ import Networking
 import UIComponents
 
 struct ArtworksScreenView: View {
-    
+
     @StateObject var worksViewModel: ArtworksViewModel
 
     var body: some View {
         list
     }
-    
+
     var list: some View {
         VStack {
             HStack {

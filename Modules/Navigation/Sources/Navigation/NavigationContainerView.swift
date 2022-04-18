@@ -18,7 +18,7 @@ public struct NavigationContainerView<Content: View>: View {
         self.content = content()
         switch transition {
         case .none:
-            self.transition = (.identity , .identity)
+            self.transition = (.identity, .identity)
         case .custom(let transition):
             self.transition = (transition, transition)
         }
@@ -39,4 +39,3 @@ public struct NavigationContainerView<Content: View>: View {
         }
     }
 }
-

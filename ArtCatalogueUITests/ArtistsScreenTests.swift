@@ -55,7 +55,6 @@ class ArtistsScreenTests: XCTestCase {
         let app = XCUIApplication()
         app.launch()
 
-
         app.tabBars["Tab Bar"].buttons["Artists"].tap()
         sleep(2)
         let tablesQuery = app.tables

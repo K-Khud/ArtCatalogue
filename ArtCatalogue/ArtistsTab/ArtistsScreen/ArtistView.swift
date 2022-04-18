@@ -16,7 +16,7 @@ struct ArtistView: View {
     var artist: ArtistData
 
     var body: some View {
-        Text(artist.title)
+        Text(artist.title ?? "")
             .modifier(AnimatingCellModifier(cellOpacity: saved ? 0 : 1))
             .modifier(AnimatingOffsetModifier(currentOffsetX: saved ? 200 : 0, currentOffsetY: saved ? 600 : 0))
 
@@ -28,7 +28,7 @@ struct ArtistView: View {
                     self.saved.toggle()
                 }
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                    self.delete(at:self.artistsViewModel.artists.firstIndex(where: { $0.id == artist.id })!)
+                    self.delete(at: self.artistsViewModel.artists.firstIndex(where: { $0.id == artist.id })!)
                 }
             }
     }
@@ -40,6 +40,12 @@ struct ArtistView: View {
 
 struct ArtistView_Previews: PreviewProvider {
     static var previews: some View {
-        ArtistView(artistsViewModel: ArtistsViewModel(), artist: ArtistData(id: 0, title: "Title", birthDate: nil, birthPlace: nil, deathDate: nil, artworkIds: [0]))
+        ArtistView(artistsViewModel: ArtistsViewModel(),
+                   artist: ArtistData(id: 0,
+                                      title: "Title",
+                                      birthDate: nil,
+                                      birthPlace: nil,
+                                      deathDate: nil,
+                                      artworkIds: [0]))
     }
 }

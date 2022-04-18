@@ -12,14 +12,14 @@ import AnyCodable
 
 public struct ArtistData: Codable, Hashable, Identifiable {
 
-    public var id: Double
-    public var title: String
+    public var id: Double?
+    public var title: String?
     public var birthDate: Double?
     public var birthPlace: String?
     public var deathDate: Double?
-    public var artworkIds: [Int]
+    public var artworkIds: [Int]?
 
-    public init(id: Double, title: String, birthDate: Double? = nil, birthPlace: String? = nil, deathDate: Double? = nil, artworkIds: [Int]) {
+    public init(id: Double? = nil, title: String? = nil, birthDate: Double? = nil, birthPlace: String? = nil, deathDate: Double? = nil, artworkIds: [Int]? = nil) {
         self.id = id
         self.title = title
         self.birthDate = birthDate
@@ -49,4 +49,3 @@ public struct ArtistData: Codable, Hashable, Identifiable {
         try container.encode(artworkIds, forKey: .artworkIds)
     }
 }
-
