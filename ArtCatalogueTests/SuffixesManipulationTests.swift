@@ -13,7 +13,7 @@ class SuffixesManipulationTests: XCTestCase {
     let mocks = Mocks()
 
     func testSplitIntoSuffixes() throws {
-        service.splitIntoSuffixes(artists: &mocks.words,
+        service.splitIntoSuffixes(artists: mocks.words,
                                   suffixStat: &mocks.suffixStat,
                                   allSuffixes: &mocks.allSuffixes,
                                   allSuffixesSorted: &mocks.allSuffixesSorted,

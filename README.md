@@ -43,11 +43,11 @@ The `WrappedSequence` struct is created in order to embrace the power of the seq
 
 **SuffixSequence**  
 
-The `SuffixIterator` struct and `SuffixSequence` struct allows to iterate over suffixes that are formed from a sinle string. For example, if it takes a word `dog`, then it forms a sequence of the following suffixes: `dog, og, g`.
+The `SuffixIterator` struct and `SuffixSequence` struct allows to iterate over suffixes that are formed from a single string. For example, if it takes a word `dog`, then it forms a sequence of the following suffixes: `dog, og, g`.
 
-**Job**
+**Concurrent tasks**
 
-
+Actor `Job` and class `JobScheduler` are used to schedule concurrent tasks of searching matching suffixes and estimating a search efficiency by providing the search time.
 
 **Injected property wrapper**
 
@@ -56,19 +56,22 @@ The `SuffixIterator` struct and `SuffixSequence` struct allows to iterate over s
 **Additional tools**  
 
 There is `ArtApi.yaml` in the project directory, that represents the API specification, that was created with the Swagger Editor and used to generate the `Networking` module.
+`generate.sh` is a script used to generate the `Networking` module.
 
 `SwiftLint` is integrated into Xcode to follow Swift style and conventions.
+
+**Tests**  
+
+`SuffixesManipulationTests` tests the methods that are used for operations with suffixes.
+`ArtCatalogueUITests` folder contains UI tests for three tabs, testing a simple user flow and the presence of the navigation buttons on the screen.
 
 # Limitations  
     
 * On Production I would add the backend response error hanling for the case when backend return nil for the properties that are necessary for the business logic.
 So that the app doesn't crash in that case, and user could see an error message. I would also track such exceptions as Crashlytics non-fatal events. In that case the team quickly learns about a problem related to the backend responses and can take appropriate actions.  
 
-
-* I didn't implement testing. On production I would add the following tests:
-  * Unit tests for secondary constructors of domain models, methods of `PlaylistRepository`, methods of `PlaylistPresenter`, methods of `DefaultSession`;
+* I would add the following tests:
   * Integration tests for parsing of data models. For that I would add json files and parse them with the existing models. The tests would check that fields of parsed models have same values as jsons.
-  * Functional UI tests. I would implement it using Espresso and MockWebServer to mock responses. I would write two test cases: one for successful response and one for error case.
 
 # Requirements
 
