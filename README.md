@@ -16,11 +16,9 @@ Suffixes screen shows a list of suffixes, that are created from the list of arti
 
 The tab is focused on a task of different manipulations with the suffixes. 
 * Top 10 the most often appeared suffixes.
-* Search matching suffix (if it's longer than 3 letters)
+* Search matching suffix (if it's longer than 3 letters).
 * The searching is debounced for 800 ms in order to give a user time for typing.
 * Colored search results as a gradient from the best to the worst search time.
-
-In the next sections of this document, I will be mainly focusing on describing the `Suffixes` tab since it has a more interesting structure and more sophisticated solutions implemented.
   
   # Technical Solutions    
 
@@ -33,7 +31,7 @@ The project has three internal packages: `UIComponents`, `Navigation`, `Networki
 The `UIComponents` module contains the main visual components of the app, so it's easy to be reused in other apps of the same group.
 
 The `Navigation` module contains a custom implementation of the navigation, since the native SwiftUI navigation implementation does not provide the desired level of the control over navigation. 
-I implemented it in a separate module, so it can be easily reused or replaced when the native soution is ready.
+I implemented it in a separate module, so it can be easily reused or replaced when the native solution is ready.
   
 The `Networking` module contains code working with the backend. The reason why I implemented it in a separate module is that it can be reused in different apps which use same backend. 
 The module is generated with the use of OpenApi code-gen, which helps to quickly adapt the client-side SDKs every time developers updated a corresponding REST API.
