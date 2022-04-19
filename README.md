@@ -99,7 +99,7 @@ So that the app doesn't crash in that case, and user could see an error message.
 # Screenshots
 Artworks | Artists | Suffixes
 ------------ | ------------- | -------------
-![Screenshot](https://github.com/K-Khud/ArtCatalogue/tree/master/Screenshots/1.png) | ![Screenshot](https://github.com/K-Khud/ArtCatalogue/tree/master/Screenshots/4.png) | ![Screenshot](https://github.com/K-Khud/ArtCatalogue/tree/master/Screenshots/7.png)
+![Screenshot](/Screenshots/1.png) | ![Screenshot](https://github.com/K-Khud/ArtCatalogue/tree/master/Screenshots/4.png) | ![Screenshot](https://github.com/K-Khud/ArtCatalogue/tree/master/Screenshots/7.png)
 ![Screenshot](https://github.com/K-Khud/ArtCatalogue/tree/master/Screenshots/2.png) | ![Screenshot](https://github.com/K-Khud/ArtCatalogue/tree/master/Screenshots/5.png) | ![Screenshot](https://github.com/K-Khud/ArtCatalogue/tree/master/Screenshots/8.png)
 ![Screenshot](https://github.com/K-Khud/ArtCatalogue/tree/master/Screenshots/3.png) | ![Screenshot](https://github.com/K-Khud/ArtCatalogue/tree/master/Screenshots/6.png) | ![Screenshot](https://github.com/K-Khud/ArtCatalogue/tree/master/Screenshots/9.png)
 
