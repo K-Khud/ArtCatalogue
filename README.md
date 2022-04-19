@@ -1,5 +1,24 @@
   # General Info  
 
+The app has three tabs: `Artworks`, `Artists`, `Suffixes`. The data is taken from public API of The Art Institute of Chicago.
+
+**Artworks**  
+
+List of artworks titles. When user scrolls to the end of the list, new page is being loaded. The user can check the details of the each item and load the image.
+
+**Artists**  
+
+List of artists. When user scrolls to the end of the list, new page is being loaded. The user can check more info about the artist and the list of his/her artworks.
+
+**Suffixes**  
+
+Suffixes screen shows a list of suffixes, that are created from the list of artists.
+
+The tab is focused on a task of different manipulations with the suffixes. 
+* Search matching suffix (if it's longer than 3 letters)
+* The searching is debounced for 800 ms in order to give a user time for typing.
+* Colored search results as a gradient from the best to the worst search time.
+
 In the next sections of this document, I will be mainly focusing on describing the `Suffixes` tab since it has a more interesting structure and more sophisticated solutions implemented.
 
   # Technical Solutions  
@@ -69,6 +88,8 @@ There is `ArtApi.yaml` in the project directory, that represents the API specifi
     
 * On Production I would add the backend response error hanling for the case when backend return nil for the properties that are necessary for the business logic.
 So that the app doesn't crash in that case, and user could see an error message. I would also track such exceptions as Crashlytics non-fatal events. In that case the team quickly learns about a problem related to the backend responses and can take appropriate actions.  
+
+* I would remove all the hardcoded strings into the separate struct/enum on production, so it's easier to control.
 
 * I would add the following tests:
   * Integration tests for parsing of data models. For that I would add json files and parse them with the existing models. The tests would check that fields of parsed models have same values as jsons.

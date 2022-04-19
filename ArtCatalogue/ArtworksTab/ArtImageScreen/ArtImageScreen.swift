@@ -23,10 +23,13 @@ struct ArtImageScreen: View {
             Text(artwork.title ?? "")
                 .bold()
                 .padding()
-            Image(uiImage: itemViewModel.artImage)
-                .frame(width: 150, height: 100, alignment: .center)
-                .padding()
-
+            if itemViewModel.imageIsLoaded {
+                Image(uiImage: itemViewModel.artImage)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 200, height: 200, alignment: .center)
+                    .padding()
+            }
             HStack {
                 LoadButton(viewModel: itemViewModel, artwork: artwork, buttonTitle: "Load Image")
                 Button {
