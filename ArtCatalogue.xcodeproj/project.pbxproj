@@ -276,6 +276,7 @@
 			children = (
 				02D2FCC7280DD5AC00F76525 /* README.md */,
 				023105FE27F334CF008F2D49 /* ApiTest.xctestplan */,
+				02DAFC20280F3FCE003F2ADF /* Screenshots */,
 				0247D06327934A6800B862D4 /* ArtCatalogue */,
 				027F1B8627A6E08900247908 /* Artworks Widget */,
 				0252DB0C27EF9BF0008949DC /* ArtCatalogueTests */,
@@ -299,7 +300,6 @@
 		0247D06327934A6800B862D4 /* ArtCatalogue */ = {
 			isa = PBXGroup;
 			children = (
-				02DAFC20280F3FCE003F2ADF /* Screenshots */,
 				02AF611B27AEC27800B250DA /* Info.plist */,
 				020D7D7027E77CE60061A6C2 /* UIComponents */,
 				0250A63827DE90E70079C56C /* Navigation */,
