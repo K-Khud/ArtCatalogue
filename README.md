@@ -15,14 +15,15 @@ List of artists. When user scrolls to the end of the list, new page is being loa
 Suffixes screen shows a list of suffixes, that are created from the list of artists.
 
 The tab is focused on a task of different manipulations with the suffixes. 
+* Top 10 the most often appeared suffixes.
 * Search matching suffix (if it's longer than 3 letters)
 * The searching is debounced for 800 ms in order to give a user time for typing.
 * Colored search results as a gradient from the best to the worst search time.
 
 In the next sections of this document, I will be mainly focusing on describing the `Suffixes` tab since it has a more interesting structure and more sophisticated solutions implemented.
-
-  # Technical Solutions  
   
+  # Technical Solutions    
+
 **Architecture**  
   
 In this project I followed MVVM architecture approach together with SOA.  
@@ -94,6 +95,12 @@ So that the app doesn't crash in that case, and user could see an error message.
 * I would add the following tests:
   * Integration tests for parsing of data models. For that I would add json files and parse them with the existing models. The tests would check that fields of parsed models have same values as jsons.
 
+
+# Screenshots
+
+------------ | ------------- | -------------
+![GitHub Logo](screenshots/1.png) | ![GitHub Logo](screenshots/2.png) | ![GitHub Logo](screenshots/3.png)
+  
 # Requirements
 
 * Swift 5.5

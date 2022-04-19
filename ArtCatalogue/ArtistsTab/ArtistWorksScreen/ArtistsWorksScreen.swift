@@ -21,7 +21,7 @@ struct ArtistsWorksScreen: View {
                 .fontWeight(.light)
             List {
                 ForEach(0..<(artist.artworkIds?.count ?? 1)) { index in
-                  Text(verbatim: "\(self.artist.artworkIds?[index])")
+                  Text(verbatim: "\(self.artist.artworkIds?[index] ?? 0)")
                         .bold()
                 }
             }
