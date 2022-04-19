@@ -99,9 +99,9 @@ So that the app doesn't crash in that case, and user could see an error message.
 # Screenshots
 Artworks | Artists | Suffixes
 ------------ | ------------- | -------------
-![GitHub Logo](https://github.com/K-Khud/ArtCatalogue/tree/master/ArtCatalogue/Screenshots/1.png) | ![GitHub Logo](https://github.com/K-Khud/ArtCatalogue/tree/master/ArtCatalogue/Screenshots/4.png) | ![GitHub Logo](https://github.com/K-Khud/ArtCatalogue/tree/master/ArtCatalogue/Screenshots/7.png)
-![GitHub Logo](https://github.com/K-Khud/ArtCatalogue/tree/master/ArtCatalogue/Screenshots/2.png) | ![GitHub Logo](https://github.com/K-Khud/ArtCatalogue/tree/master/ArtCatalogue/Screenshots/5.png) | ![GitHub Logo](https://github.com/K-Khud/ArtCatalogue/tree/master/ArtCatalogue/Screenshots/8.png)
-![GitHub Logo](https://github.com/K-Khud/ArtCatalogue/tree/master/ArtCatalogue/Screenshots/3.png) | ![GitHub Logo](https://github.com/K-Khud/ArtCatalogue/tree/master/ArtCatalogue/Screenshots/6.png) | ![GitHub Logo](https://github.com/K-Khud/ArtCatalogue/tree/master/ArtCatalogue/Screenshots/9.png)
+![Screenshot](https://github.com/K-Khud/ArtCatalogue/tree/master/Screenshots/1.png) | ![Screenshot](https://github.com/K-Khud/ArtCatalogue/tree/master/Screenshots/4.png) | ![Screenshot](https://github.com/K-Khud/ArtCatalogue/tree/master/Screenshots/7.png)
+![Screenshot](https://github.com/K-Khud/ArtCatalogue/tree/master/Screenshots/2.png) | ![Screenshot](https://github.com/K-Khud/ArtCatalogue/tree/master/Screenshots/5.png) | ![Screenshot](https://github.com/K-Khud/ArtCatalogue/tree/master/Screenshots/8.png)
+![Screenshot](https://github.com/K-Khud/ArtCatalogue/tree/master/Screenshots/3.png) | ![Screenshot](https://github.com/K-Khud/ArtCatalogue/tree/master/Screenshots/6.png) | ![Screenshot](https://github.com/K-Khud/ArtCatalogue/tree/master/Screenshots/9.png)
 
 # Requirements
 
