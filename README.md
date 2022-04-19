@@ -97,7 +97,7 @@ So that the app doesn't crash in that case, and user could see an error message.
 
 
 # Screenshots
-
+Artworks | Artists | Suffixes
 ------------ | ------------- | -------------
 ![GitHub Logo](screenshots/1.png) | ![GitHub Logo](screenshots/2.png) | ![GitHub Logo](screenshots/3.png)
   
