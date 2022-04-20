@@ -85,7 +85,6 @@ final class SuffixManipulationService {
             searchResult.append(newElement)
             return
         }
-
         searchResult[index].counter = newElement.counter
     }
 }

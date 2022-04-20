@@ -19,6 +19,22 @@ class FileService {
             .appendingPathComponent("testingCache.txt")
     }
 
+    private func createString(from results: [SearchResult]) -> Data {
+        // creating JSON out of the above array
+        var jsonData: Data!
+
+        do {
+
+            let encoder = JSONEncoder()
+            encoder.keyEncodingStrategy = .convertToSnakeCase
+            jsonData = try encoder.encode(results)
+
+        } catch {
+            print(error)
+        }
+        return jsonData
+    }
+
     func save(_ searchResults: [SearchResult]) {
 
         guard let cacheDirectoryUrl = getCacheDirectoryUrl() else { return }
@@ -47,22 +63,6 @@ class FileService {
         }
         fileManager.createFile(atPath: newFileUrl.path, contents: jsonData, attributes: nil)
 
-    }
-
-    private func createString(from results: [SearchResult]) -> Data {
-        // creating JSON out of the above array
-        var jsonData: Data!
-
-        do {
-
-            let encoder = JSONEncoder()
-            encoder.keyEncodingStrategy = .convertToSnakeCase
-            jsonData = try encoder.encode(results)
-
-        } catch {
-            print(error)
-        }
-        return jsonData
     }
 
     func load() -> [SearchResult] {
