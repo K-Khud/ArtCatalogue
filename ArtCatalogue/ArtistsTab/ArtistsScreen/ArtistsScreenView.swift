@@ -26,16 +26,16 @@ struct ArtistsScreenView: View {
             List {
                 ForEach(artistsViewModel.artists) { artist in
                     ArtistView(artistsViewModel: artistsViewModel, artist: artist)
-                        .onAppear() {
+                        .task() {
                             if artistsViewModel.artists.isLast(artist) {
                                 artistsViewModel.load()
                             }
                         }
                 }
             }
-            .onAppear(perform: {
+            .task() {
                 artistsViewModel.load()
-            })
+            }
             .listStyle(.plain)
         }
     }

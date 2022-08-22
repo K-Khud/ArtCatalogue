@@ -27,16 +27,17 @@ struct ArtworksScreenView: View {
             List {
                 ForEach(worksViewModel.artworks) { artwork in
                     ArtworkView(worksViewModel: worksViewModel, artwork: artwork)
-                        .onAppear() {
+                        .task {
                             if worksViewModel.artworks.isLast(artwork) {
                                 worksViewModel.load()
                             }
+
                         }
                 }
             }
-            .onAppear(perform: {
+            .task() {
                 worksViewModel.load()
-            })
+            }
             .listStyle(.plain)
         }
     }

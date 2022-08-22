@@ -197,6 +197,8 @@
 		028C7DEF27A076CC003AA548 /* AnimatingCellModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatingCellModifier.swift; sourceTree = "<group>"; };
 		02AF611827AEBAE800B250DA /* LinkNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkNames.swift; sourceTree = "<group>"; };
 		02AF611B27AEC27800B250DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		02B6B1992817EE5900753E25 /* ArtCatalogue.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ArtCatalogue.entitlements; sourceTree = "<group>"; };
+		02B6B19A2817EECF00753E25 /* Artworks WidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Artworks WidgetExtension.entitlements"; sourceTree = "<group>"; };
 		02D2FCC7280DD5AC00F76525 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		02D2FCC8280DEE4500F76525 /* SuffixSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixSequence.swift; sourceTree = "<group>"; };
 		02DA4564279DBA1500E8B515 /* ArtistsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsViewModel.swift; sourceTree = "<group>"; };
@@ -274,6 +276,7 @@
 		0247D05827934A6800B862D4 = {
 			isa = PBXGroup;
 			children = (
+				02B6B19A2817EECF00753E25 /* Artworks WidgetExtension.entitlements */,
 				02D2FCC7280DD5AC00F76525 /* README.md */,
 				023105FE27F334CF008F2D49 /* ApiTest.xctestplan */,
 				02DAFC20280F3FCE003F2ADF /* Screenshots */,
@@ -300,6 +303,7 @@
 		0247D06327934A6800B862D4 /* ArtCatalogue */ = {
 			isa = PBXGroup;
 			children = (
+				02B6B1992817EE5900753E25 /* ArtCatalogue.entitlements */,
 				02AF611B27AEC27800B250DA /* Info.plist */,
 				020D7D7027E77CE60061A6C2 /* UIComponents */,
 				0250A63827DE90E70079C56C /* Navigation */,
@@ -982,6 +986,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ArtCatalogue/ArtCatalogue.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1016,6 +1021,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ArtCatalogue/ArtCatalogue.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1087,6 +1093,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "Artworks WidgetExtension.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1116,6 +1123,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "Artworks WidgetExtension.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

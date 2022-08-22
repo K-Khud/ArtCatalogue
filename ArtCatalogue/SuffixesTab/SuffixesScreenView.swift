@@ -35,7 +35,7 @@ struct SuffixesScreenView: View {
                 } else {
                     SearchResultDebouncedView(viewModel: viewModel)
                 }
-            }.onAppear {
+            }.task {
                 viewModel.load()
             }
             Group {
